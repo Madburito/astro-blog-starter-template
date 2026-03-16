@@ -5,17 +5,23 @@
  */
 
 :root {
-  --accent: #2337ff;
-  --accent-dark: #000d8a;
+  --primary: #1E3A5F;
+  --accent: #E63946;
+  /* Navy palette (gradients and subtle tints) */
+  --navy-900: #0F2738;
+  --navy-700: #163351;
+  --navy-500: #1E3A5F;
+  --navy-300: #2B5678;
+  --navy-100: #EAF1F6;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
-  --gray-light: 229, 233, 240;
+  --gray-light: 245, 247, 250; /* page background tone */
   --gray-dark: 34, 41, 57;
-  --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+  --page-bg: #F5F7FA;
   --box-shadow:
-    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-    0 16px 32px rgba(var(--gray), 33%);
+    0 6px 18px rgba(30,58,95,0.08), 0 10px 30px rgba(30,58,95,0.04);
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 @font-face {
   font-family: "Atkinson";
   src: url("/fonts/atkinson-regular.woff") format("woff");
@@ -31,17 +37,15 @@
   font-display: swap;
 }
 body {
-  font-family: "Atkinson", sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   margin: 0;
   padding: 0;
   text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
-  background-size: 100% 600px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 35%, var(--navy-500) 65%);
+  background-attachment: fixed;
   color: rgb(var(--gray-dark));
-  font-size: 20px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.6;
 }
 main {
   width: 720px;
@@ -49,30 +53,49 @@ main {
   margin: auto;
   padding: 3em 1em;
 }
+
+/* card-like container for main content */
+ .prose {
+  background: #E9EEF6; /* slightly darker light-grey to pair with blue */
+  border-radius: 14px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 18px 40px rgba(16,39,56,0.08);
+  border: 1px solid rgba(255,255,255,0.04);
+ }
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.5rem 0;
-  color: rgb(var(--black));
+  margin: 0 0 0.6rem 0;
+  color: var(--primary);
   line-height: 1.2;
 }
+
 h1 {
-  font-size: 3.052em;
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
 }
+
 h2 {
-  font-size: 2.441em;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
+
 h3 {
-  font-size: 1.953em;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
+
 h4 {
-  font-size: 1.563em;
+  font-size: 1.05rem;
 }
+
 h5 {
-  font-size: 1.25em;
+  font-size: 0.95rem;
 }
 strong,
 b {
@@ -88,7 +111,9 @@ p {
   margin-bottom: 1em;
 }
 .prose p {
-  margin-bottom: 2em;
+  margin-bottom: 1.125em;
+  color: rgb(var(--gray-dark));
+  max-width: 60ch;
 }
 textarea {
   width: 100%;
@@ -122,6 +147,109 @@ blockquote {
   padding: 0 0 0 20px;
   margin: 0px;
   font-size: 1.333em;
+}
+
+/* Lists and pricing */
+ul {
+  padding-left: 1.25rem;
+}
+ul li {
+  margin: 0.6rem 0;
+  line-height: 1.4;
+}
+
+/* address styling */
+address {
+  font-style: normal;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgb(var(--gray-light));
+}
+
+/* utility button style for future CTAs */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Hero */
+.hero {
+  padding: 1.5rem 0 2.25rem 0;
+  background: linear-gradient(180deg, rgba(30,58,95,0.03), transparent 60%);
+  border-radius: 12px;
+}
+.hero-inner {
+  display: grid;
+  gap: 0.5rem;
+}
+.hero-cta {
+  margin-top: 0.5rem;
+}
+
+/* Tighten paragraph spacing inside the hero so the three intro
+   paragraphs feel evenly spaced without extra gaps */
+.hero-inner p {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* Services */
+.services .services-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.services .services-list li {
+  background: linear-gradient(180deg, #ffffff, rgba(234,241,246,0.6));
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 8px 22px rgba(16,39,56,0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(30,58,95,0.06);
+}
+
+/* Contact */
+.contact p {
+  margin: 0.35rem 0;
+  font-weight: 600;
+}
+.contact p:first-of-type {
+  margin-top: 0.5rem;
+}
+
+/* Utilities */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+/* Variant utility: navy-primary button */
+.btn-navy {
+  background: var(--navy-500);
+  color: white;
+  border: none;
+}
+
+/* Ensure max readable width for sections */
+.page-content {
+  max-width: 900px;
+}
+
+/* Smooth scroll for in-page nav */
+html {
+  scroll-behavior: smooth;
 }
 hr {
   border: none;

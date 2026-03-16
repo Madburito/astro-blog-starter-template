@@ -5,12 +5,12 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
+		    <h2><a href="#top">{SITE_TITLE}</a></h2>
+		    <div class="internal-links">
+			    <HeaderLink href="#services">Services</HeaderLink>
+			    <HeaderLink href="#instructor">Instructor</HeaderLink>
+			    <HeaderLink href="#contact">Book</HeaderLink>
+		    </div>
 		<div class="social-links">
 			<a href="https://www.instagram.com/martensdrivingschool/" target="_blank">
 			<span class="sr-only">Follow Martens Driving School</span>
@@ -38,40 +38,57 @@ import { SITE_TITLE } from '../consts';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
+		background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(234,241,246,0.7));
+		backdrop-filter: blur(4px);
+		box-shadow: 0 10px 30px rgba(16,39,56,0.07);
+		position: sticky;
+		top: 0;
+		z-index: 40;
 	}
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0.6rem 0;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.6rem;
+		font-weight: 800;
+		color: var(--primary);
+	}
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+		color: rgb(var(--black));
+	}
+	.internal-links {
+		display: flex;
+		gap: 0.75rem;
+		align-items: center;
 	}
 	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
+		padding: 0.5rem 0.5rem;
+		color: rgb(var(--black));
+		border-bottom: 3px solid transparent;
 		text-decoration: none;
 	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
+	nav a:hover {
+		border-bottom-color: rgba(var(--black), 6%);
 	}
 	.social-links,
 	.social-links a {
 		display: flex;
+		align-items: center;
 	}
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		nav {
+			padding: 0.5rem 0;
 		}
 	}
 </style>
