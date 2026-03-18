@@ -6,7 +6,13 @@ import { SITE_TITLE } from '../consts';
 <header>
 	<nav>
 		    <h2><a href="#top">{SITE_TITLE}</a></h2>
-		    <div class="internal-links">
+		    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+				<span class="sr-only">Toggle menu</span>
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+		    <div id="primary-nav" class="internal-links">
 			    <HeaderLink href="#services">Services</HeaderLink>
 			    <HeaderLink href="#instructor">Instructor</HeaderLink>
 			    <HeaderLink href="#contact">Book</HeaderLink>
@@ -76,7 +82,42 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 	}
 	nav a:hover {
-		border-bottom-color: rgba(var(--black), 6%);
+		border-bottom-color: rgba(var(--black), 0.06);
+	}
+
+	/* mobile menu toggle */
+	.menu-toggle {
+		display: none;
+		background: transparent;
+		border: none;
+		padding: 0.25rem;
+		margin-left: 0.5rem;
+		color: rgb(var(--black));
+		cursor: pointer;
+	}
+	.menu-toggle svg { display: block; }
+
+	/* when screen is small, hide the inline links and show a stacked menu */
+	@media (max-width: 720px) {
+		.menu-toggle { display: inline-flex; align-items: center; }
+		.internal-links { display: none; }
+		.internal-links.open {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+			position: absolute;
+			top: 100%;
+			right: 1rem;
+			background: var(--page-bg);
+			padding: 0.6rem;
+			border-radius: 8px;
+			box-shadow: 0 8px 24px rgba(11,27,40,0.12);
+			min-width: 160px;
+		}
+		.internal-links a {
+			display: block;
+			padding: 0.5rem 0.75rem;
+		}
 	}
 	.social-links,
 	.social-links a {
@@ -92,3 +133,16 @@ import { SITE_TITLE } from '../consts';
 		}
 	}
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	const btn = document.querySelector('.menu-toggle');
+	if (!btn) return;
+	const nav = btn.closest('nav');
+	const menu = nav && nav.querySelector('.internal-links');
+	btn.addEventListener('click', () => {
+		const open = menu.classList.toggle('open');
+		btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+	});
+});
+</script>

@@ -12,11 +12,22 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+
+const ld = {
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	name: title,
+	description,
+	url: String(canonicalURL),
+	telephone: "(204) 371-7417",
+	email: "Martensdrivingschool@gmail.com",
+};
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
@@ -45,3 +56,5 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script type="application/ld+json">{JSON.stringify(ld)}</script>
