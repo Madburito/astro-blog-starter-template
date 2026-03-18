@@ -36,6 +36,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* predictable sizing and prevent horizontal scroll */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
 body {
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   margin: 0;
@@ -47,21 +52,25 @@ body {
   font-size: 18px;
   line-height: 1.6;
 }
+
+/* responsive main container */
 main {
-  width: 720px;
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
 }
 
 /* card-like container for main content */
  .prose {
-  background: #E9EEF6; /* slightly darker light-grey to pair with blue */
+  background: #B6C6D9; /* readable light-grey/blue tone */
   border-radius: 14px;
-  padding: 2.25rem 2rem;
-  box-shadow: 0 18px 40px rgba(16,39,56,0.08);
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(11,27,40,0.12);
   border: 1px solid rgba(255,255,255,0.04);
- }
+  margin: 1.5rem auto;
+  max-width: calc(100% - 2rem);
+}
 h1,
 h2,
 h3,
@@ -130,6 +139,9 @@ img {
   height: auto;
   border-radius: 8px;
 }
+
+/* ensure cards don't force overflow */
+.services .services-list li { min-width: 0; }
 code {
   padding: 2px 5px;
   background-color: rgb(var(--gray-light));
@@ -177,6 +189,15 @@ address {
   font-weight: 700;
 }
 
+/* increase touch target size for mobile and ensure consistent spacing */
+.btn, .btn-primary, .btn-navy, nav a, .internal-links a {
+  min-height: 44px;
+  padding: 0.6rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Hero */
 .hero {
   padding: 1.5rem 0 2.25rem 0;
@@ -204,7 +225,7 @@ address {
   padding: 0;
   margin: 1rem 0 0 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
 .services .services-list li {
@@ -256,12 +277,33 @@ hr {
   border-top: 1px solid rgb(var(--gray-light));
 }
 @media (max-width: 720px) {
-  body {
-    font-size: 18px;
-  }
-  main {
-    padding: 1em;
-  }
+  /* keep comfortable readable base size on phones */
+  body { font-size: 18px; }
+
+  main { padding: 1.25rem 1rem; }
+
+  /* headings scale for mobile */
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.05rem; }
+
+  /* tighter prose on small screens */
+  .prose { padding: 1.25rem 1rem; border-radius: 12px; }
+
+  /* services: stack into single column for narrow screens */
+  .services .services-list { grid-template-columns: 1fr; }
+
+  /* header adjustments */
+  nav { padding: 0.5rem 0.5rem; }
+  .internal-links { gap: 0.5rem; flex-wrap: wrap; }
+  nav a { padding: 0.5rem 0.6rem; }
+}
+
+@media (max-width: 420px) {
+  /* small phone tweaks */
+  body { font-size: 18px; }
+  .prose { padding: 1rem; }
+  h1 { font-size: 1.4rem; }
 }
 
 .sr-only {
