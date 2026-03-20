@@ -77,8 +77,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<label for="cf-phone">Phone Number <span class="required">*</span></label>
 				<input id="cf-phone" name="phone" type="tel" placeholder="(123) 456-7890" />
 				
-				<label for="cf-date">Preferred Lesson Date</label>
-				<input id="cf-date" name="preferred_date" type="date" />
+				<label>Preferred Days of the Week (select all that apply)</label>
+				<div class="checkbox-group">
+					<label><input type="checkbox" name="preferred_days[]" value="monday"> Monday</label>
+					<label><input type="checkbox" name="preferred_days[]" value="tuesday"> Tuesday</label>
+					<label><input type="checkbox" name="preferred_days[]" value="wednesday"> Wednesday</label>
+					<label><input type="checkbox" name="preferred_days[]" value="thursday"> Thursday</label>
+					<label><input type="checkbox" name="preferred_days[]" value="friday"> Friday</label>
+					<label><input type="checkbox" name="preferred_days[]" value="saturday"> Saturday</label>
+					<label><input type="checkbox" name="preferred_days[]" value="sunday"> Sunday</label>
+				</div>
 				
 				<label for="cf-time">Preferred Time</label>
 				<select id="cf-time" name="preferred_time">

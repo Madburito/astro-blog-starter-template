@@ -327,7 +327,8 @@ address {
 .contact-form input[type="date"],
 .contact-form input[type="time"],
 .contact-form select,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form input[type="checkbox"] {
   width: 100%;
   padding: 0.65rem 0.75rem;
   border-radius: 8px;
@@ -339,7 +340,8 @@ address {
 }
 .contact-form input:focus,
 .contact-form select:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form input[type="checkbox"]:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(230,57,70,0.1);
@@ -351,6 +353,25 @@ address {
 .contact-form .btn {
   width: max-content;
   margin-top: 0.5rem;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: rgb(var(--gray-dark));
+}
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
 }
 
 /* Utilities */
