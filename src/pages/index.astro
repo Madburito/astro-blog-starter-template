@@ -59,11 +59,60 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<p>
 					If you would like to schedule a lesson or have any questions, feel free to reach out.
 				</p>
-				<p>Phone: (204) 371-7417</p>
-				<p>Email: Martensdrivingschool@gmail.com</p>
-			</section>
-
-		</main>
-		<Footer />
-	</body>
+				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
+			<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a></p>
+				<!-- Contact form for lesson bookings -->
+				<form class="contact-form" action="https://formsubmit.co/Martensdrivingschool@gmail.com" method="POST">
+					<input type="hidden" name="_subject" value="New lesson booking from Martens Driving School site" />
+					<input type="hidden" name="_captcha" value="false" />
+				<input id="cf-winnipeg" type="hidden" name="submission_date_winnipeg" value="" />
+				
+					<label for="cf-name">Name <span class="required">*</span></label>
+					<input id="cf-name" name="name" type="text" placeholder="Your full name" required />
+					
+					<label for="cf-email">Email <span class="required">*</span></label>
+				<input id="cf-email" name="email" type="email" placeholder="your@email.com" />
+				<small class="form-hint">Email or phone required</small>
+				
+				<label for="cf-phone">Phone Number <span class="required">*</span></label>
+				<input id="cf-phone" name="phone" type="tel" placeholder="(123) 456-7890" />
+				
+				<label for="cf-date">Preferred Lesson Date</label>
+				<input id="cf-date" name="preferred_date" type="date" />
+				
+				<label for="cf-time">Preferred Time</label>
+				<input id="cf-time" name="preferred_time" type="time" />
+					<label for="cf-message">Message</label>
+					<textarea id="cf-message" name="message" rows="5" placeholder="Tell us more about your driving goals or any questions..."></textarea>
+					
+					<button type="submit" class="btn btn-primary">Book Your Lesson</button>
+				</form>
+			<script>
+				document.querySelector('.contact-form').addEventListener('submit', function(e) {
+					const email = document.getElementById('cf-email').value.trim();
+					const phone = document.getElementById('cf-phone').value.trim();
+					if (!email && !phone) {
+						e.preventDefault();
+						alert('Please provide either an email address or phone number.');
+						return;
+					}
+					const winnipegDate = new Date().toLocaleString('en-CA', { timeZone: 'America/Winnipeg', hour12: false });
+					document.getElementById('cf-winnipeg').value = winnipegDate;
+				});
+			</script>
 </html>
+		<section id="service-area" class="service-area">
+			<h2>Service Area</h2>
+			<p>We proudly serve Steinbach and surrounding communities.</p>
+			<div class="map-container">
+				<iframe
+					width="600"
+					height="450"
+					style="border:0;"
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21131.32581306711!2d-96.89388574883393!3d49.52593154326695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52e92d5000000001%3A0x949996bb89e6f159!2sSteinbach%2C%20MB!5e0!3m2!1sen!2sca!4v1700431441400"
+					allowfullscreen="" aria-hidden="false" tabindex="0">
+				</iframe>
+			</div>
+		</section>
