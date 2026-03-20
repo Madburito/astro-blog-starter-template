@@ -326,6 +326,7 @@ address {
 .contact-form input[type="tel"],
 .contact-form input[type="date"],
 .contact-form input[type="time"],
+.contact-form select,
 .contact-form textarea {
   width: 100%;
   padding: 0.65rem 0.75rem;
@@ -337,6 +338,7 @@ address {
   font-family: inherit;
 }
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent);

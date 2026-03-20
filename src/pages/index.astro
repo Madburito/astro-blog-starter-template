@@ -81,7 +81,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<input id="cf-date" name="preferred_date" type="date" />
 				
 				<label for="cf-time">Preferred Time</label>
-				<input id="cf-time" name="preferred_time" type="time" />
+				<select id="cf-time" name="preferred_time">
+					<option value="">Select a time</option>
+					<option value="morning">Morning (8am - 12pm)</option>
+					<option value="afternoon">Afternoon (12pm - 5pm)</option>
+					<option value="evening">Evening (5pm - 9pm)</option>
+				</select>
 					<label for="cf-message">Message</label>
 					<textarea id="cf-message" name="message" rows="5" placeholder="Tell us more about your driving goals or any questions..."></textarea>
 					
