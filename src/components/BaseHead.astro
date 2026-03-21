@@ -19,8 +19,39 @@ const ld = {
 	name: title,
 	description,
 	url: String(canonicalURL),
+	image: new URL('/images/logo.jpeg', Astro.url).toString(),
 	telephone: "(204) 371-7417",
 	email: "Martensdrivingschool@gmail.com",
+	priceRange: "$$",
+	areaServed: [
+		"Steinbach",
+		"Southeast Manitoba"
+	],
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Steinbach",
+		addressRegion: "MB",
+		addressCountry: "CA"
+	},
+	sameAs: [
+		"https://www.instagram.com/martensdrivingschool/"
+	],
+	openingHoursSpecification: [
+		{
+			"@type": "OpeningHoursSpecification",
+			dayOfWeek: [
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday",
+				"Saturday",
+				"Sunday"
+			],
+			opens: "08:00",
+			closes: "21:00"
+		}
+	]
 };
 ---
 

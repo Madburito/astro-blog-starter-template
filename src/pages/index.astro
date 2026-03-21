@@ -54,78 +54,134 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 			</section>
 
+
 			<section id="contact" class="contact">
 				<h2>Book a Lesson</h2>
 				<p>
 					If you would like to schedule a lesson or have any questions, feel free to reach out.
 				</p>
 				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
-			<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a></p>
+				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a></p>
 				<!-- Contact form for lesson bookings -->
 				<form class="contact-form" action="https://formsubmit.co/Martensdrivingschool@gmail.com" method="POST">
 					<input type="hidden" name="_subject" value="New lesson booking from Martens Driving School site" />
 					<input type="hidden" name="_captcha" value="false" />
-				<input id="cf-winnipeg" type="hidden" name="submission_date_winnipeg" value="" />
-				
+					<input id="cf-winnipeg" type="hidden" name="submission_date_winnipeg" value="" />
+					
 					<label for="cf-name">Name <span class="required">*</span></label>
 					<input id="cf-name" name="name" type="text" placeholder="Your full name" required />
 					
 					<label for="cf-email">Email <span class="required">*</span></label>
-				<input id="cf-email" name="email" type="email" placeholder="your@email.com" />
-				<small class="form-hint">Email or phone required</small>
-				
-				<label for="cf-phone">Phone Number <span class="required">*</span></label>
-				<input id="cf-phone" name="phone" type="tel" placeholder="(123) 456-7890" />
-				
-				<label>Preferred Days of the Week (select all that apply)</label>
-				<div class="checkbox-group">
-					<label><input type="checkbox" name="preferred_days[]" value="monday"> Monday</label>
-					<label><input type="checkbox" name="preferred_days[]" value="tuesday"> Tuesday</label>
-					<label><input type="checkbox" name="preferred_days[]" value="wednesday"> Wednesday</label>
-					<label><input type="checkbox" name="preferred_days[]" value="thursday"> Thursday</label>
-					<label><input type="checkbox" name="preferred_days[]" value="friday"> Friday</label>
-					<label><input type="checkbox" name="preferred_days[]" value="saturday"> Saturday</label>
-					<label><input type="checkbox" name="preferred_days[]" value="sunday"> Sunday</label>
-				</div>
-				
-				<label for="cf-time">Preferred Time</label>
-				<select id="cf-time" name="preferred_time">
-					<option value="">Select a time</option>
-					<option value="morning">Morning (8am - 12pm)</option>
-					<option value="afternoon">Afternoon (12pm - 5pm)</option>
-					<option value="evening">Evening (5pm - 9pm)</option>
-				</select>
+					<input id="cf-email" name="email" type="email" placeholder="your@email.com" />
+					<small class="form-hint">Email or phone required</small>
+					
+					<label for="cf-phone">Phone Number <span class="required">*</span></label>
+					<input id="cf-phone" name="phone" type="tel" placeholder="(123) 456-7890" />
+					
+					<label>Preferred Days of the Week (select all that apply)</label>
+					<div class="checkbox-group">
+						<label><input type="checkbox" name="preferred_days[]" value="monday"> Monday</label>
+						<label><input type="checkbox" name="preferred_days[]" value="tuesday"> Tuesday</label>
+						<label><input type="checkbox" name="preferred_days[]" value="wednesday"> Wednesday</label>
+						<label><input type="checkbox" name="preferred_days[]" value="thursday"> Thursday</label>
+						<label><input type="checkbox" name="preferred_days[]" value="friday"> Friday</label>
+						<label><input type="checkbox" name="preferred_days[]" value="saturday"> Saturday</label>
+						<label><input type="checkbox" name="preferred_days[]" value="sunday"> Sunday</label>
+					</div>
+					
+					<label for="cf-time">Preferred Time</label>
+					<select id="cf-time" name="preferred_time">
+						<option value="">Select a time</option>
+						<option value="morning">Morning (8am - 12pm)</option>
+						<option value="afternoon">Afternoon (12pm - 5pm)</option>
+						<option value="evening">Evening (5pm - 9pm)</option>
+					</select>
 					<label for="cf-message">Message</label>
 					<textarea id="cf-message" name="message" rows="5" placeholder="Tell us more about your driving goals or any questions..."></textarea>
 					
 					<button type="submit" class="btn btn-primary">Book Your Lesson</button>
 				</form>
+			</section>
+
+			<section id="service-area" class="service-area">
+				<h2>Service Area</h2>
+				<p>We proudly serve Steinbach and surrounding communities.</p>
+				<div class="map-container">
+					<iframe
+						width="600"
+						height="450"
+						style="border:0;"
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84552.30325226844!2d-96.89388574883393!3d49.52593154326695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52e92d5000000001%3A0x949996bb89e6f159!2sSteinbach%2C%20MB!5e0!3m2!1sen!2sca!4v1700431441400"
+						allowfullscreen="" aria-hidden="false" tabindex="0">
+					</iframe>
+				</div>
+			</section>
+
+			<section class="faq" id="faq">
+				<h2>Frequently Asked Questions</h2>
+				<details>
+					<summary>How long is each lesson?</summary>
+					<p>Most lessons are booked in hourly sessions, with options based on your needs and goals.</p>
+				</details>
+				<details>
+					<summary>Do you provide a vehicle for road tests?</summary>
+					<p>Yes. Road test car rental is available.</p>
+				</details>
+				<details>
+					<summary>What areas do you serve?</summary>
+					<p>Steinbach and surrounding communities.</p>
+				</details>
+			</section>
+
+			<a class="sticky-mobile-cta" href="#contact">Book a Lesson</a>
+
 			<script>
-				document.querySelector('.contact-form').addEventListener('submit', function(e) {
-					const email = document.getElementById('cf-email').value.trim();
-					const phone = document.getElementById('cf-phone').value.trim();
-					if (!email && !phone) {
-						e.preventDefault();
-						alert('Please provide either an email address or phone number.');
-						return;
-					}
-					const winnipegDate = new Date().toLocaleString('en-CA', { timeZone: 'America/Winnipeg', hour12: false });
-					document.getElementById('cf-winnipeg').value = winnipegDate;
+				const contactForm = document.querySelector('.contact-form');
+				if (contactForm) {
+					contactForm.addEventListener('submit', function(e) {
+						const email = document.getElementById('cf-email').value.trim();
+						const phone = document.getElementById('cf-phone').value.trim();
+						if (!email && !phone) {
+							e.preventDefault();
+							alert('Please provide either an email address or phone number.');
+							return;
+						}
+						const winnipegDate = new Date().toLocaleString('en-CA', { timeZone: 'America/Winnipeg', hour12: false });
+						document.getElementById('cf-winnipeg').value = winnipegDate;
+						if (typeof window.gtag === 'function') {
+							window.gtag('event', 'generate_lead', { method: 'form_submit' });
+						}
+					});
+				}
+
+				document.querySelectorAll('a[href^="mailto:"]').forEach((el) => {
+					el.addEventListener('click', () => {
+						if (typeof window.gtag === 'function') {
+							window.gtag('event', 'contact', { method: 'email_click' });
+						}
+					});
 				});
+
+				document.querySelectorAll('a[href^="sms:"]').forEach((el) => {
+					el.addEventListener('click', () => {
+						if (typeof window.gtag === 'function') {
+							window.gtag('event', 'contact', { method: 'sms_click' });
+						}
+					});
+				});
+
+				const mapFrame = document.querySelector('.service-area iframe');
+				if (mapFrame) {
+					mapFrame.addEventListener('click', () => {
+						if (typeof window.gtag === 'function') {
+							window.gtag('event', 'view_map', { area: 'steinbach' });
+						}
+					});
+				}
 			</script>
+		</main>
+		<Footer />
+	</body>
 </html>
-		<section id="service-area" class="service-area">
-			<h2>Service Area</h2>
-			<p>We proudly serve Steinbach and surrounding communities.</p>
-			<div class="map-container">
-				<iframe
-					width="600"
-					height="450"
-					style="border:0;"
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84552.30325226844!2d-96.89388574883393!3d49.52593154326695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52e92d5000000001%3A0x949996bb89e6f159!2sSteinbach%2C%20MB!5e0!3m2!1sen!2sca!4v1700431441400"
-					allowfullscreen="" aria-hidden="false" tabindex="0">
-				</iframe>
-			</div>
-		</section>
