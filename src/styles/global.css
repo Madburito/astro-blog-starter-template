@@ -19,7 +19,7 @@
   --gray-dark: 34, 41, 57;
   --page-bg: #F5F7FA;
   --box-shadow:
-    0 6px 18px rgba(30,58,95,0.08), 0 10px 30px rgba(30,58,95,0.04);
+    0 4px 12px rgba(30,58,95,0.1), 0 8px 24px rgba(30,58,95,0.06);
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 @font-face {
@@ -63,12 +63,12 @@ main {
 
 /* card-like container for main content */
  .prose {
-  background: #B6C6D9; /* readable light-grey/blue tone */
-  border-radius: 14px;
-  padding: 2rem;
-  box-shadow: 0 18px 40px rgba(11,27,40,0.12);
-  border: 1px solid rgba(255,255,255,0.04);
-  margin: 1.5rem auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(30,58,95,0.06);
+  margin: 2rem auto;
   max-width: calc(100% - 2rem);
 }
 h1,
@@ -183,10 +183,17 @@ address {
   display: inline-block;
   background: var(--accent);
   color: white;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(230, 57, 70, 0.3);
 }
 
 /* increase touch target size for mobile and ensure consistent spacing */
@@ -200,23 +207,28 @@ address {
 
 /* Hero */
 .hero {
-  padding: 1.5rem 0 2.25rem 0;
-  background: linear-gradient(180deg, rgba(30,58,95,0.03), transparent 60%);
-  border-radius: 12px;
+  padding: 3rem 0;
+  background: linear-gradient(180deg, rgba(30,58,95,0.05), transparent 70%);
+  border-radius: 16px;
+  margin-bottom: 1rem;
 }
 .hero-inner {
   display: grid;
-  gap: 0.5rem;
+  gap: 1.5rem;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.hero-inner p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: rgb(var(--gray-dark));
+  line-height: 1.7;
 }
 .hero-cta {
-  margin-top: 0.5rem;
-}
-
-/* Tighten paragraph spacing inside the hero so the three intro
-   paragraphs feel evenly spaced without extra gaps */
-.hero-inner p {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
 }
 
 /* Services */
@@ -229,15 +241,20 @@ address {
   gap: 1rem;
 }
 .services .services-list li {
-  background: linear-gradient(180deg, #ffffff, rgba(234,241,246,0.6));
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 8px 22px rgba(16,39,56,0.06);
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
   font-weight: 600;
   border: 1px solid rgba(30,58,95,0.06);
+  transition: all 0.3s ease;
+}
+.services .services-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(30,58,95,0.12);
 }
 
 /* Instructor image and layout */
@@ -254,8 +271,7 @@ address {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: var(--box-shadow);
-  border: 1px solid rgba(255,255,255,0.06);
-  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.5));
+  border: 1px solid rgba(30,58,95,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,19 +306,37 @@ address {
 
 /* Contact */
 .contact p {
-  margin: 0.35rem 0;
+  margin: 0.5rem 0;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 .contact p:first-of-type {
-  margin-top: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-weight: normal;
+  color: rgb(var(--gray));
+}
+.contact p a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+}
+.contact p a:hover {
+  opacity: 0.8;
 }
 
 /* Contact form styles */
 .contact-form {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   display: grid;
-  gap: 0.8rem;
+  gap: 1rem;
   align-items: start;
+  background: rgba(30,58,95,0.02);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(30,58,95,0.05);
 }
 .contact-form label {
   display: block;
@@ -330,13 +364,14 @@ address {
 .contact-form textarea,
 .contact-form input[type="checkbox"] {
   width: 100%;
-  padding: 0.65rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid rgba(30,58,95,0.12);
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(30,58,95,0.15);
   font-size: 1rem;
   background: #fff;
   color: rgb(var(--gray-dark));
   font-family: inherit;
+  transition: all 0.3s ease;
 }
 .contact-form input:focus,
 .contact-form select:focus,
@@ -344,7 +379,7 @@ address {
 .contact-form input[type="checkbox"]:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(230,57,70,0.1);
+  box-shadow: 0 0 0 4px rgba(230,57,70,0.08);
 }
 .contact-form textarea {
   resize: vertical;

@@ -5,7 +5,10 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		    <h2><a href="#top">{SITE_TITLE}</a></h2>
+		    <a href="#top" class="brand-link">
+				<img src="/images/logo.jpeg" alt="Martens Driving School" class="brand-logo" />
+				<span class="brand-text">{SITE_TITLE}</span>
+			</a>
 		    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
 				<span class="sr-only">Toggle menu</span>
 				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -68,6 +71,24 @@ import { SITE_TITLE } from '../consts';
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+		color: rgb(var(--black));
+	}
+	.brand-link {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		gap: 0.75rem;
+	}
+	.brand-logo {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		display: block;
+		object-fit: cover;
+	}
+	.brand-text {
+		font-size: 1.6rem;
+		font-weight: 800;
 		color: rgb(var(--black));
 	}
 	.internal-links {
