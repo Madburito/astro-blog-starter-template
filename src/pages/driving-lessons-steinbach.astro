@@ -1,0 +1,60 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Driving Lessons in Steinbach, MB | Martens Driving School';
+const description = 'Professional one-on-one driving lessons in Steinbach with an MPI certified instructor. Build confidence and prepare for your road test.';
+const keywords = 'driving lessons steinbach, driving school steinbach mb, beginner driving lessons steinbach, road test preparation steinbach';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>Driving Lessons in Steinbach</h1>
+					<p>
+						Martens Driving School provides one-on-one driving lessons in Steinbach and surrounding communities.
+					</p>
+					<p>
+						Lessons are tailored to your experience level so you can build safe driving habits, improve confidence,
+						and prepare for your Manitoba road test.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/#contact">Book a Lesson</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>What Is Included</h2>
+				<ul class="services-list">
+					<li>🚘 One-on-One Driving Lessons  $80/hour</li>
+					<li>🚗 Road Test Car Rental  $100</li>
+				</ul>
+				<p>
+					Looking for a driving school in Steinbach that focuses on calm, practical instruction? Martens Driving School helps new and experienced learners improve behind-the-wheel skills in real traffic conditions.
+				</p>
+			</section>
+
+			<section class="faq">
+				<h2>Common Questions</h2>
+				<details>
+					<summary>Do lessons work for beginners?</summary>
+					<p>Yes. Lessons are adapted to your current level, whether you are just starting or refreshing skills.</p>
+				</details>
+				<details>
+					<summary>Can I book road test prep lessons?</summary>
+					<p>Yes. You can book road test preparation and road test car rental.</p>
+				</details>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

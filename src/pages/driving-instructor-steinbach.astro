@@ -1,0 +1,56 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Driving Instructor in Steinbach, MB | Martens Driving School';
+const description = 'Work with an MPI certified driving instructor in Steinbach. One-on-one training focused on safe habits and road test readiness.';
+const keywords = 'driving instructor steinbach, mpi certified instructor steinbach, road test instructor steinbach, driving school steinbach';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>Driving Instructor in Steinbach</h1>
+					<p>
+						Martens Driving School is led by Noemi Martens, an MPI certified driving instructor and certified Manitoba teacher.
+					</p>
+					<p>
+						Instruction is patient, supportive, and practical so students feel prepared for everyday driving and road tests.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/#contact">Book a Lesson</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="instructor">
+				<h2>Why Students Choose This Instructor</h2>
+				<div class="instructor-grid">
+					<figure class="instructor-figure">
+						<img src="/images/instructor.jpg" alt="Noemi Martens, driving instructor in Steinbach" />
+					</figure>
+					<p>
+						With over 25 years of teaching experience, lessons are clear, structured, and adapted to each learner.
+					</p>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Services</h2>
+				<ul class="services-list">
+					<li>🚘 One-on-One Driving Lessons  $80/hour</li>
+					<li>🚗 Road Test Car Rental  $100</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

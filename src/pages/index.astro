@@ -2,13 +2,68 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const HOME_TITLE = 'Driving School in Steinbach, MB | Martens Driving School';
+const HOME_DESCRIPTION = 'MPI certified one-on-one driving lessons, road test prep, and road test car rental in Steinbach and surrounding communities.';
+const HOME_KEYWORDS = 'driving school steinbach, driving instructor steinbach, road test prep steinbach, driving lessons steinbach manitoba';
+const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro.url.origin;
+
+const HOME_STRUCTURED_DATA = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'DrivingSchool',
+		name: 'Martens Driving School',
+		description: HOME_DESCRIPTION,
+		url: `${siteOrigin}/`,
+		telephone: '(204) 371-7417',
+		email: 'Martensdrivingschool@gmail.com',
+		areaServed: ['Steinbach', 'Southeast Manitoba'],
+		image: `${siteOrigin}/images/logo.jpeg`,
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: 'Steinbach',
+			addressRegion: 'MB',
+			addressCountry: 'CA'
+		},
+		serviceType: ['One-on-One Driving Lessons', 'Road Test Preparation', 'Road Test Car Rental']
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: [
+			{
+				'@type': 'Question',
+				name: 'How long is each lesson?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Most lessons are booked in hourly sessions, with options based on your needs and goals.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'Do you provide a vehicle for road tests?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Yes. Road test car rental is available.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'What areas do you serve?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Steinbach and surrounding communities.'
+				}
+			}
+		]
+	}
+];
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={HOME_TITLE} description={HOME_DESCRIPTION} keywords={HOME_KEYWORDS} structuredData={HOME_STRUCTURED_DATA} />
 	</head>
 	<body>
 		<Header />
@@ -70,7 +125,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					<input id="cf-winnipeg" type="hidden" name="submission_date_winnipeg" value="" />
 					
 					<label for="cf-name">Name <span class="required">*</span></label>
-					<input id="cf-name" name="name" type="text" placeholder="Your full name" required />
+					<input id="cf-name" name="name" type="text" placeholder="Your name" required />
 					
 					<label for="cf-email">Email <span class="required">*</span></label>
 					<input id="cf-email" name="email" type="email" placeholder="your@email.com" />

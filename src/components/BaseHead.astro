@@ -7,16 +7,18 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	keywords?: string;
+	structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { title, description, image = '/blog-placeholder-1.jpg', keywords = '', structuredData } = Astro.props;
 
-const ld = {
+const defaultStructuredData = {
 	"@context": "https://schema.org",
-	"@type": "LocalBusiness",
-	name: title,
+	"@type": "DrivingSchool",
+	name: "Martens Driving School",
 	description,
 	url: String(canonicalURL),
 	image: new URL('/images/logo.jpeg', Astro.url).toString(),
@@ -51,8 +53,21 @@ const ld = {
 			opens: "08:00",
 			closes: "21:00"
 		}
+	],
+	serviceType: [
+		"One-on-One Driving Lessons",
+		"Road Test Preparation",
+		"Road Test Car Rental"
+	],
+	hasMap: "https://www.google.com/maps/place/Steinbach,+MB",
+	knowsAbout: [
+		"Driving lessons in Steinbach",
+		"Road test preparation",
+		"Defensive driving"
 	]
 };
+
+const schemaPayload = structuredData ?? defaultStructuredData;
 ---
 
 <!-- Global Metadata -->
@@ -74,9 +89,13 @@ const ld = {
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+{keywords && <meta name="keywords" content={keywords} />}
+<meta name="geo.region" content="CA-MB" />
+<meta name="geo.placename" content="Steinbach" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="en_CA" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
@@ -89,4 +108,4 @@ const ld = {
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<script type="application/ld+json">{JSON.stringify(ld)}</script>
+<script type="application/ld+json">{JSON.stringify(schemaPayload)}</script>
