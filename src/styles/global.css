@@ -575,3 +575,38 @@ hr {
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
 }
+
+/* Submission modal styles */
+.submission-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 120;
+}
+.submission-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.submission-modal__content {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem;
+  max-width: 420px;
+  width: calc(100% - 2rem);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  z-index: 121;
+  text-align: center;
+}
+.submission-modal__content h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary);
+}
+.submission-modal__content p {
+  margin: 0 0 1rem 0;
+}
+.submission-modal[hidden] {
+  display: none;
+}
