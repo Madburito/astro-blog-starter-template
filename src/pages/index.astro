@@ -15,7 +15,7 @@ const HOME_STRUCTURED_DATA = [
 		name: 'Martens Driving School',
 		description: HOME_DESCRIPTION,
 		url: `${siteOrigin}/`,
-		telephone: '(204) 371-7417',
+			telephone: '(204) 371-7417, (204) 380-2912',
 		email: 'Martensdrivingschool@gmail.com',
 		areaServed: ['Steinbach', 'Southeast Manitoba'],
 		image: `${siteOrigin}/images/logo.jpeg`,
@@ -98,14 +98,26 @@ const HOME_STRUCTURED_DATA = [
 			</section>
 
 			<section id="instructor" class="instructor">
-				<h2>Meet Your Instructor</h2>
-				<div class="instructor-grid">
-					<figure class="instructor-figure">
-						<img src="/images/instructor.jpg" alt="Noemi Martens, instructor at Martens Driving School" />
-					</figure>
-					<p>
-						Hi, I’m Noemi Martens, owner and instructor at Martens Driving School.
-						I am an MPI certified driving instructor and a certified Manitoba teacher with over 25 years of classroom teaching experience. Teaching has always been something I truly enjoy, and I love helping students gain confidence both in the classroom and behind the wheel.			</p>
+				<h2>Meet Your Instructors</h2>
+				<div class="instructor-list">
+					<div class="instructor-card">
+						<figure class="instructor-figure">
+							<img src="/images/instructor.jpg" alt="Noemi Martens, instructor at Martens Driving School" />
+						</figure>
+						<p>
+							Hi, I’m Noemi Martens, owner and instructor at Martens Driving School.
+							I am an MPI certified driving instructor and a certified Manitoba teacher with over 25 years of classroom teaching experience. Teaching has always been something I truly enjoy, and I love helping students gain confidence both in the classroom and behind the wheel.
+						</p>
+					</div>
+
+					<div class="instructor-card">
+						<figure class="instructor-figure">
+							<img src="/images/instructor-carlos.jpg" alt="Carlos Martens, instructor at Martens Driving School" />
+						</figure>
+						<p>
+							Hi, I’m Carlos Martens. I’m a newer instructor here — I focus on clear, hands-on lessons that teach real-world driving skills. I help students prepare for their road test and build confidence behind the wheel.
+						</p>
+					</div>
 				</div>
 			</section>
 
@@ -116,7 +128,7 @@ const HOME_STRUCTURED_DATA = [
 					If you would like to schedule a lesson or have any questions, feel free to reach out.
 				</p>
 				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
-				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a></p>
+				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a> / <a href="sms:+12043802912">(204) 380-2912</a></p>
 				<!-- Contact form for lesson bookings -->
 				<form class="contact-form" action="https://formsubmit.co/Martensdrivingschool@gmail.com" method="POST">
 					<input type="hidden" name="_subject" value="New lesson booking from Martens Driving School site" />

@@ -283,6 +283,23 @@ address {
   display: block;
 }
 
+/* Multiple instructors support */
+.instructor-list {
+  display: grid;
+  gap: 1rem;
+}
+.instructor-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(30,58,95,0.06);
+  box-shadow: var(--box-shadow);
+}
+
 @media (max-width: 720px) {
   .instructor-grid { grid-template-columns: 1fr; }
   .instructor-figure { width: 100%; height: 260px; border-radius: 10px; }
