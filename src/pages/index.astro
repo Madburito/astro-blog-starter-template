@@ -17,7 +17,18 @@ const HOME_STRUCTURED_DATA = [
 		url: `${siteOrigin}/`,
 			telephone: '(204) 371-7417, (204) 380-2912',
 		email: 'Martensdrivingschool@gmail.com',
-		areaServed: ['Steinbach', 'Southeast Manitoba'],
+		areaServed: [
+			{ '@type': 'City', name: 'Steinbach' },
+			{ '@type': 'City', name: 'Blumenort' },
+			{ '@type': 'City', name: 'Mitchell' },
+			{ '@type': 'City', name: 'La Broquerie' },
+			{ '@type': 'City', name: 'New Bothwell' },
+			{ '@type': 'City', name: 'Landmark' },
+			{ '@type': 'City', name: 'Grunthal' },
+			{ '@type': 'City', name: 'Niverville' },
+			{ '@type': 'City', name: 'Kleefeld' },
+			{ '@type': 'Region', name: 'Southeastern Manitoba' }
+		],
 		image: `${siteOrigin}/images/logo.jpeg`,
 		address: {
 			'@type': 'PostalAddress',
@@ -25,7 +36,7 @@ const HOME_STRUCTURED_DATA = [
 			addressRegion: 'MB',
 			addressCountry: 'CA'
 		},
-		serviceType: ['One-on-One Driving Lessons', 'Road Test Preparation', 'Road Test Car Rental']
+		serviceType: ['One-on-One Driving Lessons', 'Road Test Preparation', 'Road Test Car Rental', 'Adult Driving Lessons', 'Highway Driving Lessons', 'Winter Driving Lessons']
 	},
 	{
 		'@context': 'https://schema.org',
@@ -33,10 +44,18 @@ const HOME_STRUCTURED_DATA = [
 		mainEntity: [
 			{
 				'@type': 'Question',
+				name: 'How much do driving lessons cost?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Driving lessons are $70 per hour. We offer flexible scheduling to fit your budget and availability.'
+				}
+			},
+			{
+				'@type': 'Question',
 				name: 'How long is each lesson?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: 'Most lessons are booked in hourly sessions, with options based on your needs and goals.'
+					text: 'Most lessons are booked in hourly sessions, with options based on your needs and goals. We also offer packages for multiple lessons.'
 				}
 			},
 			{
@@ -44,7 +63,7 @@ const HOME_STRUCTURED_DATA = [
 				name: 'Do you provide a vehicle for road tests?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: 'Yes. Road test car rental is available.'
+					text: 'Yes. Road test car rental is available for $100.'
 				}
 			},
 			{
@@ -52,7 +71,39 @@ const HOME_STRUCTURED_DATA = [
 				name: 'What areas do you serve?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: 'Steinbach and surrounding communities.'
+					text: 'We serve Steinbach and surrounding communities including Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and throughout Southeastern Manitoba.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'Can you help if I\'m nervous about driving?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Absolutely. Many of our students start out nervous. We provide patient, judgment-free instruction that builds confidence gradually. We specialize in working with anxious learners.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'Do you teach adult learners?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Yes. We offer specialized adult driving lessons with no age limit. Adults bring maturity and focus that often helps them progress quickly.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'What are your hours?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'We\'re available 8am to 9pm, seven days a week. We schedule lessons around your availability.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'How do I book a lesson?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Fill out the contact form above, email us at Martensdrivingschool@gmail.com, or text/call (204) 371-7417 or (204) 380-2912.'
 				}
 			}
 		]
@@ -89,7 +140,7 @@ const HOME_STRUCTURED_DATA = [
 			<section id="services" class="services">
 				<h2>Driving Lessons and Services</h2>
 				<ul class="services-list">
-					<li>🚘 One-on-One Driving Lessons  $80/hour</li>
+				<li>🚘 One-on-One Driving Lessons  $70/hour</li>
 					<li>🚗 Road Test Car Rental  $100</li>
 				</ul>
 				<p>
@@ -184,7 +235,19 @@ const HOME_STRUCTURED_DATA = [
 
 			<section id="service-area" class="service-area">
 				<h2>Service Area</h2>
-				<p>We proudly serve Steinbach and surrounding communities.</p>
+				<p>We proudly serve Steinbach and the following surrounding communities:</p>
+				<ul style="column-count: 2; gap: 2rem;">
+					<li>Steinbach</li>
+					<li>Blumenort</li>
+					<li>Mitchell</li>
+					<li>La Broquerie</li>
+					<li>New Bothwell</li>
+					<li>Landmark</li>
+					<li>Grunthal</li>
+					<li>Niverville</li>
+					<li>Kleefeld</li>
+					<li>Southeastern Manitoba</li>
+				</ul>
 				<div class="map-container">
 					<iframe
 						width="600"
@@ -201,16 +264,36 @@ const HOME_STRUCTURED_DATA = [
 			<section class="faq" id="faq">
 				<h2>Frequently Asked Questions</h2>
 				<details>
+					<summary>How much do driving lessons cost?</summary>
+					<p>Driving lessons are $70 per hour. We offer flexible scheduling to fit your budget and availability.</p>
+				</details>
+				<details>
 					<summary>How long is each lesson?</summary>
-					<p>Most lessons are booked in hourly sessions, with options based on your needs and goals.</p>
+					<p>Most lessons are booked in hourly sessions, with options based on your needs and goals. We also offer packages for multiple lessons.</p>
 				</details>
 				<details>
 					<summary>Do you provide a vehicle for road tests?</summary>
-					<p>Yes. Road test car rental is available.</p>
+					<p>Yes. Road test car rental is available for $100.</p>
 				</details>
 				<details>
 					<summary>What areas do you serve?</summary>
-					<p>Steinbach and surrounding communities.</p>
+					<p>We serve Steinbach and surrounding communities including Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and throughout Southeastern Manitoba.</p>
+				</details>
+				<details>
+					<summary>Can you help if I'm nervous about driving?</summary>
+					<p>Absolutely. Many of our students start out nervous. We provide patient, judgment-free instruction that builds confidence gradually. We specialize in working with anxious learners.</p>
+				</details>
+				<details>
+					<summary>Do you teach adult learners?</summary>
+					<p>Yes. We offer specialized adult driving lessons with no age limit. Adults bring maturity and focus that often helps them progress quickly.</p>
+				</details>
+				<details>
+					<summary>What are your hours?</summary>
+					<p>We're available 8am to 9pm, seven days a week. We schedule lessons around your availability.</p>
+				</details>
+				<details>
+					<summary>How do I book a lesson?</summary>
+					<p>Fill out the contact form above, email us at Martensdrivingschool@gmail.com, or text/call (204) 371-7417 or (204) 380-2912.</p>
 				</details>
 			</section>
 

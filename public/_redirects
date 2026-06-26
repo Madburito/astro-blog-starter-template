@@ -1,0 +1,19 @@
+# Cloudflare redirects for Martens Driving School
+# Redirect common misspellings and variations
+
+# Redirect with trailing slash (for consistency)
+/private-driving-lessons /private-driving-lessons/ 301
+/adult-driving-lessons /adult-driving-lessons/ 301
+/highway-driving-lessons /highway-driving-lessons/ 301
+/winter-driving-lessons /winter-driving-lessons/ 301
+/road-test-preparation /road-test-preparation/ 301
+/nervous-drivers /nervous-drivers/ 301
+/driving-instructor-steinbach /driving-instructor-steinbach/ 301
+/driving-lessons-steinbach /driving-lessons-steinbach/ 301
+
+# Redirect old or alternative URLs if they existed
+/instructor /driving-instructor-steinbach/ 301
+/instructors /driving-instructor-steinbach/ 301
+/lessons /private-driving-lessons/ 301
+/road-test /road-test-preparation/ 301
+/nervous /nervous-drivers/ 301

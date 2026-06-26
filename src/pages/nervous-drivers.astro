@@ -1,0 +1,163 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Driving Lessons for Nervous Drivers in Steinbach, MB';
+const description = 'Feel anxious about driving? Our patient, experienced instructors specialize in helping nervous drivers build confidence. Judgment-free lessons in Steinbach and nearby communities.';
+const keywords = 'nervous driver lessons, anxious driver lessons steinbach, driving anxiety, driving confidence';
+const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro.url.origin;
+
+const STRUCTURED_DATA = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: `${siteOrigin}/`
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Nervous Drivers',
+				item: `${siteOrigin}/nervous-drivers/`
+			}
+		]
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		name: 'Driving Lessons for Nervous Drivers',
+		provider: {
+			'@type': 'LocalBusiness',
+			name: 'Martens Driving School',
+			telephone: '(204) 371-7417'
+		},
+		description: 'Compassionate, patient driving instruction for nervous and anxious drivers. Build confidence with experienced instructors in Steinbach and surrounding communities.'
+	}
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} structuredData={STRUCTURED_DATA} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>Driving Lessons for Nervous Drivers</h1>
+					<p>
+						If you feel anxious or nervous about driving, you're not alone. Our patient, experienced instructors at Martens Driving School in Steinbach specialize in helping nervous drivers build confidence at a comfortable pace.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/#contact">Start Building Confidence</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Why Choose Us for Nervous Driver Lessons?</h2>
+				<ul class="services-list">
+					<li>✓ Patient, understanding instructors</li>
+					<li>✓ No judgment—we understand your concerns</li>
+					<li>✓ Lessons at your pace and comfort level</li>
+					<li>✓ Safe, dual-control vehicles</li>
+					<li>✓ Years of experience with nervous drivers</li>
+				</ul>
+				<p>
+					Driving anxiety is real, and it's manageable. Our instructors are trained to work with nervous drivers and have helped many people overcome their driving fears in Steinbach, Blumenort, Mitchell, and southeastern Manitoba.
+				</p>
+			</section>
+
+			<section class="services">
+				<h2>How We Help Nervous Drivers Build Confidence</h2>
+				<p>
+					Our approach focuses on building your confidence gradually:
+				</p>
+				<ul>
+					<li><strong>Start slow:</strong> We begin in quiet, low-traffic areas where you feel comfortable</li>
+					<li><strong>Progress gradually:</strong> As your confidence grows, we introduce slightly busier roads</li>
+					<li><strong>Personalized pace:</strong> There's no rushing. We move forward only when you're ready</li>
+					<li><strong>Positive reinforcement:</strong> We focus on what you're doing right to build confidence</li>
+					<li><strong>Problem-solving:</strong> Together, we identify specific concerns and address them directly</li>
+					<li><strong>Relaxation techniques:</strong> We share strategies to manage driving anxiety</li>
+				</ul>
+			</section>
+
+			<section class="services">
+				<h2>Common Concerns We Help With</h2>
+				<ul>
+					<li>Fear of traffic and other drivers</li>
+					<li>Anxiety about intersections or highways</li>
+					<li>Nervousness about parking</li>
+					<li>Worry about making mistakes</li>
+					<li>Panic about being on unfamiliar roads</li>
+					<li>Fear of driving at night</li>
+					<li>Anxiety after a driving incident</li>
+				</ul>
+				<p>
+					Whatever your specific worry, our experienced instructors have worked with drivers facing similar concerns. We know that driving anxiety is valid, and we're here to help.
+				</p>
+			</section>
+
+			<section class="services">
+				<h2>Serving Nervous Drivers Across Southeast Manitoba</h2>
+				<p>
+					We provide compassionate driving instruction for nervous drivers in Steinbach, Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and surrounding areas.
+				</p>
+			</section>
+
+			<section class="faq">
+				<h2>FAQ for Nervous Drivers</h2>
+				<details>
+					<summary>Is it normal to feel nervous about driving?</summary>
+					<p>Absolutely. Many people experience driving anxiety. It's a very common concern, and with the right instruction and practice, most people overcome it.</p>
+				</details>
+				<details>
+					<summary>How will you help me with my driving anxiety?</summary>
+					<p>We start by understanding your specific concerns. Then, we create a lesson plan that gradually builds your confidence in a safe, supportive environment. We move at your pace—never faster than you're comfortable with.</p>
+				</details>
+				<details>
+					<summary>What if I have a panic attack while driving?</summary>
+					<p>We know how to handle this. Your instructor will safely pull over and help you calm down. We'll practice grounding techniques and take breaks as needed. Your safety and comfort are our priorities.</p>
+				</details>
+				<details>
+					<summary>Can you teach me to drive despite my severe anxiety?</summary>
+					<p>In many cases, yes. Our patient, experienced approach has helped many people with significant driving anxiety. We recommend starting with one lesson to see how you feel working with us.</p>
+				</details>
+				<details>
+					<summary>How long before I feel confident driving?</summary>
+					<p>This varies from person to person. Some see confidence improvements in a few lessons, while others take more time. The key is consistent practice with an understanding instructor.</p>
+				</details>
+				<details>
+					<summary>What's the cost of nervous driver lessons?</summary>
+					<p>Lessons for nervous drivers are $70 per hour, just like all our private driving lessons. Most benefit from ongoing weekly or bi-weekly sessions as they build confidence.</p>
+				</details>
+			</section>
+
+			<section id="contact" class="contact">
+				<h2>Take the First Step</h2>
+				<p>
+					If you're ready to overcome your driving anxiety, contact Martens Driving School in Steinbach. Let's work together to build your confidence behind the wheel.
+				</p>
+				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
+				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a> / <a href="sms:+12043802912">(204) 380-2912</a></p>
+			</section>
+
+			<nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+				<p>
+					<a href="/">← Back to Home</a> | 
+					<a href="/private-driving-lessons/">Private Lessons</a> | 
+					<a href="/#contact">Contact Us</a>
+				</p>
+			</nav>
+		</main>
+		<Footer />
+	</body>
+</html>

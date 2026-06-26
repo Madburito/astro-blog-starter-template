@@ -26,8 +26,47 @@ const defaultStructuredData = {
 	email: "Martensdrivingschool@gmail.com",
 	priceRange: "$$",
 	areaServed: [
-		"Steinbach",
-		"Southeast Manitoba"
+		{
+			"@type": "City",
+			"name": "Steinbach",
+			"@id": "https://en.wikipedia.org/wiki/Steinbach,_Manitoba"
+		},
+		{
+			"@type": "City",
+			"name": "Blumenort"
+		},
+		{
+			"@type": "City",
+			"name": "Mitchell"
+		},
+		{
+			"@type": "City",
+			"name": "La Broquerie"
+		},
+		{
+			"@type": "City",
+			"name": "New Bothwell"
+		},
+		{
+			"@type": "City",
+			"name": "Landmark"
+		},
+		{
+			"@type": "City",
+			"name": "Grunthal"
+		},
+		{
+			"@type": "City",
+			"name": "Niverville"
+		},
+		{
+			"@type": "City",
+			"name": "Kleefeld"
+		},
+		{
+			"@type": "Region",
+			"name": "Southeastern Manitoba"
+		}
 	],
 	address: {
 		"@type": "PostalAddress",
@@ -57,14 +96,32 @@ const defaultStructuredData = {
 	serviceType: [
 		"One-on-One Driving Lessons",
 		"Road Test Preparation",
-		"Road Test Car Rental"
+		"Road Test Car Rental",
+		"Adult Driving Lessons",
+		"Highway Driving Lessons",
+		"Winter Driving Lessons",
+		"Nervous Driver Instruction"
 	],
 	hasMap: "https://www.google.com/maps/place/Steinbach,+MB",
 	knowsAbout: [
 		"Driving lessons in Steinbach",
 		"Road test preparation",
-		"Defensive driving"
-	]
+		"Defensive driving",
+		"Winter driving safety",
+		"Highway driving",
+		"Adult driver training"
+	],
+	potentialAction: {
+		"@type": "ReserveAction",
+		target: {
+			"@type": "EntryPoint",
+			urlTemplate: "https://martensdrivingschool.ca/#contact",
+			actionPlatform: [
+				"http://schema.org/DesktopWebPlatform",
+				"http://schema.org/MobileWebPlatform"
+			]
+		}
+	}
 };
 
 const schemaPayload = structuredData ?? defaultStructuredData;

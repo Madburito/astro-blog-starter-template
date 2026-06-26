@@ -1,0 +1,147 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Winter Driving Lessons in Steinbach, MB | Safe Cold-Weather Driving';
+const description = 'Master winter driving with specialized lessons in Steinbach. Learn snow, ice, and cold-weather driving skills from certified instructors. Prepare for Manitoba winters.';
+const keywords = 'winter driving lessons, snow driving lessons, ice driving lessons, winter driving skills, cold weather driving';
+const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro.url.origin;
+
+const STRUCTURED_DATA = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: `${siteOrigin}/`
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Winter Driving Lessons',
+				item: `${siteOrigin}/winter-driving-lessons/`
+			}
+		]
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		name: 'Winter Driving Lessons',
+		provider: {
+			'@type': 'LocalBusiness',
+			name: 'Martens Driving School',
+			telephone: '(204) 371-7417'
+		},
+		description: 'Winter driving instruction specializing in snow, ice, and cold-weather techniques. Learn to drive safely in Manitoba winters with professional instructors in Steinbach.'
+	}
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} structuredData={STRUCTURED_DATA} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>Winter Driving Lessons in Steinbach</h1>
+					<p>
+						Manitoba winters are no joke. Learn to drive safely on snow and ice with our specialized winter driving lessons. Our instructors teach you the techniques that keep you safe during Steinbach's long, cold winters.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/#contact">Book Your Winter Lesson</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Winter Driving Skills You'll Learn</h2>
+				<ul class="services-list">
+					<li>✓ Proper steering and acceleration on snow/ice</li>
+					<li>✓ Braking safely without locking wheels</li>
+					<li>✓ How to recover from skids and slides</li>
+					<li>✓ Traction control and tire selection</li>
+					<li>✓ Visibility management in snow</li>
+					<li>✓ Safe winter highway driving</li>
+				</ul>
+				<p>
+					Winter driving requires different techniques than summer driving. We teach hands-on skills in actual winter conditions, focusing on techniques that prevent accidents when roads are snow-covered or icy.
+				</p>
+			</section>
+
+			<section class="services">
+				<h2>Why Winter Driving Lessons Save Lives</h2>
+				<p>
+					Winter is when most driving accidents happen. Proper technique, understanding your vehicle's behavior on slippery surfaces, and knowing how to respond to skids can be the difference between a safe commute and a serious accident. Our instruction focuses on the specific challenges of Steinbach and southeastern Manitoba winters.
+				</p>
+				<ul>
+					<li><strong>Hands-on practice:</strong> We teach in actual winter conditions, not theory</li>
+					<li><strong>Vehicle control:</strong> Understand how your car behaves on snow and ice</li>
+					<li><strong>Emergency response:</strong> Know what to do if you start to skid</li>
+					<li><strong>Confidence:</strong> Drive safely through winter storms and ice</li>
+					<li><strong>Prevention-focused:</strong> Learn techniques that avoid accidents entirely</li>
+				</ul>
+			</section>
+
+			<section class="services">
+				<h2>Winter Lessons Available October Through April</h2>
+				<p>
+					We schedule winter driving lessons during Manitoba's snow and ice season. Lessons in Steinbach, Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and throughout southeastern Manitoba are available when winter conditions exist.
+				</p>
+			</section>
+
+			<section class="faq">
+				<h2>Winter Driving Lessons FAQ</h2>
+				<details>
+					<summary>When should I take winter driving lessons?</summary>
+					<p>The best time is before your first winter after getting your license, or before you encounter your first snow-driving situation. We offer lessons October through April.</p>
+				</details>
+				<details>
+					<summary>What if there's no snow?</summary>
+					<p>We schedule lessons during winter months when actual snow or icy conditions are present. This ensures you learn with real winter driving challenges, not hypothetical ones.</p>
+				</details>
+				<details>
+					<summary>How many winter driving lessons do I need?</summary>
+					<p>Most new drivers benefit from 2-3 lessons focusing specifically on winter techniques. Experienced drivers wanting a refresher might take 1 lesson. We'll assess your needs.</p>
+				</details>
+				<details>
+					<summary>Will I learn what to do if I start to skid?</summary>
+					<p>Yes, skid recovery is a core part of winter driving instruction. We teach proper steering and throttle techniques to regain control safely.</p>
+				</details>
+				<details>
+					<summary>Do I need special tires for winter driving?</summary>
+					<p>Winter tires (snow tires) are highly recommended and in some cases required by law in Manitoba. We can discuss tire selection as part of your lessons.</p>
+				</details>
+				<details>
+					<summary>How much are winter driving lessons?</summary>
+					<p>Winter driving lessons are $70 per hour. Package deals available for multiple lessons.</p>
+				</details>
+			</section>
+
+			<section id="contact" class="contact">
+				<h2>Book Winter Driving Lessons Now</h2>
+				<p>
+					Don't let winter catch you unprepared. Contact Martens Driving School in Steinbach and master safe winter driving techniques before the snow flies.
+				</p>
+				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
+				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a> / <a href="sms:+12043802912">(204) 380-2912</a></p>
+			</section>
+
+			<nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+				<p>
+					<a href="/">← Back to Home</a> | 
+					<a href="/private-driving-lessons/">Private Lessons</a> | 
+					<a href="/#contact">Contact Us</a>
+				</p>
+			</nav>
+		</main>
+		<Footer />
+	</body>
+</html>

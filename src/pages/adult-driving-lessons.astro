@@ -1,0 +1,146 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Adult Driving Lessons in Steinbach, MB | Learn at Your Pace';
+const description = 'Never learned to drive? Want to brush up? Martens Driving School offers adult driving lessons in Steinbach. No age limit. Learn at your pace with experienced instructors.';
+const keywords = 'adult driving lessons, learn to drive as adult, driving lessons for adults, brush up driving lessons';
+const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro.url.origin;
+
+const STRUCTURED_DATA = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: `${siteOrigin}/`
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Adult Driving Lessons',
+				item: `${siteOrigin}/adult-driving-lessons/`
+			}
+		]
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		name: 'Adult Driving Lessons',
+		provider: {
+			'@type': 'LocalBusiness',
+			name: 'Martens Driving School',
+			telephone: '(204) 371-7417'
+		},
+		description: 'Professional driving lessons for adults at any age and experience level. Learn to drive or brush up your skills with patient instructors in Steinbach and nearby communities.'
+	}
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} structuredData={STRUCTURED_DATA} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>Adult Driving Lessons in Steinbach</h1>
+					<p>
+						Never learned to drive as a teenager? Want to brush up on your skills? It's never too late. Martens Driving School in Steinbach offers professional adult driving lessons—no judgment, just patient, experienced instruction.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/#contact">Book Your Adult Lesson</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Driving Lessons for Adults</h2>
+				<ul class="services-list">
+					<li>✓ No age limit—we teach adults of all ages</li>
+					<li>✓ Beginner-friendly instruction</li>
+					<li>✓ Judgment-free, patient teaching</li>
+					<li>✓ Flexible scheduling around your work and life</li>
+					<li>✓ One-on-one attention</li>
+				</ul>
+				<p>
+					If you're an adult who never learned to drive, or you haven't driven in years and need to refresh your skills, we're here to help. Our experienced instructors understand that adult learners have unique needs and schedules. We work at your pace, in your timeframe.
+				</p>
+			</section>
+
+			<section class="services">
+				<h2>Why Adults Choose Martens Driving School</h2>
+				<p>
+					As an adult learner, you bring maturity, determination, and real motivation to driving lessons. We recognize that adults often learn differently than teenagers. Our approach respects your experience and focuses on building your confidence and competence.
+				</p>
+				<ul>
+					<li><strong>Respectful instruction:</strong> We teach adults as the intelligent, capable learners you are</li>
+					<li><strong>Flexible scheduling:</strong> Book lessons that fit your work and personal schedule</li>
+					<li><strong>Real-world focus:</strong> We emphasize practical, everyday driving skills</li>
+					<li><strong>Patient pace:</strong> No rushing. Learn at the speed that's right for you</li>
+					<li><strong>Experienced instructors:</strong> Our instructors have worked with many adult learners</li>
+				</ul>
+			</section>
+
+			<section class="services">
+				<h2>Adult Driving Lessons in Steinbach and Surrounding Areas</h2>
+				<p>
+					We serve adult learners in Steinbach, Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and throughout southeastern Manitoba.
+				</p>
+			</section>
+
+			<section class="faq">
+				<h2>Adult Driving Lessons FAQ</h2>
+				<details>
+					<summary>Is it too late to learn to drive as an adult?</summary>
+					<p>Absolutely not! Many adults learn to drive successfully. You bring maturity and focus that often helps adult learners progress quickly.</p>
+				</details>
+				<details>
+					<summary>How many lessons does an adult typically need?</summary>
+					<p>This varies based on your experience and goals. Complete beginners typically need 10-15 hours, while those brushing up might need 3-5 hours. We'll assess your needs and create a plan.</p>
+				</details>
+				<details>
+					<summary>Do you offer evening and weekend lessons?</summary>
+					<p>Yes, we have flexible scheduling specifically to accommodate working adults. Book lessons that fit your schedule.</p>
+				</details>
+				<details>
+					<summary>What if I haven't driven in a long time?</summary>
+					<p>That's common, and we can help. We'll refresh your skills gradually, building confidence before moving to busier roads or more complex situations.</p>
+				</details>
+				<details>
+					<summary>Can you help me pass my MPI test as an adult?</summary>
+					<p>Yes, we offer specialized MPI road test preparation for adult learners. We focus on exactly what the test requires.</p>
+				</details>
+				<details>
+					<summary>How much are adult driving lessons?</summary>
+					<p>Adult driving lessons are $70 per hour. We offer flexible packages based on your needs.</p>
+				</details>
+			</section>
+
+			<section id="contact" class="contact">
+				<h2>Start Your Adult Driving Lessons Today</h2>
+				<p>
+					Ready to learn to drive or refresh your skills? Contact Martens Driving School in Steinbach. It's never too late.
+				</p>
+				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
+				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a> / <a href="sms:+12043802912">(204) 380-2912</a></p>
+			</section>
+
+			<nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+				<p>
+					<a href="/">← Back to Home</a> | 
+					<a href="/private-driving-lessons/">Private Lessons</a> | 
+					<a href="/#contact">Contact Us</a>
+				</p>
+			</nav>
+		</main>
+		<Footer />
+	</body>
+</html>

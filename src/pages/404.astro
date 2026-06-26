@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Page Not Found | Martens Driving School';
+const description = 'The page you\'re looking for couldn\'t be found. Return to Martens Driving School in Steinbach for driving lessons and road test prep.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>Page Not Found</h1>
+					<p>Sorry, we couldn't find the page you're looking for.</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/">Back to Home</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Looking for Driving Lessons?</h2>
+				<p>Try one of these popular pages:</p>
+				<ul>
+					<li><a href="/private-driving-lessons/">Private Driving Lessons</a></li>
+					<li><a href="/adult-driving-lessons/">Adult Driving Lessons</a></li>
+					<li><a href="/highway-driving-lessons/">Highway Driving Lessons</a></li>
+					<li><a href="/winter-driving-lessons/">Winter Driving Lessons</a></li>
+					<li><a href="/road-test-preparation/">Road Test Preparation</a></li>
+					<li><a href="/nervous-drivers/">Driving for Nervous Drivers</a></li>
+					<li><a href="/#contact">Contact Us</a></li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,198 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'MPI Road Test Preparation in Steinbach | Martens Driving School';
+const description = 'Prepare for your Manitoba MPI road test with expert instruction. Intensive road test prep lessons in Steinbach and surrounding communities. Pass your test with confidence.';
+const keywords = 'mpi road test preparation, road test lessons steinbach, mpi road test prep mb, driving test practice';
+const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro.url.origin;
+
+const STRUCTURED_DATA = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: `${siteOrigin}/`
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Road Test Preparation',
+				item: `${siteOrigin}/road-test-preparation/`
+			}
+		]
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		name: 'MPI Road Test Preparation',
+		provider: {
+			'@type': 'LocalBusiness',
+			name: 'Martens Driving School',
+			telephone: '(204) 371-7417'
+		},
+		areaServed: [
+			{ '@type': 'City', name: 'Steinbach' },
+			{ '@type': 'City', name: 'Blumenort' },
+			{ '@type': 'City', name: 'Mitchell' }
+		],
+		description: 'Specialized MPI road test preparation with experienced instructors. Learn exactly what MPI examiners look for.',
+		offers: {
+			'@type': 'Offer',
+			priceCurrency: 'CAD',
+			price: '70',
+			priceValidUntil: '2025-12-31'
+		}
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: [
+			{
+				'@type': 'Question',
+				name: 'What does MPI road test preparation include?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Our MPI road test prep focuses on the exact maneuvers and skills tested by MPI examiners. We cover parking techniques, lane changes, turns, intersections, defensive driving, and everything you need for a successful test.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'How many road test prep lessons do I need?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Most learners benefit from 3-5 intensive prep lessons before their MPI road test. We assess your readiness and create a focused plan.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'Can you help if I failed my MPI test?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Absolutely. We provide targeted lessons to address the specific areas where you struggled. Many students pass on their second attempt after working with us.'
+				}
+			}
+		]
+	}
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} structuredData={STRUCTURED_DATA} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>MPI Road Test Preparation in Steinbach</h1>
+					<p>
+						Pass your Manitoba MPI road test with confidence. Our specialized road test preparation lessons teach you exactly what MPI examiners are looking for, with intensive practice in real test conditions.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/#contact">Book Road Test Prep</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Expert MPI Road Test Preparation</h2>
+				<p>
+					Preparing for your MPI road test? Our specialized road test preparation program focuses on the exact skills and maneuvers tested by MPI examiners. We've helped countless students pass their road tests—in Steinbach, Blumenort, Mitchell, and across southeastern Manitoba.
+				</p>
+				<ul class="services-list">
+					<li>✓ MPI test-focused instruction</li>
+					<li>✓ Experienced instructors who know the test</li>
+					<li>✓ Practice in real test conditions</li>
+					<li>✓ Focused on your weak areas</li>
+					<li>✓ Intensive prep available</li>
+				</ul>
+			</section>
+
+			<section class="services">
+				<h2>What We Cover in Road Test Prep</h2>
+				<p>
+					Our MPI road test preparation program covers all tested skills:
+				</p>
+				<ul>
+					<li><strong>Parking:</strong> Forward/reverse parking, parallel parking</li>
+					<li><strong>Turns:</strong> Proper signaling, mirror checks, smooth steering</li>
+					<li><strong>Lane changes:</strong> Safe techniques with proper mirror and head checks</li>
+					<li><strong>Intersections:</strong> Stopping distance, safety scanning, right-of-way</li>
+					<li><strong>Speed control:</strong> Maintaining appropriate speeds in various conditions</li>
+					<li><strong>Defensive driving:</strong> Anticipating hazards and reacting safely</li>
+					<li><strong>Traffic awareness:</strong> Staying alert to other vehicles and pedestrians</li>
+					<li><strong>Vehicle control:</strong> Smooth acceleration, braking, and steering</li>
+					<li><strong>Test route knowledge:</strong> Familiarity with the actual test route (when possible)</li>
+				</ul>
+			</section>
+
+			<section class="services">
+				<h2>Road Test Car Rental</h2>
+				<p>
+					Don't have a suitable vehicle for your MPI road test? We offer road test car rental for $100. Our vehicles are fully equipped with dual controls and comfortable for testing.
+				</p>
+			</section>
+
+			<section class="services">
+				<h2>For Every Skill Level</h2>
+				<p>
+					Whether you're a beginner getting ready for your first MPI road test or you failed your test and need to improve, our instructors in Steinbach and surrounding communities can help. We serve Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and all of southeastern Manitoba.
+				</p>
+			</section>
+
+			<section class="faq">
+				<h2>Road Test Preparation FAQ</h2>
+				<details>
+					<summary>What should I know before booking road test prep?</summary>
+					<p>You should have a valid learner's permit and some basic driving experience. We'll assess your skill level during your first lesson and create a prep plan focused on your needs.</p>
+				</details>
+				<details>
+					<summary>How much does MPI road test prep cost?</summary>
+					<p>Road test preparation lessons are $70 per hour. Most students book 3-5 intensive prep hours. Road test car rental is available for $100.</p>
+				</details>
+				<details>
+					<summary>Can I do a practice test route with you?</summary>
+					<p>Yes! Familiarity with the test route builds confidence. We can practice on the actual routes used by MPI when possible.</p>
+				</details>
+				<details>
+					<summary>What if I fail my MPI test after prep with you?</summary>
+					<p>We offer follow-up lessons to address areas where you struggled. You'll practice the specific maneuvers that gave you trouble, improving your chances on your next attempt.</p>
+				</details>
+				<details>
+					<summary>Do you offer evening or weekend road test prep?</summary>
+					<p>Yes, we have flexible scheduling including evenings and weekends. Contact us to arrange a prep schedule that works for you.</p>
+				</details>
+				<details>
+					<summary>Can I rent a vehicle just for my MPI test?</summary>
+					<p>Yes, we offer road test vehicle rental for $100. This ensures you have a comfortable, well-maintained vehicle for your MPI examination.</p>
+				</details>
+			</section>
+
+			<section id="contact" class="contact">
+				<h2>Start Your Road Test Preparation Today</h2>
+				<p>
+					Ready to pass your MPI road test? Contact Martens Driving School in Steinbach for expert road test preparation.
+				</p>
+				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
+				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a> / <a href="sms:+12043802912">(204) 380-2912</a></p>
+			</section>
+
+			<nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+				<p>
+					<a href="/">← Back to Home</a> | 
+					<a href="/private-driving-lessons/">Private Lessons</a> | 
+					<a href="/#contact">Book Now</a>
+				</p>
+			</nav>
+		</main>
+		<Footer />
+	</body>
+</html>

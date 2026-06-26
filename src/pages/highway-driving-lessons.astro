@@ -1,0 +1,147 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Highway Driving Lessons in Steinbach, MB | Beginner to Confident';
+const description = 'Nervous about highway driving? Our instructors teach highway skills for beginners and experienced drivers. Learn merging, lane changes, and high-speed driving safely in Steinbach.';
+const keywords = 'highway driving lessons, beginner highway driving, highway driving skills, freeway driving lessons';
+const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro.url.origin;
+
+const STRUCTURED_DATA = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: `${siteOrigin}/`
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Highway Driving Lessons',
+				item: `${siteOrigin}/highway-driving-lessons/`
+			}
+		]
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		name: 'Highway Driving Lessons',
+		provider: {
+			'@type': 'LocalBusiness',
+			name: 'Martens Driving School',
+			telephone: '(204) 371-7417'
+		},
+		description: 'Specialized highway driving instruction in Steinbach and southeastern Manitoba. Learn to merge, change lanes, and drive confidently at highway speeds.'
+	}
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} structuredData={STRUCTURED_DATA} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>Highway Driving Lessons in Steinbach</h1>
+					<p>
+						Anxious about merging? Uncomfortable with lane changes on the highway? You're not alone. Our specialized highway driving lessons build your confidence and skill so you can drive safely at speed.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/#contact">Book Your Highway Lesson</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Highway Driving Skills We Teach</h2>
+				<ul class="services-list">
+					<li>✓ Safe merging techniques</li>
+					<li>✓ Smooth lane changes at speed</li>
+					<li>✓ Navigating busy highway traffic</li>
+					<li>✓ Proper passing procedures</li>
+					<li>✓ Safe exit techniques</li>
+					<li>✓ Confidence building for highway driving</li>
+				</ul>
+				<p>
+					Highway driving is intimidating if you haven't done it much or at all. Our instructors specialize in building this critical skill progressively, starting at manageable speeds and distances, then gradually increasing complexity.
+				</p>
+			</section>
+
+			<section class="services">
+				<h2>Why Highway Driving Lessons Matter</h2>
+				<p>
+					Highway driving requires different skills and reflexes than city driving. Distances are covered faster, lane positioning is more critical, and merging demands confidence and timing. Many drivers are nervous about highways—that's precisely why our specialized lessons help.
+				</p>
+				<ul>
+					<li><strong>Safety-focused:</strong> We emphasize defensive driving and safe practices</li>
+					<li><strong>Progressive learning:</strong> Start manageable, build to highway speeds gradually</li>
+					<li><strong>Muscle memory:</strong> Repetition until moves become automatic</li>
+					<li><strong>Confidence building:</strong> Direct instruction and positive reinforcement</li>
+					<li><strong>Real-world scenarios:</strong> Practice actual highway conditions in Steinbach and southeastern Manitoba</li>
+				</ul>
+			</section>
+
+			<section class="services">
+				<h2>Highway Lessons Available in Your Area</h2>
+				<p>
+					We offer highway driving lessons in Steinbach, Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and throughout southeastern Manitoba. We use local highways to provide realistic, practical instruction.
+				</p>
+			</section>
+
+			<section class="faq">
+				<h2>Highway Driving Lessons FAQ</h2>
+				<details>
+					<summary>When should I start highway driving lessons?</summary>
+					<p>After you're comfortable with basic vehicle control and have passed your road test, or if you have your license but avoid highways. Highway instruction can be a standalone package or combined with other lessons.</p>
+				</details>
+				<details>
+					<summary>How many highway lessons do I need?</summary>
+					<p>This depends on your current skill level and comfort. Beginners typically benefit from 3-5 lessons focusing on highway skills specifically. Some drivers take 1-2 lessons just to build confidence before doing highway driving independently.</p>
+				</details>
+				<details>
+					<summary>What highways do you use for lessons?</summary>
+					<p>We practice on highways you'll encounter in Steinbach and southeastern Manitoba, including Trans-Canada routes. We start with less busy sections and progress to busier traffic situations.</p>
+				</details>
+				<details>
+					<summary>Will I learn emergency maneuvers on the highway?</summary>
+					<p>Yes, we teach safe responses to common highway situations like sudden lane changes, entering traffic, and handling various weather conditions.</p>
+				</details>
+				<details>
+					<summary>Can you help if I'm very nervous about highway driving?</summary>
+					<p>Absolutely. Many of our clients are nervous about highway driving initially. Our patient, step-by-step approach builds confidence without pressure.</p>
+				</details>
+				<details>
+					<summary>How much are highway driving lessons?</summary>
+					<p>Highway driving lessons are $70 per hour. We can customize packages based on your needs.</p>
+				</details>
+			</section>
+
+			<section id="contact" class="contact">
+				<h2>Book Your Highway Driving Lessons Today</h2>
+				<p>
+					Don't let highway anxiety hold you back. Contact Martens Driving School in Steinbach and start building your highway confidence.
+				</p>
+				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
+				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a> / <a href="sms:+12043802912">(204) 380-2912</a></p>
+			</section>
+
+			<nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+				<p>
+					<a href="/">← Back to Home</a> | 
+					<a href="/private-driving-lessons/">Private Lessons</a> | 
+					<a href="/#contact">Contact Us</a>
+				</p>
+			</nav>
+		</main>
+		<Footer />
+	</body>
+</html>

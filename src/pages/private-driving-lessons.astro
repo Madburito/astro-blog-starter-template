@@ -1,0 +1,206 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Private Driving Lessons in Steinbach, MB | Martens Driving School';
+const description = 'One-on-one private driving lessons tailored to your pace. Experienced MPI certified instructors in Steinbach and surrounding communities. Book your private lesson today.';
+const keywords = 'private driving lessons steinbach, one-on-one driving lessons, driving instructor near me, private driving school mb';
+const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro.url.origin;
+
+const STRUCTURED_DATA = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: `${siteOrigin}/`
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Private Driving Lessons',
+				item: `${siteOrigin}/private-driving-lessons/`
+			}
+		]
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		name: 'Private Driving Lessons',
+		provider: {
+			'@type': 'LocalBusiness',
+			name: 'Martens Driving School',
+			telephone: '(204) 371-7417'
+		},
+		areaServed: [
+			{ '@type': 'City', name: 'Steinbach' },
+			{ '@type': 'City', name: 'Blumenort' },
+			{ '@type': 'City', name: 'Mitchell' },
+			{ '@type': 'City', name: 'La Broquerie' },
+			{ '@type': 'City', name: 'Southeastern Manitoba' }
+		],
+		description: 'Customized one-on-one driving lessons designed for your learning pace and goals. Experienced MPI certified instructors.',
+		offers: {
+			'@type': 'Offer',
+			priceCurrency: 'CAD',
+			price: '70',
+			priceValidUntil: '2025-12-31'
+		}
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: [
+			{
+				'@type': 'Question',
+				name: 'What are the benefits of private driving lessons?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Private driving lessons offer personalized instruction tailored to your pace, learning style, and goals. You get one-on-one attention from an experienced instructor who can focus entirely on your development as a driver.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'How long are private driving lessons?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Our private driving lessons are typically one hour long. You can book multiple hours for extended sessions based on your needs and schedule.'
+				}
+			},
+			{
+				'@type': 'Question',
+				name: 'Can I schedule private lessons around my schedule?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Yes, we offer flexible scheduling for private lessons. Contact us to arrange times that work best for you, including evening and weekend options.'
+				}
+			}
+		]
+	}
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} structuredData={STRUCTURED_DATA} />
+	</head>
+	<body>
+		<Header />
+		<main class="prose page-content">
+			<section class="hero">
+				<div class="hero-inner">
+					<h1>Private Driving Lessons in Steinbach</h1>
+					<p>
+						Get personalized one-on-one driving instruction from experienced MPI certified instructors. Our private lessons are tailored to your pace, learning style, and driving goals.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-navy" href="/#contact">Book Your Private Lesson</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Why Choose Private Driving Lessons?</h2>
+				<ul class="services-list">
+					<li>✓ One-on-one personalized instruction</li>
+					<li>✓ Lessons adapted to your learning pace</li>
+					<li>✓ Experienced MPI certified instructors</li>
+					<li>✓ Flexible scheduling</li>
+					<li>✓ Serving Steinbach, Blumenort, Mitchell, and surrounding communities</li>
+				</ul>
+				<p>
+					Private driving lessons at Martens Driving School in Steinbach give you undivided attention from your instructor. Whether you're a beginner, preparing for your MPI road test, or looking to improve your driving skills, our instructors customize each lesson to your specific needs.
+				</p>
+			</section>
+
+			<section class="services">
+				<h2>What to Expect in Your Private Lessons</h2>
+				<p>
+					Our private driving lessons focus on building your confidence and developing safe driving habits. We start by understanding your current skill level and goals, then create a structured progression that moves at your pace. Each lesson includes:
+				</p>
+				<ul>
+					<li><strong>Personalized assessment:</strong> We evaluate your driving abilities and identify areas for improvement</li>
+					<li><strong>Focused instruction:</strong> Your instructor concentrates entirely on your development</li>
+					<li><strong>Real-world practice:</strong> We practice in actual traffic conditions on roads you'll encounter</li>
+					<li><strong>Constructive feedback:</strong> Immediate, helpful guidance to reinforce good habits</li>
+					<li><strong>Progress tracking:</strong> Regular assessment to ensure you're meeting your goals</li>
+				</ul>
+			</section>
+
+			<section class="services">
+				<h2>Private Lessons for Every Driver</h2>
+				<p>
+					We serve all skill levels and ages across Steinbach, Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and southeastern Manitoba.
+				</p>
+				<ul>
+					<li><strong>Beginner drivers:</strong> Learn the fundamentals in a supportive environment</li>
+					<li><strong>MPI road test preparation:</strong> Focused practice for your upcoming road test</li>
+					<li><strong>Nervous or anxious drivers:</strong> Build confidence with patient, understanding instruction</li>
+					<li><strong>Adult learners:</strong> Catch up on driving skills at your own pace</li>
+					<li><strong>Experienced drivers:</strong> Brush up on skills or learn advanced techniques like highway driving</li>
+				</ul>
+			</section>
+
+			<section class="services">
+				<h2>Pricing for Private Driving Lessons</h2>
+				<p>
+					<strong>Private driving lessons: $70 per hour</strong>
+				</p>
+				<p>
+					Our transparent pricing means no hidden fees. Book one lesson or multiple hours—the choice is yours. Contact us to discuss your specific needs and schedule.
+				</p>
+			</section>
+
+			<section class="faq">
+				<h2>Private Driving Lessons FAQ</h2>
+				<details>
+					<summary>Do I need to provide my own vehicle for lessons?</summary>
+					<p>No, we provide a fully equipped dual-control vehicle for all lessons. You'll be comfortable practicing in a safe, controlled environment.</p>
+				</details>
+				<details>
+					<summary>How many private lessons do I need?</summary>
+					<p>This depends on your current skill level and goals. Beginners typically benefit from 5-10 hours of instruction, while others may need fewer lessons. We'll assess your needs during your first lesson.</p>
+				</details>
+				<details>
+					<summary>Can I book private lessons in Blumenort, Mitchell, or other nearby areas?</summary>
+					<p>Yes, we serve all surrounding communities including Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, and Kleefeld. Contact us to arrange lessons in your area.</p>
+				</details>
+				<details>
+					<summary>What if I'm nervous about driving?</summary>
+					<p>Many people feel nervous about driving, and that's completely normal. Our patient, understanding instructors are experienced in helping nervous drivers build confidence at a comfortable pace.</p>
+				</details>
+				<details>
+					<summary>Are your instructors MPI certified?</summary>
+					<p>Yes, all instructors at Martens Driving School are MPI certified and experienced in private driving instruction. You're learning from qualified professionals.</p>
+				</details>
+				<details>
+					<summary>Can I schedule private lessons on weekends?</summary>
+					<p>Yes, we offer flexible scheduling including evenings and weekends. Contact us to find times that work for your schedule.</p>
+				</details>
+			</section>
+
+			<section id="contact" class="contact">
+				<h2>Book Your Private Driving Lesson Today</h2>
+				<p>
+					Ready to start your private driving lessons? Contact Martens Driving School in Steinbach to schedule your personalized instruction.
+				</p>
+				<p>Email: <a href="mailto:Martensdrivingschool@gmail.com">Martensdrivingschool@gmail.com</a></p>
+				<p>SMS/Text: <a href="sms:+12043717417">(204) 371-7417</a> / <a href="sms:+12043802912">(204) 380-2912</a></p>
+			</section>
+
+			<nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+				<p>
+					<a href="/">← Back to Home</a> | 
+					<a href="/#instructor">Meet Our Instructors</a> | 
+					<a href="/#contact">Book a Lesson</a>
+				</p>
+			</nav>
+		</main>
+		<Footer />
+	</body>
+</html>
