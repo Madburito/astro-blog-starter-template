@@ -25,7 +25,7 @@ export function generateOrganizationSchema(siteOrigin: string) {
       '@type': 'ContactPoint',
       telephone: '(204) 371-7417, (204) 380-2912',
       contactType: 'Customer Service',
-      email: 'Martensdrivingschool@gmail.com'
+      email: 'info@martensdrivingschool.ca'
     },
     foundingDate: '2023',
     address: {
