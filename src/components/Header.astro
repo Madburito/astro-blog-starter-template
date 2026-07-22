@@ -15,11 +15,10 @@ import { SITE_TITLE } from '../consts';
 					<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 			</button>
-		    <div id="primary-nav" class="internal-links">
-			    <HeaderLink href="/#services">Services</HeaderLink>
-			    <HeaderLink href="/#instructor">Instructor</HeaderLink>
-			    <HeaderLink href="/#contact">Book</HeaderLink>
-		    </div>
+			    <div id="primary-nav" class="internal-links">
+				<HeaderLink href="/#services">Services</HeaderLink>
+				<HeaderLink href="/#instructor">Instructor</HeaderLink>
+			</div>
 		<div class="social-links">
 			<a href="https://www.instagram.com/martensdrivingschool/" target="_blank">
 			<span class="sr-only">Follow Martens Driving School</span>
@@ -40,6 +39,7 @@ import { SITE_TITLE } from '../consts';
 			  </svg>
 				
 		</a>
+		</div>
 		</div>
 	</nav>
 </header>
@@ -96,6 +96,15 @@ import { SITE_TITLE } from '../consts';
 		gap: 0.75rem;
 		align-items: center;
 	}
+	.header-actions {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+	}
+	.schedule-button-container {
+		display: flex;
+		align-items: center;
+	}
 	nav a {
 		padding: 0.5rem 0.5rem;
 		color: rgb(var(--black));
@@ -138,6 +147,12 @@ import { SITE_TITLE } from '../consts';
 		.internal-links a {
 			display: block;
 			padding: 0.5rem 0.75rem;
+		}
+		.header-actions {
+			gap: 0.75rem;
+		}
+		.schedule-button-container {
+			order: -1;
 		}
 	}
 	.social-links,

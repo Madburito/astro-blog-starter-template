@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ScheduleButton from '../components/ScheduleButton.astro';
 
 const title = 'Private Driving Lessons in Steinbach, MB | Martens Driving School';
 const description = 'One-on-one private driving lessons tailored to your pace. Experienced MPI certified instructors in Steinbach and surrounding communities. Book your private lesson today.';
@@ -99,7 +100,7 @@ const STRUCTURED_DATA = [
 						Get personalized one-on-one driving instruction from experienced MPI certified instructors. Our private lessons are tailored to your pace, learning style, and driving goals.
 					</p>
 					<div class="hero-cta">
-						<a class="btn btn-navy" href="/#contact">Book Your Private Lesson</a>
+						<ScheduleButton />
 					</div>
 				</div>
 			</section>
@@ -197,7 +198,7 @@ const STRUCTURED_DATA = [
 				<p>
 					<a href="/">← Back to Home</a> | 
 					<a href="/#instructor">Meet Our Instructors</a> | 
-					<a href="/#contact">Book a Lesson</a>
+					<ScheduleButton />
 				</p>
 			</nav>
 		</main>

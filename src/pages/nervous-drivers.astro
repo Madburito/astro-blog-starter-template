@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ScheduleButton from '../components/ScheduleButton.astro';
 
 const title = 'Driving Lessons for Nervous Drivers in Steinbach, MB';
 const description = 'Feel anxious about driving? Our patient, experienced instructors specialize in helping nervous drivers build confidence. Judgment-free lessons in Steinbach and nearby communities.';
@@ -10,9 +11,7 @@ const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro
 
 const STRUCTURED_DATA = [
 	{
-		'@context': 'https://schema.org',
-		'@type': 'BreadcrumbList',
-		itemListElement: [
+					<ScheduleButton />
 			{
 				'@type': 'ListItem',
 				position: 1,

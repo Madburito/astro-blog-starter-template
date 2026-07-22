@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ScheduleButton from '../components/ScheduleButton.astro';
 
 const HOME_TITLE = 'Driving School in Steinbach, MB | Martens Driving School';
 const HOME_DESCRIPTION = 'MPI certified one-on-one driving lessons, road test prep, and road test car rental in Steinbach and surrounding communities.';
@@ -132,7 +133,7 @@ const HOME_STRUCTURED_DATA = [
 						Martens Driving School proudly serves students in Steinbach and surrounding communities.
 					</p>
 					<div class="hero-cta">
-						<a class="btn btn-navy" href="#contact">Book a Lesson</a>
+						<ScheduleButton />
 					</div>
 				</div>
 			</section>
@@ -174,15 +175,15 @@ const HOME_STRUCTURED_DATA = [
 
 
 			<section id="contact" class="contact">
-				<h2>Book a Lesson</h2>
+				<h2>General Inquiry</h2>
 				<p>
-					If you would like to schedule a lesson or have any questions, feel free to reach out.
+					Have a question or want to get in touch? Send us a message below and we'll respond as soon as we can.
 				</p>
 				<p>Email: <a href="mailto:info@martensdrivingschool.ca">info@martensdrivingschool.ca</a></p>
 				<p>SMS/Text: <a href="sms:+12043802912">Carlos (204) 380-2912</a> / <a href="sms:+12043717417">Noemi (204) 371-7417</a></p>
-				<!-- Contact form for lesson bookings -->
+				<!-- Contact form for general inquiries -->
 				<form class="contact-form" action="https://formsubmit.co/info@martensdrivingschool.ca" method="POST">
-					<input type="hidden" name="_subject" value="New lesson booking from Martens Driving School site" />
+					<input type="hidden" name="_subject" value="New inquiry from Martens Driving School site" />
 					<input type="hidden" name="_captcha" value="false" />
 					<input id="cf-next" type="hidden" name="_next" value="" />
 					<input id="cf-winnipeg" type="hidden" name="submission_date_winnipeg" value="" />
@@ -197,28 +198,11 @@ const HOME_STRUCTURED_DATA = [
 					<label for="cf-phone">Phone Number <span class="required">*</span></label>
 					<input id="cf-phone" name="phone" type="tel" placeholder="(123) 456-7890" />
 					
-					<label>Preferred Days of the Week (select all that apply)</label>
-					<div class="checkbox-group">
-						<label><input type="checkbox" name="preferred_days[]" value="monday"> Monday</label>
-						<label><input type="checkbox" name="preferred_days[]" value="tuesday"> Tuesday</label>
-						<label><input type="checkbox" name="preferred_days[]" value="wednesday"> Wednesday</label>
-						<label><input type="checkbox" name="preferred_days[]" value="thursday"> Thursday</label>
-						<label><input type="checkbox" name="preferred_days[]" value="friday"> Friday</label>
-						<label><input type="checkbox" name="preferred_days[]" value="saturday"> Saturday</label>
-						<label><input type="checkbox" name="preferred_days[]" value="sunday"> Sunday</label>
-					</div>
-					
-					<label for="cf-time">Preferred Time <span class="required">*</span></label>
-					<select id="cf-time" name="preferred_time" required>
-						<option value="">Select a time</option>
-						<option value="morning">Morning (8am - 12pm)</option>
-						<option value="afternoon">Afternoon (12pm - 5pm)</option>
-						<option value="evening">Evening (5pm - 9pm)</option>
-					</select>
+					<!-- General inquiry form: only basic contact fields and message -->
 					<label for="cf-message">Message</label>
-					<textarea id="cf-message" name="message" rows="5" placeholder="Tell us more about your driving goals or any questions..."></textarea>
-					
-					<button type="submit" class="btn btn-primary">Book Your Lesson</button>
+					<textarea id="cf-message" name="message" rows="5" placeholder="How can we help? Please include any details or questions..."></textarea>
+                    
+					<button type="submit" class="btn btn-primary">Send Inquiry</button>
 					<p class="form-status" aria-live="polite"></p>
 				</form>
 
@@ -297,7 +281,7 @@ const HOME_STRUCTURED_DATA = [
 				</details>
 			</section>
 
-			<a class="sticky-mobile-cta" href="#contact">Book a Lesson</a>
+			<ScheduleButton />
 
 			<script>
 				// If form was just submitted, show a dismissible modal to prevent double-submits

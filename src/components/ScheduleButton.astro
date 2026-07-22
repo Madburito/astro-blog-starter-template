@@ -1,0 +1,47 @@
+---
+---
+
+<div id="google-calendar-button" class="schedule-button-wrapper"></div>
+
+<!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  window.addEventListener('load', function() {
+    const target = document.getElementById('google-calendar-button');
+    if (target && window.calendar && window.calendar.schedulingButton) {
+      calendar.schedulingButton.load({
+        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Bb22lvO2Dd7VVH8au87CaqvWWx0zv_2Kr25dL7VFjYB6SRmEe-_di6J5Lc5HB0yK15v2RK1Pj?gv=true',
+        color: '#1E3A5F',
+        label: 'Book Appointment',
+        target,
+      });
+    }
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
+
+<style>
+  .schedule-button-wrapper {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  :global(.goog-date-picker-btn) {
+    background-color: #1E3A5F !important;
+    border-color: #1E3A5F !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  :global(.goog-date-picker-btn:hover) {
+    background-color: #163351 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+  }
+</style>

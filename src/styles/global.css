@@ -140,6 +140,39 @@ img {
   border-radius: 8px;
 }
 
+/* Make the hero scheduling button more prominent and centered */
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.hero-cta .schedule-button-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Target the Google scheduling button inside our wrapper */
+.hero-cta .schedule-button-wrapper .goog-date-picker-btn,
+.hero-cta .schedule-button-wrapper .goog-button,
+.hero-cta .schedule-button-wrapper button {
+  background-color: var(--navy-500) !important;
+  border-color: var(--navy-500) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  padding: 0.9rem 1.6rem !important;
+  font-size: 1.05rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 28px rgba(30,58,95,0.18) !important;
+}
+
+.hero-cta .schedule-button-wrapper .goog-date-picker-btn:hover,
+.hero-cta .schedule-button-wrapper .goog-button:hover,
+.hero-cta .schedule-button-wrapper button:hover {
+  background-color: var(--navy-700) !important;
+  transform: translateY(-2px) !important;
+}
+
 /* ensure cards don't force overflow */
 .services .services-list li { min-width: 0; }
 code {
