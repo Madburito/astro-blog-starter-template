@@ -207,6 +207,28 @@ img {
   min-width: 0;
 }
 
+@media (max-width: 640px) {
+  .hero-cta {
+    margin-top: 0.75rem;
+  }
+
+  .hero-cta .schedule-button-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-cta .schedule-button-wrapper .qxCTlb,
+  .hero-cta .schedule-button-wrapper .goog-date-picker-btn,
+  .hero-cta .schedule-button-wrapper .goog-button,
+  .hero-cta .schedule-button-wrapper button {
+    width: auto;
+    max-width: 10rem;
+    padding: 0.7rem 1rem !important;
+    font-size: 0.9rem !important;
+    min-height: 2.6rem !important;
+  }
+}
+
 code {
   padding: 2px 5px;
   background-color: rgb(var(--gray-light));
