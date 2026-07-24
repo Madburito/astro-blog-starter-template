@@ -175,24 +175,31 @@ img {
 }
 
 /* Target the Google scheduling button inside our wrapper */
+.hero-cta .schedule-button-wrapper .qxCTlb,
 .hero-cta .schedule-button-wrapper .goog-date-picker-btn,
 .hero-cta .schedule-button-wrapper .goog-button,
 .hero-cta .schedule-button-wrapper button {
-  background-color: var(--navy-500) !important;
-  border-color: var(--navy-500) !important;
+  background: linear-gradient(135deg, var(--navy-500) 0%, var(--navy-700) 100%) !important;
+  border: 2px solid var(--navy-700) !important;
   color: #fff !important;
-  font-weight: 700 !important;
-  padding: 0.9rem 1.6rem !important;
-  font-size: 1.05rem !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 28px rgba(30, 58, 95, 0.18) !important;
+  font-weight: 800 !important;
+  padding: 1rem 2.2rem !important;
+  font-size: 1.15rem !important;
+  line-height: 1.2 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 12px 32px rgba(30, 58, 95, 0.24) !important;
+  min-height: 3.4rem !important;
+  min-width: 12rem !important;
+  transform: scale(1.03) !important;
 }
 
+.hero-cta .schedule-button-wrapper .qxCTlb:hover,
 .hero-cta .schedule-button-wrapper .goog-date-picker-btn:hover,
 .hero-cta .schedule-button-wrapper .goog-button:hover,
 .hero-cta .schedule-button-wrapper button:hover {
-  background-color: var(--navy-700) !important;
-  transform: translateY(-2px) !important;
+  background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-900) 100%) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 16px 38px rgba(30, 58, 95, 0.32) !important;
 }
 
 /* ensure cards don't force overflow */
