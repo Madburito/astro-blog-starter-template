@@ -1,84 +1,103 @@
 ---
+const {
+  variant = 'single',
+  instructor = 'carlos'
+} = Astro.props;
+
+const carlosUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Bb22lvO2Dd7VVH8au87CaqvWWx0zv_2Kr25dL7VFjYB6SRmEe-_di6J5Lc5HB0yK15v2RK1Pj?gv=true';
+const noemiUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0GCF6QGO4L0zwJdSa4jLhgFVWUxpr-VRl6GuFievEvfqHMw_Y88vr1-yjn8fJcv2u1BrRbNf-G?gv=true';
+
+const buttons = variant === 'split'
+  ? [
+      { label: 'Book with Carlos', url: carlosUrl, secondary: false },
+      { label: 'Book with Noemi', url: noemiUrl, secondary: true }
+    ]
+  : [
+      {
+        label: instructor === 'noemi' ? 'Book with Noemi' : 'Book with Carlos',
+        url: instructor === 'noemi' ? noemiUrl : carlosUrl,
+        secondary: instructor === 'noemi'
+      }
+    ];
 ---
 
-<div id="google-calendar-button" class="schedule-button-wrapper"></div>
-
-<!-- Google Calendar Appointment Scheduling begin -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  window.addEventListener('load', function() {
-    const target = document.getElementById('google-calendar-button');
-    if (target && window.calendar && window.calendar.schedulingButton) {
-      calendar.schedulingButton.load({
-        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Bb22lvO2Dd7VVH8au87CaqvWWx0zv_2Kr25dL7VFjYB6SRmEe-_di6J5Lc5HB0yK15v2RK1Pj?gv=true',
-        color: '#1E3A5F',
-        label: 'Book Appointment',
-        target,
-      });
-    }
-  });
-})();
-</script>
-<!-- end Google Calendar Appointment Scheduling -->
+<div class="booking-actions" class:list={{ 'booking-actions--split': variant === 'split' }}>
+  {buttons.map((button) => (
+    <a
+      href={button.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class:list={['booking-link', { 'booking-link--secondary': button.secondary }]}
+    >
+      {button.label}
+    </a>
+  ))}
+</div>
 
 <style>
-  .schedule-button-wrapper {
+  .booking-actions {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-top: 0.25rem;
     width: 100%;
     max-width: 100%;
   }
 
-  :global(.qxCTlb),
-  :global(.goog-date-picker-btn) {
-    display: inline-flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-    background: linear-gradient(135deg, #1E3A5F 0%, #163351 100%) !important;
-    border: 2px solid #163351 !important;
-    color: white !important;
-    font-weight: 800 !important;
-    font-size: 1.15rem !important;
-    padding: 1rem 2.2rem !important;
-    min-height: 3.4rem !important;
-    min-width: 12rem !important;
-    border-radius: 999px !important;
-    box-shadow: 0 10px 24px rgba(30, 58, 95, 0.22) !important;
-    transition: all 0.25s ease !important;
-    transform: scale(1.02) !important;
-    letter-spacing: 0.01em !important;
+  .booking-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(135deg, #E63946 0%, #c12f3e 100%);
+    border: 2px solid #c12f3e;
+    color: white;
+    font-weight: 800;
+    font-size: 1.05rem;
+    padding: 0.9rem 1.4rem;
+    min-height: 3.2rem;
+    min-width: 11rem;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(230, 57, 70, 0.22);
+    transition: all 0.25s ease;
+    text-decoration: none;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
-  :global(.qxCTlb:hover),
-  :global(.goog-date-picker-btn:hover) {
-    background: linear-gradient(135deg, #163351 0%, #0F2738 100%) !important;
-    transform: translateY(-2px) scale(1.04) !important;
-    box-shadow: 0 14px 30px rgba(30, 58, 95, 0.3) !important;
+  .booking-link:hover {
+    background: linear-gradient(135deg, #c12f3e 0%, #a72432 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(230, 57, 70, 0.28);
+    color: white;
+  }
+
+  .booking-link--secondary {
+    background: linear-gradient(135deg, #E63946 0%, #c12f3e 100%);
+    border-color: #c12f3e;
+    box-shadow: 0 10px 24px rgba(230, 57, 70, 0.22);
+  }
+
+  .booking-link--secondary:hover {
+    background: linear-gradient(135deg, #c12f3e 0%, #a72432 100%);
+    box-shadow: 0 14px 30px rgba(230, 57, 70, 0.28);
   }
 
   @media (max-width: 640px) {
-    :global(.qxCTlb),
-    :global(.goog-date-picker-btn) {
-      display: inline-flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      font-size: 0.95rem !important;
-      line-height: 1.2 !important;
-      padding: 0.8rem 1.15rem !important;
-      min-height: 3rem !important;
-      min-width: 10.5rem !important;
-      width: fit-content !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      border-radius: 999px !important;
-      transform: scale(1) !important;
-      white-space: nowrap !important;
+    .booking-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .booking-link {
+      width: 100%;
+      min-width: 0;
+      font-size: 0.95rem;
+      padding: 0.85rem 1rem;
+      min-height: 3rem;
     }
   }
 </style>
