@@ -92,7 +92,7 @@ import { SITE_TITLE } from '../consts';
 		border: 2px solid rgba(255,255,255,0.9);
 	}
 	.brand-text {
-		font-size: 1.2rem;
+		font-size: 1.15rem;
 		font-weight: 800;
 		color: rgb(var(--black));
 		letter-spacing: -0.01em;
@@ -113,11 +113,12 @@ import { SITE_TITLE } from '../consts';
 	}
 	nav a {
 		padding: 0.55rem 0.8rem;
-		color: rgb(var(--black));
+		color: var(--navy-900);
+		font-weight: 700;
 		border-bottom: 3px solid transparent;
 		text-decoration: none;
 		border-radius: 999px;
-		transition: all 0.2s ease;
+		transition: all 0.16s ease;
 	}
 	nav a:hover {
 		border-bottom-color: rgba(var(--black), 0.08);
@@ -139,6 +140,12 @@ import { SITE_TITLE } from '../consts';
 	.menu-toggle:hover {
 		background: rgba(30,58,95,0.06);
 		transform: translateY(-1px);
+	}
+
+	nav a:focus-visible {
+		outline: none;
+		box-shadow: 0 0 0 4px rgba(30,58,95,0.08);
+		border-radius: 8px;
 	}
 	.menu-toggle svg { display: block; }
 

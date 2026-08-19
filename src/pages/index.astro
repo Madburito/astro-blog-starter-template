@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import ScheduleButton from '../components/ScheduleButton.astro';
 
 const HOME_TITLE = 'Driving School in Steinbach, MB | Martens Driving School';
-const HOME_DESCRIPTION = 'MPI certified one-on-one driving lessons, road test prep, and road test car rental in Steinbach and surrounding communities.';
+const HOME_DESCRIPTION = 'MPI certified private driving lessons, road test prep, and road test car rental in Steinbach and surrounding communities.';
 const HOME_KEYWORDS = 'driving school steinbach, driving instructor steinbach, road test prep steinbach, driving lessons steinbach manitoba';
 const siteOrigin = Astro.site ? Astro.site.toString().replace(/\/$/, '') : Astro.url.origin;
 
@@ -30,14 +30,14 @@ const HOME_STRUCTURED_DATA = [
 			{ '@type': 'City', name: 'Kleefeld' },
 			{ '@type': 'Region', name: 'Southeastern Manitoba' }
 		],
-		image: `${siteOrigin}/images/logo.jpeg`,
-		address: {
+			image: `${siteOrigin}/images/logo.jpeg`,
+			address: {
 			'@type': 'PostalAddress',
 			addressLocality: 'Steinbach',
 			addressRegion: 'MB',
 			addressCountry: 'CA'
 		},
-		serviceType: ['One-on-One Driving Lessons', 'Road Test Preparation', 'Road Test Car Rental', 'Adult Driving Lessons', 'Highway Driving Lessons', 'Winter Driving Lessons']
+			serviceType: ['Driving Lesson', 'Road Test Preparation', 'Road Test Car Rental', 'Adult Driving Lessons', 'Highway Driving Lessons', 'Winter Driving Lessons']
 	},
 	{
 		'@context': 'https://schema.org',
@@ -48,7 +48,7 @@ const HOME_STRUCTURED_DATA = [
 				name: 'How much do driving lessons cost?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: 'Driving lessons are $70 per hour. We offer flexible scheduling to fit your budget and availability.'
+					text: 'Driving lessons: Carlos $55/hour; Noemi $70/hour. We offer flexible scheduling to fit your budget and availability.'
 				}
 			},
 			{
@@ -127,7 +127,7 @@ const HOME_STRUCTURED_DATA = [
 						Learning to drive should feel comfortable and supportive. At Martens Driving School, our goal is to help you become a safe and confident driver, not just someone who can pass a road test.
 					</p>
 					<p>
-						We offer one on one driving lessons in a calm and patient environment. Every lesson is adapted to your experience level so you can learn at your own pace and feel confident behind the wheel.
+						We offer private driving lessons in a calm and patient environment. Every lesson is adapted to your experience level so you can learn at your own pace and feel confident behind the wheel.
 					</p>
 					<p>
 						Martens Driving School proudly serves students in Steinbach and surrounding communities.
@@ -140,14 +140,69 @@ const HOME_STRUCTURED_DATA = [
 
 			<section id="services" class="services">
 				<h2>Driving Lessons and Services</h2>
-				<ul class="services-list">
-				<li>🚘 One-on-One Driving Lessons  $70/hour</li>
-					<li>🚗 Road Test Car Rental  $100</li>
-				</ul>
+				<div class="services-grid">
+					<div class="service-card">
+						<div class="service-title">Driving Lesson</div>
+						<div class="service-subtitle">Carlos</div>
+						<div class="service-price">$55 / hour</div>
+					</div>
+					<div class="service-card">
+						<div class="service-title">Driving Lesson</div>
+						<div class="service-subtitle">Noemi</div>
+						<div class="service-price">$70 / hour</div>
+					</div>
+					<div class="service-card">
+						<div class="service-title">Road Test Car Rental</div>
+						<div class="service-subtitle">Carlos / Noemi</div>
+						<div class="service-price">$100</div>
+					</div>
+				</div>
 				<p>
-					Whether you are just starting to learn or preparing for your road test, lessons focus on real world driving skills that will help you feel comfortable on the road.
+					Whether you are just starting to learn or preparing for your road test, our lessons focus on real-world driving skills that will help you feel comfortable on the road.
 				</p>
 			</section>
+
+			<style>
+				.services-grid {
+					display: flex;
+					gap: 1rem;
+					flex-wrap: wrap;
+					margin: 0.5rem 0 1rem 0;
+				}
+				.service-card {
+					flex: 1 1 220px;
+					background: white;
+					border: 1px solid rgba(15,23,42,0.06);
+					padding: 0.9rem;
+					border-radius: 12px;
+					box-shadow: 0 6px 18px rgba(11,27,40,0.04);
+					display: flex;
+					flex-direction: column;
+				}
+				.service-title {
+					font-weight: 800;
+					font-size: 1.15rem;
+					margin-bottom: 0.125rem;
+				}
+				.service-subtitle {
+					font-size: 1.05rem;
+					color: rgba(15,23,42,0.65);
+					font-weight: 700;
+					margin-bottom: 0.5rem;
+					letter-spacing: 0.01em;
+				}
+				.service-price {
+					color: rgba(15,23,42,0.9);
+					font-weight: 800;
+					margin-top: auto;
+					font-size: 1.05rem;
+				}
+				.service-actions { margin-top: 0.5rem; }
+				/* subtle spacing for cards */
+				@media (max-width: 720px) {
+					.services-grid { flex-direction: column; }
+				}
+			</style>
 
 			<section id="instructor" class="instructor">
 				<h2>Meet Your Instructors</h2>
@@ -156,19 +211,25 @@ const HOME_STRUCTURED_DATA = [
 						<figure class="instructor-figure">
 							<img src="/images/instructor.jpg" alt="Noemi Martens, instructor at Martens Driving School" />
 						</figure>
-						<p>
-							Hi, I’m Noemi Martens, owner and instructor at Martens Driving School.
-							I am an MPI certified driving instructor and a certified Manitoba teacher with over 25 years of classroom teaching experience. Teaching has always been something I truly enjoy, and I love helping students gain confidence both in the classroom and behind the wheel.
-						</p>
+						<div class="instructor-info">
+							<h3 class="instructor-name">Noemi Martens</h3>
+							<p>
+								Hi, I’m Noemi Martens, owner and instructor at Martens Driving School.
+								I am an MPI certified driving instructor and a certified Manitoba teacher with over 25 years of classroom teaching experience. Teaching has always been something I truly enjoy, and I love helping students gain confidence both in the classroom and behind the wheel.
+							</p>
+						</div>
 					</div>
 
 					<div class="instructor-card">
 						<figure class="instructor-figure">
 							<img src="/images/instructor-carlos.jpg" alt="Carlos Martens, instructor at Martens Driving School" />
 						</figure>
-						<p>
-							Hi, I’m Carlos Martens. I’m a newer instructor here — I focus on clear, hands-on lessons that teach real-world driving skills. I help students prepare for their road test and build confidence behind the wheel.
-						</p>
+						<div class="instructor-info">
+							<h3 class="instructor-name">Carlos Martens</h3>
+							<p>
+								Hi, I’m Carlos Martens. I’m a newer instructor here — I focus on clear, hands-on lessons that teach real-world driving skills. I help students prepare for their road test and build confidence behind the wheel.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -249,7 +310,7 @@ const HOME_STRUCTURED_DATA = [
 				<h2>Frequently Asked Questions</h2>
 				<details>
 					<summary>How much do driving lessons cost?</summary>
-					<p>Driving lessons are $70 per hour. We offer flexible scheduling to fit your budget and availability.</p>
+					<p>Driving lessons: Carlos $55/hour; Noemi $70/hour. We offer flexible scheduling to fit your budget and availability.</p>
 				</details>
 				<details>
 					<summary>How long is each lesson?</summary>

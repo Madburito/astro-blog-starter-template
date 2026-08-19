@@ -420,9 +420,10 @@ nav a,
 
 .hero h1 {
   font-size: 2.75rem;
-  line-height: 1.1;
-  margin-bottom: 0.6rem;
+  line-height: 1.08;
+  margin-bottom: 0.55rem;
   text-wrap: balance;
+  color: var(--navy-900);
 }
 
 .hero-inner p {
@@ -431,6 +432,10 @@ nav a,
   color: rgb(var(--gray-dark));
   line-height: 1.75;
   max-width: 72ch;
+}
+
+.hero-inner {
+  gap: 1.4rem;
 }
 
 .hero-cta {
@@ -451,19 +456,52 @@ nav a,
 .services .services-list li {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(234, 241, 246, 0.95));
   border-radius: 16px;
-  padding: 1.2rem 1.1rem;
+  padding: 1.6rem 1.4rem;
   box-shadow: var(--shadow-soft);
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
   font-weight: 600;
   border: 1px solid rgba(30, 58, 95, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, transform 0.18s ease;
+  min-height: 120px;
 }
 
 .services .services-list li:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 24px rgba(30, 58, 95, 0.12);
+}
+
+/* Service card typography */
+.service-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy-700);
+  margin-bottom: 0.15rem;
+}
+
+.service-subtitle {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--primary);
+  opacity: 0.95;
+  margin-bottom: 0.35rem;
+}
+
+.service-price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Better focus outlines for keyboard users */
+:where(a, button):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.12), 0 0 0 1px rgba(230, 57, 70, 0.18);
+  border-radius: 8px;
 }
 
 /* Instructor image and layout */
@@ -515,6 +553,23 @@ nav a,
 .instructor-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(30, 58, 95, 0.12);
+}
+
+.instructor-info {
+  display: block;
+}
+
+.instructor-name {
+  margin: 0 0 0.45rem 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--navy-700);
+}
+
+.instructor-info p {
+  margin: 0;
+  color: rgb(var(--gray-dark));
+  line-height: 1.6;
 }
 
 @media (max-width: 720px) {
