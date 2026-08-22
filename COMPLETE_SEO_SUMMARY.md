@@ -81,7 +81,7 @@ A comprehensive SEO optimization has been completed for the Martens Driving Scho
 
 ✅ **Highway Driving Lessons** (`/highway-driving-lessons/`)
 - Keywords: "highway driving lessons", "freeway driving", "merging, lane changes"
-- Content: Anxiety-addressing, skill progression, real-world highways, 6 FAQs
+- Content: Anxiety-addressing, skill progression, real world highways, 6 FAQs
 - Target: Drivers nervous about highway speeds
 
 ✅ **Winter Driving Lessons** (`/winter-driving-lessons/`)
