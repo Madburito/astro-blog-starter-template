@@ -1,103 +1,204 @@
 ---
+interface Props {
+  variant?: 'single' | 'split';
+  instructor?: 'carlos' | 'noemi';
+  showPriceBadge?: boolean;
+  size?: 'default' | 'lg' | 'sm';
+}
+
 const {
   variant = 'single',
-  instructor = 'carlos'
+  instructor = 'carlos',
+  showPriceBadge = true,
+  size = 'default'
 } = Astro.props;
 
-const carlosUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Bb22lvO2Dd7VVH8au87CaqvWWx0zv_2Kr25dL7VFjYB6SRmEe-_di6J5Lc5HB0yK15v2RK1Pj?gv=true';
-const noemiUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0GCF6QGO4L0zwJdSa4jLhgFVWUxpr-VRl6GuFievEvfqHMw_Y88vr1-yjn8fJcv2u1BrRbNf-G?gv=true';
+const CARLOS_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Bb22lvO2Dd7VVH8au87CaqvWWx0zv_2Kr25dL7VFjYB6SRmEe-_di6J5Lc5HB0yK15v2RK1Pj?gv=true';
+const NOEMI_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0GCF6QGO4L0zwJdSa4jLhgFVWUxpr-VRl6GuFievEvfqHMw_Y88vr1-yjn8fJcv2u1BrRbNf-G?gv=true';
 
 const buttons = variant === 'split'
   ? [
-      { label: 'Book with Carlos', url: carlosUrl, secondary: false },
-      { label: 'Book with Noemi', url: noemiUrl, secondary: true }
+      {
+        id: 'carlos',
+        label: 'Book with Carlos',
+        url: CARLOS_URL,
+        price: '$55/hr',
+        specialty: 'Real-World Skills'
+      },
+      {
+        id: 'noemi',
+        label: 'Book with Noemi',
+        url: NOEMI_URL,
+        price: '$70/hr',
+        specialty: 'Anxious Learner Specialist'
+      }
     ]
   : [
       {
+        id: instructor,
         label: instructor === 'noemi' ? 'Book with Noemi' : 'Book with Carlos',
-        url: instructor === 'noemi' ? noemiUrl : carlosUrl,
-        secondary: instructor === 'noemi'
+        url: instructor === 'noemi' ? NOEMI_URL : CARLOS_URL,
+        price: instructor === 'noemi' ? '$70/hr' : '$55/hr',
+        specialty: instructor === 'noemi' ? 'Anxious Learner Specialist' : 'Real-World Skills'
       }
     ];
 ---
 
-<div class="booking-actions" class:list={{ 'booking-actions--split': variant === 'split' }}>
-  {buttons.map((button) => (
+<div class="schedule-group" class:list={{ 'schedule-group--split': variant === 'split' }}>
+  {buttons.map((btn) => (
     <a
-      href={button.url}
+      href={btn.url}
       target="_blank"
       rel="noopener noreferrer"
-      class:list={['booking-link', { 'booking-link--secondary': button.secondary }]}
+      class:list={[
+        'schedule-btn',
+        `schedule-btn--${size}`,
+        `schedule-btn--${btn.id}`
+      ]}
+      aria-label={`${btn.label} (${btn.price})`}
     >
-      {button.label}
+      <!-- Calendar Icon -->
+      <span class="btn-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+      </span>
+
+      <span class="btn-text-wrap">
+        <span class="btn-label">{btn.label}</span>
+      </span>
+
+      {showPriceBadge && (
+        <span class="btn-rate-badge">{btn.price}</span>
+      )}
+
+      <!-- Arrow Icon -->
+      <span class="btn-arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </span>
     </a>
   ))}
 </div>
 
 <style>
-  .booking-actions {
+  .schedule-group {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 0.25rem;
+    gap: 1.25rem;
     width: 100%;
-    max-width: 100%;
   }
 
-  .booking-link {
+  .schedule-group--split {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .schedule-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    text-align: center;
-    background: linear-gradient(135deg, #E63946 0%, #c12f3e 100%);
-    border: 2px solid #c12f3e;
-    color: white;
-    font-weight: 800;
-    font-size: 1.05rem;
-    padding: 0.9rem 1.4rem;
-    min-height: 3.2rem;
-    min-width: 11rem;
-    border-radius: 999px;
-    box-shadow: 0 10px 24px rgba(230, 57, 70, 0.22);
-    transition: all 0.25s ease;
+    gap: 0.75rem;
+    padding: 0.95rem 1.6rem;
+    border-radius: var(--radius-pill);
+    background: var(--gradient-cta);
+    color: #ffffff !important;
     text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
     line-height: 1.2;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: var(--shadow-cta), var(--highlight-top);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+                background 0.25s ease;
     white-space: nowrap;
+    position: relative;
+    cursor: pointer;
   }
 
-  .booking-link:hover {
-    background: linear-gradient(135deg, #c12f3e 0%, #a72432 100%);
+  .schedule-btn:hover {
+    background: var(--gradient-cta-hover);
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(230, 57, 70, 0.28);
-    color: white;
+    box-shadow: var(--shadow-cta-hover), var(--highlight-top);
+    color: #ffffff;
   }
 
-  .booking-link--secondary {
-    background: linear-gradient(135deg, #E63946 0%, #c12f3e 100%);
-    border-color: #c12f3e;
-    box-shadow: 0 10px 24px rgba(230, 57, 70, 0.22);
+  .schedule-btn--lg {
+    padding: 1.1rem 2rem;
+    font-size: 1.15rem;
   }
 
-  .booking-link--secondary:hover {
-    background: linear-gradient(135deg, #c12f3e 0%, #a72432 100%);
-    box-shadow: 0 14px 30px rgba(230, 57, 70, 0.28);
+  .schedule-btn--sm {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.925rem;
   }
 
-  @media (max-width: 640px) {
-    .booking-actions {
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    opacity: 0.95;
+  }
+
+  .btn-text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-label {
+    letter-spacing: -0.01em;
+  }
+
+  .btn-rate-badge {
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.825rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+
+  .btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .schedule-btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  @media (max-width: 680px) {
+    .schedule-group,
+    .schedule-group--split {
       flex-direction: column;
-      align-items: stretch;
+      width: 100%;
+      gap: 0.75rem;
     }
 
-    .booking-link {
+    .schedule-btn {
       width: 100%;
       min-width: 0;
-      font-size: 0.95rem;
-      padding: 0.85rem 1rem;
-      min-height: 3rem;
+      justify-content: center;
+      padding: 0.85rem 1.25rem;
+      font-size: 1rem;
     }
   }
 </style>

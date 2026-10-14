@@ -2,60 +2,303 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Martens Driving School
-	<div class="social-links">
-		<a href="https://www.instagram.com/martensdrivingschool/" target="_blank">
-			<span class="sr-only">Follow Martens Driving School on Instagram</span>
-			  <svg
-   				 xmlns="http://www.w3.org/2000/svg"
-    			 width="24"
-				 height="24"
-			     viewBox="0 0 24 24"
-				 fill="none"
-				 stroke="currentColor"
-				 stroke-width="2"
-				 stroke-linecap="round"
-				 stroke-linejoin="round"
-  				>
-				<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-				<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-				<line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-			  </svg>
-				
-		</a
-	</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <!-- Brand column -->
+      <div class="footer-brand-col">
+        <a href="/#top" class="footer-brand-link">
+          <div class="footer-logo-frame">
+            <img src="/images/logo.jpeg" alt="Martens Driving School" class="footer-logo" width="40" height="40" />
+          </div>
+          <span class="footer-brand-name">Martens Driving School</span>
+        </a>
+        <p class="footer-tagline">
+          MPI-certified private driving lessons and road test preparation in Steinbach and Southeastern Manitoba. Patient, professional instruction tailored for lifelong confidence.
+        </p>
+        <div class="footer-trust-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>MPI-Certified Instructors • Dual-Control Honda CR-V</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-nav-list">
+          <li><a href="/#services">Driving Lessons & Rates</a></li>
+          <li><a href="/#instructors">Meet Your Instructors</a></li>
+          <li><a href="/#why-us">Why Learn With Us</a></li>
+          <li><a href="/#service-area">Service Areas</a></li>
+          <li><a href="/#faq">Frequently Asked Questions</a></li>
+          <li><a href="/#contact">General Inquiry</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact details -->
+      <div class="footer-contact-col">
+        <h4 class="footer-heading">Contact & Hours</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <span class="contact-label">Email:</span>
+            <a href="mailto:info@martensdrivingschool.ca">info@martensdrivingschool.ca</a>
+          </li>
+          <li>
+            <span class="contact-label">Carlos (Text/Call):</span>
+            <a href="tel:+12043802912">(204) 380-2912</a>
+          </li>
+          <li>
+            <span class="contact-label">Noemi (Text/Call):</span>
+            <a href="tel:+12043717417">(204) 371-7417</a>
+          </li>
+          <li>
+            <span class="contact-label">Lesson Hours:</span>
+            <span>8:00 AM – 9:00 PM, 7 Days a Week</span>
+          </li>
+          <li>
+            <span class="contact-label">Location:</span>
+            <span>Steinbach & Southeastern MB</span>
+          </li>
+        </ul>
+
+        <div class="footer-social-wrap">
+          <a 
+            href="https://www.instagram.com/martensdrivingschool/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="footer-social-btn" 
+            aria-label="Follow Martens Driving School on Instagram"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+            </svg>
+            <span>@martensdrivingschool</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom copyright row -->
+    <div class="footer-bottom">
+      <p class="copyright-text">
+        &copy; {today.getFullYear()} Martens Driving School. All rights reserved.
+      </p>
+      <p class="footer-subtext">
+        Steinbach, Manitoba, Canada • Driving Instruction & Road Test Car Rental
+      </p>
+    </div>
+  </div>
 </footer>
+
 <style>
-	footer {
-		padding: 2em 1em 5.5em 1em;
-		background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(234,241,246,0.88));
-		color: rgb(var(--gray));
-		text-align: center;
-		border-top: 1px solid rgba(30,58,95,0.08);
-		margin-top: 1.5rem;
-		box-shadow: inset 0 1px 0 rgba(255,255,255,0.85);
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-		border-radius: 999px;
-		padding: 0.45rem;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		transition: all 0.2s ease;
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-		background: rgba(30,58,95,0.06);
-		transform: translateY(-1px);
-		box-shadow: 0 6px 16px rgba(15,39,56,0.08);
-	}
+  .site-footer {
+    background: #0b1526;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary-dark);
+    padding: 4rem 1.5rem 5rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .footer-container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.25fr;
+    gap: 3rem;
+  }
+
+  /* Brand col */
+  .footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-primary-dark);
+  }
+
+  .footer-logo-frame {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(230, 57, 70, 0.4));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .footer-brand-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary-dark);
+    max-width: 40ch;
+    margin: 0;
+  }
+
+  .footer-trust-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(29, 53, 87, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-primary-dark);
+    width: fit-content;
+  }
+
+  .footer-trust-pill svg {
+    color: #4ade80;
+    flex-shrink: 0;
+  }
+
+  /* Headings */
+  .footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Nav lists */
+  .footer-nav-list,
+  .footer-contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-list a {
+    color: var(--text-secondary-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+
+  .footer-nav-list a:hover {
+    color: #ffffff;
+    transform: translateX(3px);
+  }
+
+  /* Contact list */
+  .footer-contact-list li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .contact-label {
+    font-size: 0.8rem;
+    color: var(--text-muted-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .footer-contact-list a {
+    color: var(--text-primary-dark);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
+  }
+
+  .footer-contact-list a:hover {
+    color: var(--accent-red);
+  }
+
+  .footer-social-wrap {
+    margin-top: 1.25rem;
+  }
+
+  .footer-social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-primary-dark);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.45rem 0.9rem;
+    border-radius: var(--radius-pill);
+    transition: all 0.2s ease;
+  }
+
+  .footer-social-btn:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  /* Bottom row */
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .copyright-text,
+  .footer-subtext {
+    font-size: 0.875rem;
+    color: var(--text-muted-dark);
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  }
 </style>
