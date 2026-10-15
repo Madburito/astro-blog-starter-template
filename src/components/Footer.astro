@@ -11,16 +11,16 @@ const today = new Date();
           <div class="footer-logo-frame">
             <img src="/images/logo.jpeg" alt="Martens Driving School" class="footer-logo" width="40" height="40" />
           </div>
-          <span class="footer-brand-name">Martens Driving School</span>
+          <div class="footer-brand-text-wrap">
+            <span class="footer-brand-name">Martens Driving School</span>
+            <span class="footer-location-tag">Steinbach & Southeastern MB</span>
+          </div>
         </a>
         <p class="footer-tagline">
-          MPI-certified private driving lessons and road test preparation in Steinbach and Southeastern Manitoba. Patient, professional instruction tailored for lifelong confidence.
+          A small, family-owned driving school in Steinbach, Manitoba. MPI-certified driving instruction and road test vehicle rental in a calm, patient, and judgment-free environment.
         </p>
-        <div class="footer-trust-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-          <span>MPI-Certified Instructors • Dual-Control Honda CR-V</span>
+        <div class="footer-trust-badge">
+          <span>MPI-Certified Instructors • Dual-Control 2024 Honda CR-V</span>
         </div>
       </div>
 
@@ -28,38 +28,34 @@ const today = new Date();
       <div class="footer-links-col">
         <h4 class="footer-heading">Navigation</h4>
         <ul class="footer-nav-list">
-          <li><a href="/#services">Driving Lessons & Rates</a></li>
-          <li><a href="/#instructors">Meet Your Instructors</a></li>
-          <li><a href="/#why-us">Why Learn With Us</a></li>
-          <li><a href="/#service-area">Service Areas</a></li>
-          <li><a href="/#faq">Frequently Asked Questions</a></li>
-          <li><a href="/#contact">General Inquiry</a></li>
+          <li><a href="/#services">Lessons & Rates</a></li>
+          <li><a href="/#instructors">Meet Noemi & Carlos</a></li>
+          <li><a href="/#why-us">How We Teach</a></li>
+          <li><a href="/#service-area">Service Area</a></li>
+          <li><a href="/#faq">Questions & Answers</a></li>
+          <li><a href="/#contact">Get in Touch</a></li>
         </ul>
       </div>
 
       <!-- Contact details -->
       <div class="footer-contact-col">
-        <h4 class="footer-heading">Contact & Hours</h4>
+        <h4 class="footer-heading">Reach Out Directly</h4>
         <ul class="footer-contact-list">
+          <li>
+            <span class="contact-label">Call or Text Carlos:</span>
+            <a href="tel:+12043802912">(204) 380-2912</a>
+          </li>
+          <li>
+            <span class="contact-label">Text Noemi:</span>
+            <a href="tel:+12043717417">(204) 371-7417</a>
+          </li>
           <li>
             <span class="contact-label">Email:</span>
             <a href="mailto:info@martensdrivingschool.ca">info@martensdrivingschool.ca</a>
           </li>
           <li>
-            <span class="contact-label">Carlos (Text/Call):</span>
-            <a href="tel:+12043802912">(204) 380-2912</a>
-          </li>
-          <li>
-            <span class="contact-label">Noemi (Text/Call):</span>
-            <a href="tel:+12043717417">(204) 371-7417</a>
-          </li>
-          <li>
-            <span class="contact-label">Lesson Hours:</span>
-            <span>8:00 AM – 9:00 PM, 7 Days a Week</span>
-          </li>
-          <li>
-            <span class="contact-label">Location:</span>
-            <span>Steinbach & Southeastern MB</span>
+            <span class="contact-label">Hours:</span>
+            <span>Mon–Sat: 8:00 AM – 9:00 PM<br/>Sun: 8:00 AM – 7:00 PM</span>
           </li>
         </ul>
 
@@ -71,7 +67,7 @@ const today = new Date();
             class="footer-social-btn" 
             aria-label="Follow Martens Driving School on Instagram"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
@@ -88,7 +84,7 @@ const today = new Date();
         &copy; {today.getFullYear()} Martens Driving School. All rights reserved.
       </p>
       <p class="footer-subtext">
-        Steinbach, Manitoba, Canada • Driving Instruction & Road Test Car Rental
+        Steinbach, Manitoba, Canada • MPI Certified Private In-Car Driving Lessons
       </p>
     </div>
   </div>
@@ -96,10 +92,9 @@ const today = new Date();
 
 <style>
   .site-footer {
-    background: #0b1526;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    color: var(--text-secondary-dark);
-    padding: 4rem 1.5rem 5rem;
+    background-color: var(--navy-brand);
+    color: #FAF8F5;
+    padding: 4.5rem 1.5rem 5rem;
     position: relative;
     z-index: 10;
   }
@@ -122,26 +117,25 @@ const today = new Date();
   .footer-brand-col {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.1rem;
   }
 
   .footer-brand-link {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    text-decoration: none;
-    color: var(--text-primary-dark);
+    text-decoration: none !important;
+    color: #FFFFFF;
   }
 
   .footer-logo-frame {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    padding: 2px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(230, 57, 70, 0.4));
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: #FFFFFF;
+    flex-shrink: 0;
   }
 
   .footer-logo {
@@ -151,45 +145,49 @@ const today = new Date();
     object-fit: cover;
   }
 
+  .footer-brand-text-wrap {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
   .footer-brand-name {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.01em;
+    color: #FFFFFF;
+  }
+
+  .footer-location-tag {
+    font-size: 0.8rem;
+    color: #CBD5E1;
   }
 
   .footer-tagline {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--text-secondary-dark);
-    max-width: 40ch;
+    color: #E2DDD5;
+    max-width: 42ch;
     margin: 0;
   }
 
-  .footer-trust-pill {
+  .footer-trust-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background: rgba(29, 53, 87, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0.35rem 0.75rem;
-    border-radius: var(--radius-pill);
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--text-primary-dark);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #FFFFFF;
     width: fit-content;
-  }
-
-  .footer-trust-pill svg {
-    color: #4ade80;
-    flex-shrink: 0;
   }
 
   /* Headings */
   .footer-heading {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #FFFFFF;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-bottom: 1.25rem;
@@ -205,16 +203,16 @@ const today = new Date();
   }
 
   .footer-nav-list a {
-    color: var(--text-secondary-dark);
-    text-decoration: none;
+    color: #CBD5E1;
+    text-decoration: none !important;
     font-size: 0.95rem;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.15s ease, transform 0.15s ease;
     display: inline-block;
   }
 
   .footer-nav-list a:hover {
-    color: #ffffff;
-    transform: translateX(3px);
+    color: #FFFFFF;
+    transform: translateX(2px);
   }
 
   /* Contact list */
@@ -224,25 +222,26 @@ const today = new Date();
     display: flex;
     flex-direction: column;
     gap: 0.15rem;
+    color: #E2DDD5;
   }
 
   .contact-label {
-    font-size: 0.8rem;
-    color: var(--text-muted-dark);
+    font-size: 0.775rem;
+    color: #94A3B8;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
   }
 
   .footer-contact-list a {
-    color: var(--text-primary-dark);
-    text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: none !important;
     font-weight: 700;
-    transition: color 0.2s ease;
+    transition: color 0.15s ease;
   }
 
   .footer-contact-list a:hover {
-    color: var(--accent-red);
+    color: #F87171;
   }
 
   .footer-social-wrap {
@@ -255,26 +254,24 @@ const today = new Date();
     gap: 0.5rem;
     font-size: 0.875rem;
     font-weight: 700;
-    color: var(--text-primary-dark);
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+    text-decoration: none !important;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 0.45rem 0.9rem;
-    border-radius: var(--radius-pill);
-    transition: all 0.2s ease;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.15s ease;
   }
 
   .footer-social-btn:hover {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: rgba(255, 255, 255, 0.25);
-    color: #ffffff;
-    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
   }
 
   /* Bottom row */
   .footer-bottom {
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -284,8 +281,8 @@ const today = new Date();
 
   .copyright-text,
   .footer-subtext {
-    font-size: 0.875rem;
-    color: var(--text-muted-dark);
+    font-size: 0.85rem;
+    color: #94A3B8;
     margin: 0;
   }
 

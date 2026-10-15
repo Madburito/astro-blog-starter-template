@@ -125,55 +125,125 @@ const HOME_STRUCTURED_DATA = [
 		<main id="top" class="site-main">
 			
 			<!-- ============================================================
-			     1. HIGH-CONVERTING HERO SECTION (Linear / Dark Surface Depth)
+			     1. HERO SECTION (Warm, Personal & Grounded)
 			     ============================================================ -->
 			<section class="hero-section" aria-labelledby="hero-heading">
-				<div class="hero-backdrop-glow" aria-hidden="true"></div>
 				<div class="section-container">
-					<div class="hero-content">
-						<!-- Eyebrow Pill Badge -->
-						<div class="eyebrow-badge eyebrow-badge--dark">
-							<span class="badge-dot" aria-hidden="true"></span>
-							<span>MPI-Certified Driving Instruction • Steinbach & Southeastern MB</span>
-						</div>
-
-						<!-- Main Headline -->
+					<div class="hero-inner">
 						<h1 id="hero-heading" class="hero-headline">
 							Learning to drive should feel comfortable and supportive.
 						</h1>
 
-						<!-- Subcopy -->
-						<p class="hero-lead">
-							At Martens Driving School, our mission is to build lifelong road confidence in a calm, judgment-free environment—not just help you pass a test. Every private in-car lesson is tailored to your pace and comfort level across Steinbach and Southeastern Manitoba.
+						<p class="hero-subcopy">
+							We’re Noemi and Carlos Martens—a mother-and-son, MPI-certified driving school right here in Steinbach. Whether you’re a nervous beginner, an adult learning for the first time, or preparing for your road test, we teach at your pace in a calm, patient environment.
 						</p>
 
-						<!-- Dual-Instructor CTA Architecture -->
+						<!-- Dual Direct Booking CTAs: Noemi & Carlos side-by-side -->
 						<div class="hero-actions">
 							<ScheduleButton variant="split" size="lg" showPriceBadge={true} />
 						</div>
 
-						<!-- Trust Micro-Bar -->
-						<div class="trust-micro-bar" role="region" aria-label="Key school advantages">
-							<div class="trust-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-									<polyline points="9 12 11 14 15 10"></polyline>
-								</svg>
+						<!-- Translucent Hero Trust Bar -->
+						<div class="hero-trust-bar" role="region" aria-label="Key school advantages">
+							<span class="hero-trust-item">
+								<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
 								<span>MPI-Certified Instructors</span>
+							</span>
+							<span class="hero-trust-item">
+								<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+								<span>25+ Yrs Teaching Experience</span>
+							</span>
+							<span class="hero-trust-item">
+								<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+								<span>Dual-Control 2024 CR-V & 2026 Equinox</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- ============================================================
+			     2. "WHO YOU'LL BE DRIVING WITH" (Soft Coastal Sky Blue)
+			     ============================================================ -->
+			<section id="instructors" class="section-instructors" aria-labelledby="instructors-heading">
+				<!-- Legacy anchor support -->
+				<span id="instructor" style="display: block; position: relative; top: -5rem; visibility: hidden;"></span>
+
+				<div class="section-container">
+					<div class="section-header section-header--center">
+						<h2 id="instructors-heading">Who You’ll Be Driving With</h2>
+						<p>
+							We’re a local, family-run driving school right here in Steinbach. Every lesson is private, 1-on-1, and taught directly by Noemi or Carlos.
+						</p>
+					</div>
+
+					<div class="instructors-grid">
+						<!-- Instructor 1: Noemi Martens -->
+						<div class="instructor-card-warm instructor-card-warm--noemi">
+							<div class="instructor-card-header">
+								<div class="instructor-photo-frame">
+									<img 
+										src="/images/instructor.jpg" 
+										alt="Noemi Martens, owner and driving instructor at Martens Driving School" 
+										class="instructor-photo"
+										width="96" 
+										height="96" 
+										loading="lazy"
+									/>
+								</div>
+								<div class="instructor-meta">
+									<h3>Noemi Martens</h3>
+									<div class="instructor-subtitle">Founder, MPI-Certified Instructor & Active Manitoba High School Teacher (25+ Years)</div>
+								</div>
 							</div>
-							<div class="trust-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="8" r="7"></circle>
-									<polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-								</svg>
-								<span>25+ Years Classroom Teaching Pedagogy</span>
+
+							<div class="instructor-vehicle-pill">
+								<span>🚗 Training Vehicle: Black 2024 Honda CR-V Hybrid EX-L (Dual-Control)</span>
 							</div>
-							<div class="trust-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<rect x="2" y="5" width="20" height="14" rx="2"></rect>
-									<line x1="2" y1="10" x2="22" y2="10"></line>
-								</svg>
-								<span>2024 Honda CR-V Hybrid Dual-Control Vehicle</span>
+
+							<p class="instructor-bio-text">
+								Hi, I’m Noemi. Alongside running Martens Driving School, I’m an active Manitoba high school teacher with over 25 years of classroom experience. Teaching is what I truly love, and I believe learning to drive should never involve yelling, pressure, or feeling embarrassed. I specialize in working with nervous beginners and adult learners, creating a patient, step-by-step space where you can relax and build genuine confidence behind the wheel.
+							</p>
+
+							<div class="instructor-card-cta">
+								<a href={NOEMI_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Book a driving lesson with Noemi Martens for $70 per hour">
+									<span>Book with Noemi ($70/hr)</span>
+								</a>
+							</div>
+						</div>
+
+						<!-- Instructor 2: Carlos Martens -->
+						<div class="instructor-card-warm instructor-card-warm--carlos">
+							<div class="instructor-card-header">
+								<div class="instructor-photo-frame">
+									<img 
+										src="/images/instructor-carlos.jpg" 
+										alt="Carlos Martens, driving instructor at Martens Driving School" 
+										class="instructor-photo"
+										width="96" 
+										height="96" 
+										loading="lazy"
+									/>
+								</div>
+								<div class="instructor-meta">
+									<h3>Carlos Martens</h3>
+									<div class="instructor-subtitle">MPI-Certified Instructor & Road Test Prep</div>
+								</div>
+							</div>
+
+							<div class="instructor-vehicle-pill">
+								<span>⚡ Training Vehicle: Grey 2026 Chevy Equinox EV (Dual-Control)</span>
+							</div>
+
+							<p class="instructor-bio-text">
+								Hi, I’m Carlos. My focus is on clear, practical, hands-on driving skills that prepare you for the real world—not just passing a test. Whether we’re practicing Steinbach intersections, highway merging on Highway 12, parallel parking, or mastering the core maneuvers evaluated on the MPI road test, I keep lessons calm and structured so you always know what to expect.
+							</p>
+
+							<div class="instructor-card-cta">
+								<a href={CARLOS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Book a driving lesson with Carlos Martens for $55 per hour">
+									<span>Book with Carlos ($55/hr)</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -182,375 +252,86 @@ const HOME_STRUCTURED_DATA = [
 
 
 			<!-- ============================================================
-			     2. "WHY LEARN WITH US" VALUE PILLARS (Bento Grid)
+			     3. "WHAT YOU'LL BE DRIVING" (Warm Alabaster Photo Showcase)
 			     ============================================================ -->
-			<section id="why-us" class="section-container" aria-labelledby="why-us-heading">
-				<div class="section-header">
-					<div class="eyebrow-badge eyebrow-badge--dark">
-						<span class="badge-dot" aria-hidden="true"></span>
-						<span>The Martens Difference</span>
-					</div>
-					<h2 id="why-us-heading">Why Learn With Us</h2>
-					<p>
-						Instruction built on patience, professional pedagogy, and real-world Southeastern Manitoba road mastery.
-					</p>
-				</div>
-
-				<div class="bento-grid">
-					<!-- Bento Card 1: Teacher-Led Patience -->
-					<div class="bento-card bento-col-6">
-						<div class="bento-card-header">
-							<div class="bento-icon-wrapper" aria-hidden="true">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-									<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-								</svg>
-							</div>
-							<h3>Teacher-Led Patience</h3>
-						</div>
+			<section id="vehicles" class="section-vehicles" aria-labelledby="vehicles-heading">
+				<div class="section-container">
+					<div class="section-header section-header--center">
+						<h2 id="vehicles-heading">Comfortable, Modern & Safe Training Vehicles</h2>
 						<p>
-							Instruction rooted in professional classroom pedagogy—zero yelling, zero intimidation, and total respect. Our methods break down complex road situations into clear, digestible steps so you stay relaxed and receptive behind the wheel.
+							Both of our vehicles are equipped with passenger-side dual safety brakes, automatic transmissions, and modern visibility aids so you can learn with complete peace of mind.
 						</p>
 					</div>
 
-					<!-- Bento Card 2: Nervous & Adult Learners -->
-					<div class="bento-card bento-col-6">
-						<div class="bento-card-header">
-							<div class="bento-icon-wrapper" aria-hidden="true">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-								</svg>
-							</div>
-							<h3>Tailored for Nervous & Adult Learners</h3>
-						</div>
-						<p>
-							Whether you have driving anxiety or are starting later in life, our sessions are paced specifically to replace stress with calm competence. There is no age limit to learning, and we progress strictly at your comfort level.
-						</p>
-					</div>
-
-					<!-- Bento Card 3: Local Route Mastery -->
-					<div class="bento-card bento-col-6">
-						<div class="bento-card-header">
-							<div class="bento-icon-wrapper" aria-hidden="true">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-							</div>
-							<h3>Local Steinbach Route Mastery</h3>
-						</div>
-						<p>
-							Practical preparation for real-world Southeastern Manitoba conditions—navigating busy Main Street and Highway 12, highway merging, rural gravel roads, roundabouts, and the exact intersections evaluated on the MPI road test.
-						</p>
-					</div>
-
-					<!-- Bento Card 4: Modern Dual-Control Hybrid -->
-					<div class="bento-card bento-col-6">
-						<div class="bento-card-header">
-							<div class="bento-icon-wrapper" aria-hidden="true">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
-									<circle cx="7" cy="17" r="2"></circle>
-									<path d="M9 17h6"></path>
-									<circle cx="17" cy="17" r="2"></circle>
-								</svg>
-							</div>
-							<h3>2024 Honda CR-V Hybrid Safety</h3>
-						</div>
-						<p>
-							Train and test in our pristine, fully dual-controlled 2024 Honda CR-V Hybrid. Equipped with instructor-side dual braking and modern active safety features, you can drive with complete peace of mind from day one.
-						</p>
-					</div>
-				</div>
-			</section>
-
-
-			<!-- ============================================================
-			     3. SERVICES & TRANSPARENT PRICING CARDS (Bento Tiered Layout)
-			     ============================================================ -->
-			<section id="services" class="section-container services-section" aria-labelledby="services-heading">
-				<div class="section-header">
-					<div class="eyebrow-badge eyebrow-badge--dark">
-						<span class="badge-dot" aria-hidden="true"></span>
-						<span>Transparent Pricing</span>
-					</div>
-					<h2 id="services-heading">Driving Lessons & Services</h2>
-					<p>
-						No hidden fees. Book single lessons at your own pace or reserve our dual-controlled vehicle for your official road test.
-					</p>
-				</div>
-
-				<div class="services-grid-modern">
-					<!-- Service Card 1: Carlos -->
-					<div class="pricing-card">
-						<div class="pricing-card-header">
-							<span class="pricing-badge">1-on-1 In-Car Training</span>
-							<h3 class="pricing-title">Driving Lesson</h3>
-							<div class="pricing-instructor">Instructor: Carlos Martens</div>
-							<div class="pricing-price-row">
-								<span class="pricing-amount">$55</span>
-								<span class="pricing-unit">/ hour</span>
-							</div>
-						</div>
-
-						<ul class="pricing-features">
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Private, calm 1-on-1 personalized instruction</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Tailored to your current experience level</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Practical real-world skill building & road confidence</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Steinbach & Southeastern Manitoba route practice</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Flexible scheduling 8am – 9pm, 7 days a week</span>
-							</li>
-						</ul>
-
-						<div class="pricing-cta-container">
-							<a href={CARLOS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-navy" aria-label="Book a driving lesson with Carlos Martens for $55 per hour">
-								<span>Book with Carlos</span>
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<line x1="5" y1="12" x2="19" y2="12"></line>
-									<polyline points="12 5 19 12 12 19"></polyline>
-								</svg>
-							</a>
-						</div>
-					</div>
-
-					<!-- Service Card 2: Noemi (Featured) -->
-					<div class="pricing-card pricing-card--featured">
-						<div class="featured-pill">Specialist Pedagogy</div>
-						<div class="pricing-card-header">
-							<span class="pricing-badge">1-on-1 In-Car Training</span>
-							<h3 class="pricing-title">Driving Lesson</h3>
-							<div class="pricing-instructor">Instructor: Noemi Martens (Owner)</div>
-							<div class="pricing-price-row">
-								<span class="pricing-amount">$70</span>
-								<span class="pricing-unit">/ hour</span>
-							</div>
-						</div>
-
-						<ul class="pricing-features">
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Private, patient, judgment-free instruction</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>25+ years professional Manitoba teaching pedagogy</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Specialized guidance for anxious & adult learners</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Progressive road test mastery & confidence drills</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Flexible scheduling 8am – 9pm, 7 days a week</span>
-							</li>
-						</ul>
-
-						<div class="pricing-cta-container">
-							<a href={NOEMI_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Book a driving lesson with Noemi Martens for $70 per hour">
-								<span>Book with Noemi</span>
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<line x1="5" y1="12" x2="19" y2="12"></line>
-									<polyline points="12 5 19 12 12 19"></polyline>
-								</svg>
-							</a>
-						</div>
-					</div>
-
-					<!-- Service Card 3: Road Test Car Rental -->
-					<div class="pricing-card">
-						<div class="pricing-card-header">
-							<span class="pricing-badge">Exam Package</span>
-							<h3 class="pricing-title">Road Test Car Rental</h3>
-							<div class="pricing-instructor">Instructors: Carlos / Noemi</div>
-							<div class="pricing-price-row">
-								<span class="pricing-amount">$100</span>
-								<span class="pricing-unit">flat rate</span>
-							</div>
-						</div>
-
-						<ul class="pricing-features">
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Vehicle provided for official MPI road test in Steinbach</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Dual-controlled 2024 Honda CR-V Hybrid vehicle</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Convenient pick-up & drop-off service included</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Pre-test warm-up drive to settle exam nerves</span>
-							</li>
-							<li class="pricing-feature-item">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<polyline points="20 6 9 17 4 12"></polyline>
-								</svg>
-								<span>Stress-free vehicle inspection pass guarantee</span>
-							</li>
-						</ul>
-
-						<div class="pricing-cta-container">
-							<a href="/#contact" class="btn btn-navy" aria-label="Inquire or reserve car rental for MPI road test">
-								<span>Reserve for Road Test</span>
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<line x1="5" y1="12" x2="19" y2="12"></line>
-									<polyline points="12 5 19 12 12 19"></polyline>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<p class="services-footer-note">
-					Whether you are just starting to learn or preparing for your road test, our lessons focus on real-world driving skills that will help you feel comfortable on the road for life.
-				</p>
-			</section>
-
-
-			<!-- ============================================================
-			     4. "MEET YOUR INSTRUCTORS" (Editorial Profile Cards)
-			     ============================================================ -->
-			<section id="instructors" class="section-container" aria-labelledby="instructors-heading">
-				<!-- Hidden anchor target for backward compatibility with #instructor -->
-				<span id="instructor" style="display: block; position: relative; top: -5.5rem; visibility: hidden;"></span>
-
-				<div class="section-header">
-					<div class="eyebrow-badge eyebrow-badge--dark">
-						<span class="badge-dot" aria-hidden="true"></span>
-						<span>Experienced Educators</span>
-					</div>
-					<h2 id="instructors-heading">Meet Your Instructors</h2>
-					<p>
-						Dedicated to patient, personalized driving instruction that respects your pace and builds genuine confidence.
-					</p>
-				</div>
-
-				<div class="instructors-grid-modern">
-					<!-- Instructor 1: Noemi Martens -->
-					<div class="instructor-editorial-card">
-						<div class="instructor-card-top">
-							<div class="instructor-avatar-frame">
+					<div class="vehicles-grid">
+						<!-- Vehicle 1: Noemi's CR-V Hybrid & Road Test Rental -->
+						<div class="vehicle-card">
+							<div class="vehicle-card-media">
 								<img 
-									src="/images/instructor.jpg" 
-									alt="Noemi Martens, owner and driving instructor at Martens Driving School" 
-									width="110" 
-									height="110" 
+									src="/images/crv-hybrid.jpg" 
+									alt="Shiny Black 2024 Honda CR-V Hybrid EX-L training vehicle" 
+									class="vehicle-card-img"
+									width="720"
+									height="450"
 									loading="lazy"
 								/>
+								<span class="vehicle-badge-overlay">Noemi’s Vehicle • Available for MPI Road Test Rental</span>
 							</div>
-							<div class="instructor-identity">
-								<h3>Noemi Martens</h3>
-								<span class="instructor-role-label">Owner & MPI Certified Instructor</span>
+							<div class="vehicle-card-body">
+								<h3 class="vehicle-title">2024 Honda CR-V Hybrid EX-L (Black)</h3>
+								
+								<div class="vehicle-pills-list">
+									<span class="vehicle-pill">Passenger Dual-Control Brake</span>
+									<span class="vehicle-pill">Smooth Hybrid AWD</span>
+									<span class="vehicle-pill">EX-L Leather Comfort</span>
+									<span class="vehicle-pill">Blind-Spot & Backup Cameras</span>
+								</div>
+
+								<p class="vehicle-description">
+									A quiet, comfortable, and confidence-inspiring SUV with commanding road visibility. Available for all of Noemi's lessons as well as our $100 MPI Road Test Car Rental package.
+								</p>
+
+								<div class="vehicle-card-action">
+									<a href={NOEMI_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Book a lesson with Noemi in the 2024 Honda CR-V Hybrid">
+										<span>Book Noemi's Lesson ($70/hr)</span>
+									</a>
+								</div>
 							</div>
 						</div>
 
-						<div class="instructor-credentials">
-							<span class="credential-pill">MPI Certified Instructor</span>
-							<span class="credential-pill">Certified Manitoba Teacher (25+ Yrs)</span>
-							<span class="credential-pill">Anxious & Adult Learner Specialist</span>
-						</div>
-
-						<p class="instructor-bio">
-							Hi, I’m Noemi Martens, owner and instructor at Martens Driving School. I am an MPI certified driving instructor and a certified Manitoba teacher with over 25 years of classroom teaching experience. Teaching has always been something I truly enjoy, and I love helping students gain confidence both in the classroom and behind the wheel.
-						</p>
-
-						<div class="instructor-card-action">
-							<a href={NOEMI_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Book a driving lesson with Noemi Martens">
-								<span>Book with Noemi ($70/hr)</span>
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<line x1="5" y1="12" x2="19" y2="12"></line>
-									<polyline points="12 5 19 12 12 19"></polyline>
-								</svg>
-							</a>
-						</div>
-					</div>
-
-					<!-- Instructor 2: Carlos Martens -->
-					<div class="instructor-editorial-card">
-						<div class="instructor-card-top">
-							<div class="instructor-avatar-frame">
+						<!-- Vehicle 2: Carlos's Equinox EV -->
+						<div class="vehicle-card">
+							<div class="vehicle-card-media">
 								<img 
-									src="/images/instructor-carlos.jpg" 
-									alt="Carlos Martens, driving instructor at Martens Driving School" 
-									width="110" 
-									height="110" 
+									src="/images/equinox-ev.jpg" 
+									alt="Metallic Grey 2026 Chevrolet Equinox EV electric training vehicle" 
+									class="vehicle-card-img"
+									width="720"
+									height="450"
 									loading="lazy"
 								/>
+								<span class="vehicle-badge-overlay vehicle-badge-overlay--carlos">Carlos’s Vehicle • All-Electric & Ultra-Smooth</span>
 							</div>
-							<div class="instructor-identity">
-								<h3>Carlos Martens</h3>
-								<span class="instructor-role-label">MPI Certified Instructor</span>
+							<div class="vehicle-card-body">
+								<h3 class="vehicle-title">2026 Chevrolet Equinox EV (Grey)</h3>
+
+								<div class="vehicle-pills-list">
+									<span class="vehicle-pill">Passenger Dual-Control Brake</span>
+									<span class="vehicle-pill">100% Electric & Whisper Quiet</span>
+									<span class="vehicle-pill">High-Def Surround Vision</span>
+									<span class="vehicle-pill">Effortless Handling</span>
+								</div>
+
+								<p class="vehicle-description">
+									With zero engine noise or shifting vibrations, the all-electric 2026 Equinox EV creates an exceptionally calm cabin environment—helping nervous learners stay focused on Steinbach roads, highway merges, and parking.
+								</p>
+
+								<div class="vehicle-card-action">
+									<a href={CARLOS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Book a lesson with Carlos in the 2026 Chevrolet Equinox EV">
+										<span>Book Carlos's Lesson ($55/hr)</span>
+									</a>
+								</div>
 							</div>
-						</div>
-
-						<div class="instructor-credentials">
-							<span class="credential-pill">MPI Certified Instructor</span>
-							<span class="credential-pill">Real-World Skill Building</span>
-							<span class="credential-pill">Road Test Prep Specialist</span>
-						</div>
-
-						<p class="instructor-bio">
-							Hi, I’m Carlos Martens. I’m an instructor here focused on clear, hands-on lessons that teach practical, real-world driving skills. I help students master difficult driving scenarios, prepare thoroughly for their road test, and build lifelong confidence behind the wheel.
-						</p>
-
-						<div class="instructor-card-action">
-							<a href={CARLOS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-navy" aria-label="Book a driving lesson with Carlos Martens">
-								<span>Book with Carlos ($55/hr)</span>
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<line x1="5" y1="12" x2="19" y2="12"></line>
-									<polyline points="12 5 19 12 12 19"></polyline>
-								</svg>
-							</a>
 						</div>
 					</div>
 				</div>
@@ -558,397 +339,503 @@ const HOME_STRUCTURED_DATA = [
 
 
 			<!-- ============================================================
-			     5. SERVICE AREA & INTERACTIVE MAP
+			     4. "STRAIGHTFORWARD LESSONS & RATES" (Rich Prussian Feature)
 			     ============================================================ -->
-			<section id="service-area" class="section-container" aria-labelledby="service-area-heading">
-				<div class="section-header">
-					<div class="eyebrow-badge eyebrow-badge--dark">
-						<span class="badge-dot" aria-hidden="true"></span>
-						<span>Local Coverage</span>
-					</div>
-					<h2 id="service-area-heading">Service Area</h2>
-					<p>
-						Proudly based in Steinbach and serving Southeastern Manitoba communities.
-					</p>
-				</div>
-
-				<div class="service-area-module">
-					<div class="service-area-info">
-						<h3>Communities We Serve</h3>
+			<section id="services" class="section-rates-feature" aria-labelledby="services-heading">
+				<div class="section-container">
+					<div class="section-header section-header--center">
+						<h2 id="services-heading">Straightforward Lessons & Rates</h2>
 						<p>
-							We provide convenient pick-up and drop-off driving instruction throughout Steinbach and surrounding towns:
+							Simple hourly booking with no hidden fees or complicated packages.
 						</p>
+					</div>
 
-						<div class="service-area-pills" role="list">
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>Steinbach</span>
+					<div class="rates-grid">
+						<!-- Lesson 1: Noemi -->
+						<div class="rate-card">
+							<div class="rate-card-top">
+								<h3 class="rate-title">Driving Lesson</h3>
+								<div class="rate-instructor">Instructor: Noemi Martens (Founder)</div>
+								<div class="rate-price-row">
+									<span class="rate-amount">$70</span>
+									<span class="rate-unit">/ hour</span>
+								</div>
 							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>Blumenort</span>
+
+							<ul class="rate-features">
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Private, patient, judgment-free instruction</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Grounded in 25+ years of active high school classroom teaching experience</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Specialized, gentle guidance for nervous beginners and adult learners</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Learner vehicle: Black 2024 Honda CR-V Hybrid EX-L</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Flexible appointments 7 days a week (8am – 9pm)</span>
+								</li>
+							</ul>
+
+							<div class="rate-card-action">
+								<a href={NOEMI_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Book 1-hour driving lesson with Noemi Martens for $70">
+									<span>Book with Noemi ($70/hr)</span>
+								</a>
 							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>Mitchell</span>
+						</div>
+
+						<!-- Lesson 2: Carlos -->
+						<div class="rate-card">
+							<div class="rate-card-top">
+								<h3 class="rate-title">Driving Lesson</h3>
+								<div class="rate-instructor">Instructor: Carlos Martens</div>
+								<div class="rate-price-row">
+									<span class="rate-amount">$55</span>
+									<span class="rate-unit">/ hour</span>
+								</div>
 							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>La Broquerie</span>
+
+							<ul class="rate-features">
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Private, calm 1-on-1 personalized in-car instruction</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Tailored directly to your current comfort and experience level</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Practical real-world skills: parking, highway merging, gravel roads</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Learner vehicle: Grey 2026 Chevrolet Equinox EV</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Flexible appointments 7 days a week (8am – 9pm)</span>
+								</li>
+							</ul>
+
+							<div class="rate-card-action">
+								<a href={CARLOS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Book 1-hour driving lesson with Carlos Martens for $55">
+									<span>Book with Carlos ($55/hr)</span>
+								</a>
 							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>New Bothwell</span>
+						</div>
+
+						<!-- Package 3: Road Test Car Rental -->
+						<div class="rate-card rate-card--highlight">
+							<div class="rate-card-top">
+								<span class="rate-ribbon-badge">Includes Pick-Up & Drop-Off</span>
+								<h3 class="rate-title">MPI Road Test Car Rental</h3>
+								<div class="rate-instructor">Instructors: Carlos / Noemi</div>
+								<div class="rate-price-row">
+									<span class="rate-amount">$100</span>
+									<span class="rate-unit">flat rate</span>
+								</div>
 							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>Landmark</span>
-							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>Grunthal</span>
-							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>Niverville</span>
-							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>Kleefeld</span>
-							</div>
-							<div class="area-pill" role="listitem">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<circle cx="12" cy="10" r="3"></circle>
-									<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
-								</svg>
-								<span>Southeastern Manitoba</span>
+
+							<ul class="rate-features">
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Use our certified vehicle for your official Steinbach MPI road test</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Dual-controlled 2024 Honda CR-V Hybrid EX-L vehicle</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Pick-up and drop-off service in Steinbach included</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Pre-test warm-up drive right before your test to settle exam jitters</span>
+								</li>
+								<li>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									<span>Available to both new and continuing students</span>
+								</li>
+							</ul>
+
+							<div class="rate-card-action">
+								<a href="#contact" class="btn btn-outline" aria-label="Reserve car rental for your MPI road test">
+									<span>Reserve for Road Test</span>
+								</a>
 							</div>
 						</div>
 					</div>
-
-					<div class="service-area-map-container">
-						<iframe
-							title="Martens Driving School service area map in Steinbach, MB"
-							width="600"
-							height="450"
-							style="border:0;"
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
-							src="https://www.google.com/maps?q=Martens+Driving+School+Steinbach+MB&output=embed"
-							allowfullscreen="" 
-							aria-hidden="false" 
-							tabindex="0">
-						</iframe>
-					</div>
 				</div>
 			</section>
 
 
 			<!-- ============================================================
-			     6. FREQUENTLY ASKED QUESTIONS (Accordion)
+			     5. "HOW WE TEACH" & FAQ (Soft Coastal Sky Blue)
 			     ============================================================ -->
-			<section id="faq" class="section-container" aria-labelledby="faq-heading">
-				<div class="section-header">
-					<div class="eyebrow-badge eyebrow-badge--dark">
-						<span class="badge-dot" aria-hidden="true"></span>
-						<span>Got Questions?</span>
-					</div>
-					<h2 id="faq-heading">Frequently Asked Questions</h2>
-					<p>
-						Everything you need to know about driving lessons, vehicle rental, and road tests.
-					</p>
-				</div>
-
-				<div class="faq-container">
-					<div class="faq-card">
-						<details>
-							<summary>
-								<span>How much do driving lessons cost?</span>
-								<span class="faq-icon" aria-hidden="true">+</span>
-							</summary>
-							<div class="faq-content">
-								<p>Driving lessons: Carlos $55/hour; Noemi $70/hour. We offer flexible scheduling to fit your budget and availability.</p>
-							</div>
-						</details>
+			<section id="why-us" class="section-teach-faq" aria-labelledby="why-us-heading">
+				<div class="section-container">
+					<div class="section-header section-header--center">
+						<h2 id="why-us-heading">How We Teach</h2>
+						<p>
+							A calm, patient approach designed to build real confidence behind the wheel.
+						</p>
 					</div>
 
-					<div class="faq-card">
-						<details>
-							<summary>
-								<span>How long is each lesson?</span>
-								<span class="faq-icon" aria-hidden="true">+</span>
-							</summary>
-							<div class="faq-content">
-								<p>Most lessons are booked in hourly sessions, with options based on your needs and goals. We also offer packages for multiple lessons.</p>
-							</div>
-						</details>
-					</div>
-
-					<div class="faq-card">
-						<details>
-							<summary>
-								<span>Do you provide a vehicle for road tests?</span>
-								<span class="faq-icon" aria-hidden="true">+</span>
-							</summary>
-							<div class="faq-content">
-								<p>Yes. Road test car rental is available for $100 in our dual-controlled 2024 Honda CR-V Hybrid.</p>
-							</div>
-						</details>
-					</div>
-
-					<div class="faq-card">
-						<details>
-							<summary>
-								<span>What areas do you serve?</span>
-								<span class="faq-icon" aria-hidden="true">+</span>
-							</summary>
-							<div class="faq-content">
-								<p>We serve Steinbach and surrounding communities including Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and throughout Southeastern Manitoba.</p>
-							</div>
-						</details>
-					</div>
-
-					<div class="faq-card">
-						<details>
-							<summary>
-								<span>Can you help if I'm nervous about driving?</span>
-								<span class="faq-icon" aria-hidden="true">+</span>
-							</summary>
-							<div class="faq-content">
-								<p>Absolutely. Many of our students start out nervous. We provide patient, judgment-free instruction that builds confidence gradually. We specialize in working with anxious learners.</p>
-							</div>
-						</details>
-					</div>
-
-					<div class="faq-card">
-						<details>
-							<summary>
-								<span>Do you teach adult learners?</span>
-								<span class="faq-icon" aria-hidden="true">+</span>
-							</summary>
-							<div class="faq-content">
-								<p>Yes. We offer specialized adult driving lessons with no age limit. Adults bring maturity and focus that often helps them progress quickly.</p>
-							</div>
-						</details>
-					</div>
-
-					<div class="faq-card">
-						<details>
-							<summary>
-								<span>What are your hours?</span>
-								<span class="faq-icon" aria-hidden="true">+</span>
-							</summary>
-							<div class="faq-content">
-								<p>We're available 8am to 9pm, seven days a week. We schedule lessons around your availability.</p>
-							</div>
-						</details>
-					</div>
-
-					<div class="faq-card">
-						<details>
-							<summary>
-								<span>How do I book a lesson?</span>
-								<span class="faq-icon" aria-hidden="true">+</span>
-							</summary>
-							<div class="faq-content">
-								<p>Fill out the contact form below, email us at info@martensdrivingschool.ca, or text/call Carlos at (204) 380-2912 or Noemi at (204) 371-7417.</p>
-							</div>
-						</details>
-					</div>
-				</div>
-			</section>
-
-
-			<!-- ============================================================
-			     7. GENERAL INQUIRY & CONTACT MODULE (Split Layout)
-			     ============================================================ -->
-			<section id="contact" class="section-container" aria-labelledby="contact-heading">
-				<div class="section-header">
-					<div class="eyebrow-badge eyebrow-badge--dark">
-						<span class="badge-dot" aria-hidden="true"></span>
-						<span>Direct Communication</span>
-					</div>
-					<h2 id="contact-heading">General Inquiry & Contact</h2>
-					<p>
-						Have a question or want to get in touch? Reach out directly via text or phone, or send an inquiry below.
-					</p>
-				</div>
-
-				<div class="contact-module-split">
-					<!-- Left Column: Direct Contact Channels -->
-					<div class="contact-channels-column">
-						<div class="contact-channels-header">
-							<h3>Get in Touch Directly</h3>
+					<div class="how-we-teach-grid">
+						<!-- Point 1 -->
+						<div class="teach-block">
+							<span class="teach-number" aria-hidden="true">01</span>
+							<h3>No Yelling, No Rush</h3>
 							<p>
-								We respond quickly to all texts, calls, and email inquiries. Available 7 days a week.
+								Learning a new skill takes time. We explain things clearly, answer every question, and never make you feel bad for making a mistake. You learn at your own pace with zero pressure.
 							</p>
 						</div>
 
-						<div class="contact-cards-list">
-							<!-- Email Card -->
-							<a href="mailto:info@martensdrivingschool.ca" class="contact-channel-card">
-								<div class="channel-icon" aria-hidden="true">
-									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-										<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-										<polyline points="22,6 12,13 2,6"></polyline>
-									</svg>
-								</div>
-								<div class="channel-details">
-									<span class="channel-label">Email Us</span>
-									<span class="channel-value">info@martensdrivingschool.ca</span>
-									<span class="channel-subtext">Click to email anytime</span>
-								</div>
-							</a>
+						<!-- Point 2 -->
+						<div class="teach-block">
+							<span class="teach-number" aria-hidden="true">02</span>
+							<h3>Great for Nervous & Adult Learners</h3>
+							<p>
+								Starting later in life or feeling anxious about traffic? We start in quiet residential streets and build up to busier Steinbach roads and highways only when you feel ready and supported.
+							</p>
+						</div>
 
-							<!-- Carlos Phone/SMS Card -->
-							<div class="contact-channel-card">
-								<div class="channel-icon" aria-hidden="true">
-									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-									</svg>
-								</div>
-								<div class="channel-details">
-									<span class="channel-label">Carlos Martens</span>
-									<span class="channel-value">(204) 380-2912</span>
-									<div class="contact-quick-actions">
-										<a href="sms:+12043802912" class="quick-action-link">SMS / Text</a>
-										<a href="tel:+12043802912" class="quick-action-link">Call</a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Noemi Phone/SMS Card -->
-							<div class="contact-channel-card">
-								<div class="channel-icon" aria-hidden="true">
-									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-									</svg>
-								</div>
-								<div class="channel-details">
-									<span class="channel-label">Noemi Martens</span>
-									<span class="channel-value">(204) 371-7417</span>
-									<div class="contact-quick-actions">
-										<a href="sms:+12043717417" class="quick-action-link">SMS / Text</a>
-										<a href="tel:+12043717417" class="quick-action-link">Call</a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Hours & Location Card -->
-							<div class="contact-channel-card">
-								<div class="channel-icon" aria-hidden="true">
-									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-										<circle cx="12" cy="12" r="10"></circle>
-										<polyline points="12 6 12 12 16 14"></polyline>
-									</svg>
-								</div>
-								<div class="channel-details">
-									<span class="channel-label">Hours of Operation</span>
-									<span class="channel-value">8:00 AM – 9:00 PM</span>
-									<span class="channel-subtext">7 Days a Week • Flexible Appointments</span>
-								</div>
-							</div>
+						<!-- Point 3 -->
+						<div class="teach-block">
+							<span class="teach-number" aria-hidden="true">03</span>
+							<h3>Real Local Road Confidence</h3>
+							<p>
+								We don’t just teach you to pass a test—we make sure you feel completely comfortable driving on Manitoba highways, rural gravel roads, winter weather conditions, and everyday errands.
+							</p>
 						</div>
 					</div>
 
-					<!-- Right Column: Inquiry Form -->
-					<div class="contact-form-column">
-						<h3>Send an Inquiry</h3>
-						<p class="form-intro">
-							Fill out this quick form and we’ll get back to you promptly with answers or scheduling availability.
+					<!-- Anchor for FAQ navigation -->
+					<span id="faq" style="display: block; position: relative; top: -5rem; visibility: hidden;"></span>
+
+					<div class="section-header section-header--center" style="margin-top: 3.5rem;">
+						<h2>Frequently Asked Questions</h2>
+						<p>
+							Everything you need to know about getting your license, booking lessons, and road tests in Steinbach.
 						</p>
+					</div>
 
-						<!-- Form: Strictly Preserves All Attributes & Logic -->
-						<form class="contact-form" action="https://formsubmit.co/info@martensdrivingschool.ca" method="POST">
-							<input type="hidden" name="_subject" value="New inquiry from Martens Driving School site" />
-							<input type="hidden" name="_captcha" value="false" />
-							<input id="cf-next" type="hidden" name="_next" value="" />
-							<input id="cf-winnipeg" type="hidden" name="submission_date_winnipeg" value="" />
+					<div class="faq-accordion-wrap">
+						<div class="faq-item">
+							<details>
+								<summary>
+									<span>How much do driving lessons cost?</span>
+									<span class="faq-toggle-icon" aria-hidden="true">+</span>
+								</summary>
+								<div class="faq-answer">
+									<p>Driving lessons: Carlos $55/hour; Noemi $70/hour. We offer flexible scheduling to fit your budget and availability.</p>
+								</div>
+							</details>
+						</div>
 
-							<div class="form-group">
-								<label for="cf-name" class="form-label">Name <span class="required">*</span></label>
-								<input id="cf-name" class="form-input" name="name" type="text" placeholder="Your full name" required />
-							</div>
+						<div class="faq-item">
+							<details>
+								<summary>
+									<span>How long is each lesson?</span>
+									<span class="faq-toggle-icon" aria-hidden="true">+</span>
+								</summary>
+								<div class="faq-answer">
+									<p>Most lessons are booked in hourly sessions, with options based on your needs and goals. We schedule lessons around your availability.</p>
+								</div>
+							</details>
+						</div>
 
-							<div class="form-group">
-								<label for="cf-email" class="form-label">Email <span class="required">*</span></label>
-								<input id="cf-email" class="form-input" name="email" type="email" placeholder="your@email.com" />
-								<span class="form-hint">Email or phone number is required</span>
-							</div>
+						<div class="faq-item">
+							<details>
+								<summary>
+									<span>Do you provide a vehicle for road tests?</span>
+									<span class="faq-toggle-icon" aria-hidden="true">+</span>
+								</summary>
+								<div class="faq-answer">
+									<p>Yes. Road test car rental is available for $100 in our dual-controlled 2024 Honda CR-V Hybrid, including pick-up, drop-off, and a pre-test warm-up drive.</p>
+								</div>
+							</details>
+						</div>
 
-							<div class="form-group">
-								<label for="cf-phone" class="form-label">Phone Number <span class="required">*</span></label>
-								<input id="cf-phone" class="form-input" name="phone" type="tel" placeholder="(204) 123-4567" />
-							</div>
+						<div class="faq-item">
+							<details>
+								<summary>
+									<span>What areas do you serve?</span>
+									<span class="faq-toggle-icon" aria-hidden="true">+</span>
+								</summary>
+								<div class="faq-answer">
+									<p>We serve Steinbach and surrounding communities including Blumenort, Mitchell, La Broquerie, New Bothwell, Landmark, Grunthal, Niverville, Kleefeld, and throughout Southeastern Manitoba.</p>
+								</div>
+							</details>
+						</div>
 
-							<div class="form-group">
-								<label for="cf-message" class="form-label">Message</label>
-								<textarea id="cf-message" class="form-textarea" name="message" rows="4" placeholder="How can we help? Tell us about your driving experience, questions, or goals..."></textarea>
-							</div>
+						<div class="faq-item">
+							<details>
+								<summary>
+									<span>Can you help if I'm nervous about driving?</span>
+									<span class="faq-toggle-icon" aria-hidden="true">+</span>
+								</summary>
+								<div class="faq-answer">
+									<p>Absolutely. Many of our students start out nervous. We provide patient, judgment-free instruction that builds confidence gradually. We specialize in working with anxious learners.</p>
+								</div>
+							</details>
+						</div>
 
-							<button type="submit" class="btn btn-primary btn-submit">
-								<span>Send Inquiry</span>
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-									<line x1="22" y1="2" x2="11" y2="13"></line>
-									<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-								</svg>
-							</button>
+						<div class="faq-item">
+							<details>
+								<summary>
+									<span>Do you teach adult learners?</span>
+									<span class="faq-toggle-icon" aria-hidden="true">+</span>
+								</summary>
+								<div class="faq-answer">
+									<p>Yes. We offer specialized adult driving lessons with no age limit. Adults bring maturity and focus that often helps them progress quickly.</p>
+								</div>
+							</details>
+						</div>
 
-							<p class="form-status" aria-live="polite"></p>
-						</form>
+						<div class="faq-item">
+							<details>
+								<summary>
+									<span>What are your hours?</span>
+									<span class="faq-toggle-icon" aria-hidden="true">+</span>
+								</summary>
+								<div class="faq-answer">
+									<p>We're available 8am to 9pm, seven days a week. We schedule lessons around your availability.</p>
+								</div>
+							</details>
+						</div>
+
+						<div class="faq-item">
+							<details>
+								<summary>
+									<span>How do I book a lesson?</span>
+									<span class="faq-toggle-icon" aria-hidden="true">+</span>
+								</summary>
+								<div class="faq-answer">
+									<p>Fill out the contact form below, email us at info@martensdrivingschool.ca, or text/call Carlos at (204) 380-2912 or Noemi at (204) 371-7417.</p>
+								</div>
+							</details>
+						</div>
 					</div>
 				</div>
+			</section>
 
-				<!-- Submission modal shown after successful send -->
-				<div id="submission-modal" class="submission-modal" role="dialog" aria-modal="true" aria-labelledby="submission-modal-title" hidden>
-					<div class="submission-modal__overlay" tabindex="-1"></div>
-					<div class="submission-modal__content">
-						<div class="submission-modal-icon">
-							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-								<polyline points="20 6 9 17 4 12"></polyline>
-							</svg>
+
+			<!-- ============================================================
+			     6. SERVICE AREA & CONTACT SPLIT CARD (Warm Alabaster)
+			     ============================================================ -->
+			<section id="contact-section" class="section-contact-area" aria-labelledby="contact-heading">
+				<span id="service-area" style="display: block; position: relative; top: -5rem; visibility: hidden;"></span>
+				<span id="contact" style="display: block; position: relative; top: -5rem; visibility: hidden;"></span>
+
+				<div class="section-container">
+					<!-- Service Area Box -->
+					<div class="service-area-box">
+						<div class="service-area-text">
+							<h3>Service Area & Communities</h3>
+							<p>
+								Based right here in Steinbach, proudly teaching students throughout Southeastern Manitoba:
+							</p>
+
+							<div class="town-tags-list" role="list">
+								<span class="town-tag" role="listitem">Steinbach</span>
+								<span class="town-tag" role="listitem">Blumenort</span>
+								<span class="town-tag" role="listitem">Mitchell</span>
+								<span class="town-tag" role="listitem">La Broquerie</span>
+								<span class="town-tag" role="listitem">New Bothwell</span>
+								<span class="town-tag" role="listitem">Landmark</span>
+								<span class="town-tag" role="listitem">Grunthal</span>
+								<span class="town-tag" role="listitem">Niverville</span>
+								<span class="town-tag" role="listitem">Kleefeld</span>
+								<span class="town-tag" role="listitem">Southeastern Manitoba</span>
+							</div>
 						</div>
-						<h3 id="submission-modal-title">Message Sent!</h3>
-						<p>Thank you for reaching out. We have received your inquiry and will contact you as soon as possible.</p>
-						<button id="submission-modal-dismiss" class="btn btn-primary">OK</button>
+
+						<div class="service-map-container">
+							<iframe
+								title="Martens Driving School service area map in Steinbach, MB"
+								width="600"
+								height="450"
+								style="border:0;"
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+								src="https://www.google.com/maps?q=Martens+Driving+School+Steinbach+MB&output=embed"
+								allowfullscreen="" 
+								aria-hidden="false" 
+								tabindex="0">
+							</iframe>
+						</div>
+					</div>
+
+					<div class="section-header section-header--center">
+						<h2 id="contact-heading">Get in Touch</h2>
+						<p>
+							Not sure who to book with or how many lessons you need? Send us a text, email, or message below—we’re happy to help.
+						</p>
+					</div>
+
+					<!-- Split Two-Tone Contact Card -->
+					<div class="contact-split-layout">
+						<!-- Left Column: Direct Local Contacts (Prussian Navy) -->
+						<div class="contact-channels-panel">
+							<div>
+								<h3>Reach Out Directly</h3>
+								<p>
+									Text, call, or email anytime. As a two-person family school, you’ll hear back directly from Carlos or Noemi.
+								</p>
+							</div>
+
+							<div class="direct-contacts-list">
+								<!-- Carlos Phone/SMS -->
+								<div class="contact-entry">
+									<span class="contact-entry-label">Call or Text Carlos</span>
+									<span class="contact-entry-value">(204) 380-2912</span>
+									<div class="contact-entry-actions">
+										<a href="sms:+12043802912" class="action-pill-btn">Send Text</a>
+										<a href="tel:+12043802912" class="action-pill-btn">Call</a>
+									</div>
+								</div>
+
+								<!-- Noemi Text -->
+								<div class="contact-entry">
+									<span class="contact-entry-label">Text Noemi</span>
+									<span class="contact-entry-value">(204) 371-7417</span>
+									<div class="contact-entry-actions">
+										<a href="sms:+12043717417" class="action-pill-btn">Send Text</a>
+										<a href="tel:+12043717417" class="action-pill-btn">Call</a>
+									</div>
+								</div>
+
+								<!-- Email -->
+								<div class="contact-entry">
+									<span class="contact-entry-label">Email Us</span>
+									<a href="mailto:info@martensdrivingschool.ca" class="contact-entry-value" style="font-size: 1rem; color: #FFFFFF; text-decoration: none;">
+										info@martensdrivingschool.ca
+									</a>
+								</div>
+
+								<!-- Hours -->
+								<div class="contact-entry">
+									<span class="contact-entry-label">Lesson Hours</span>
+									<span style="color: #FFFFFF; font-size: 0.95rem; line-height: 1.4;">
+										Mon–Sat: 8:00 AM – 9:00 PM<br/>
+										Sun: 8:00 AM – 7:00 PM
+									</span>
+								</div>
+
+								<!-- Instagram -->
+								<div class="contact-entry">
+									<span class="contact-entry-label">Instagram</span>
+									<a href="https://www.instagram.com/martensdrivingschool/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; font-weight: 700; text-decoration: none;">
+										@martensdrivingschool
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Right Column: Inquiry Form (Crisp White) -->
+						<div class="contact-form-panel">
+							<h3>Send Us a Message</h3>
+							<p class="contact-form-intro">
+								Leave a note below and we’ll get back to you promptly with answers or scheduling availability.
+							</p>
+
+							<!-- Form: Strictly Preserves All Attributes & Logic -->
+							<form class="contact-form-native contact-form" action="https://formsubmit.co/info@martensdrivingschool.ca" method="POST">
+								<input type="hidden" name="_subject" value="New inquiry from Martens Driving School site" />
+								<input type="hidden" name="_captcha" value="false" />
+								<input id="cf-next" type="hidden" name="_next" value="" />
+								<input id="cf-winnipeg" type="hidden" name="submission_date_winnipeg" value="" />
+
+								<div class="form-group-warm">
+									<label for="cf-name">Name <span class="required-star">*</span></label>
+									<input id="cf-name" class="form-control-warm" name="name" type="text" placeholder="Your name" required />
+								</div>
+
+								<div class="form-group-warm">
+									<label for="cf-email">Email <span class="required-star">*</span></label>
+									<input id="cf-email" class="form-control-warm" name="email" type="email" placeholder="your@email.com" />
+									<span class="form-field-hint">Email or phone number is required</span>
+								</div>
+
+								<div class="form-group-warm">
+									<label for="cf-phone">Phone Number <span class="required-star">*</span></label>
+									<input id="cf-phone" class="form-control-warm" name="phone" type="tel" placeholder="(204) 123-4567" />
+								</div>
+
+								<div class="form-group-warm">
+									<label for="cf-message">Message</label>
+									<textarea id="cf-message" class="form-control-warm" name="message" rows="4" placeholder="How can we help? Tell us about your driving experience, questions, or goals..."></textarea>
+								</div>
+
+								<button type="submit" class="btn btn-primary btn-form-submit">
+									<span>Send Message</span>
+								</button>
+
+								<p class="form-status" aria-live="polite"></p>
+							</form>
+						</div>
+					</div>
+
+					<!-- Submission modal shown after successful send -->
+					<div id="submission-modal" class="submission-modal" role="dialog" aria-modal="true" aria-labelledby="submission-modal-title" hidden>
+						<div class="submission-modal__overlay" tabindex="-1"></div>
+						<div class="submission-modal__content">
+							<h3 id="submission-modal-title">Message Sent!</h3>
+							<p>Thank you for reaching out. We have received your note and will get back to you as soon as possible.</p>
+							<button id="submission-modal-dismiss" class="btn btn-primary">OK</button>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- Mobile Sticky Quick Action Bar -->
-			<div class="mobile-sticky-action-bar" aria-label="Quick mobile booking actions">
-				<a href={CARLOS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-navy">
-					<span>Book Carlos ($55)</span>
-				</a>
+			<div class="mobile-sticky-booking-bar" aria-label="Quick mobile booking actions">
 				<a href={NOEMI_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
 					<span>Book Noemi ($70)</span>
+				</a>
+				<a href={CARLOS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+					<span>Book Carlos ($55)</span>
 				</a>
 			</div>
 
@@ -1036,7 +923,7 @@ const HOME_STRUCTURED_DATA = [
 					});
 				});
 
-				const mapFrame = document.querySelector('.service-area-module iframe');
+				const mapFrame = document.querySelector('.service-map-container iframe');
 				if (mapFrame) {
 					mapFrame.addEventListener('click', () => {
 						if (typeof window.gtag === 'function') {

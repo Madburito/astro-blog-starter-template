@@ -4,61 +4,35 @@ import { SITE_TITLE } from '../consts';
 
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <!-- 1. Left: Brand Logo Emblem & Wordmark -->
+    <!-- Left: Brand Logo Emblem & Wordmark with "Steinbach, MB" sub-label -->
     <div class="header-left">
       <a href="/#top" class="brand-link" aria-label="Martens Driving School - Return to top">
         <div class="brand-logo-frame">
-          <img src="/images/logo.jpeg" alt="Martens Driving School Emblem" class="brand-logo" width="40" height="40" />
+          <img src="/images/logo.jpeg" alt="Martens Driving School Logo" class="brand-logo" width="40" height="40" />
         </div>
-        <span class="brand-text">{SITE_TITLE}</span>
+        <div class="brand-text-block">
+          <span class="brand-text">{SITE_TITLE}</span>
+          <span class="brand-sublabel">Steinbach, MB</span>
+        </div>
       </a>
     </div>
 
-    <!-- 2. Center: Anchor Navigation Links (Desktop) -->
-    <nav id="primary-nav" class="desktop-nav" aria-label="Main navigation">
-      <a href="/#services" class="nav-link">Services</a>
-      <a href="/#instructors" class="nav-link">Instructors</a>
-      <a href="/#why-us" class="nav-link">Why Us</a>
+    <!-- Center: Clean Anchor Navigation Links (Desktop) -->
+    <nav id="primary-nav" class="desktop-nav" aria-label="Primary navigation">
+      <a href="/#instructors" class="nav-link">Meet Us</a>
+      <a href="/#vehicles" class="nav-link">Our Vehicles</a>
+      <a href="/#services" class="nav-link">Lessons & Rates</a>
+      <a href="/#faq" class="nav-link">FAQ</a>
       <a href="/#contact" class="nav-link">Contact</a>
     </nav>
 
-    <!-- 3. Right: CTA Action Button & Mobile Hamburger Toggle -->
+    <!-- Right: Book a Lesson CTA Button (Desktop) & Mobile Hamburger Toggle -->
     <div class="header-right">
-      <!-- Desktop Actions -->
-      <a 
-        href="https://www.instagram.com/martensdrivingschool/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class="instagram-link desktop-only" 
-        aria-label="Follow Martens Driving School on Instagram"
-      >
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          width="18" 
-          height="18" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
-          stroke-width="2" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-        </svg>
-      </a>
-
       <a href="/#services" class="btn btn-primary btn-sm header-cta desktop-only">
         <span>Book a Lesson</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-          <polyline points="12 5 19 12 12 19"></polyline>
-        </svg>
       </a>
 
-      <!-- Mobile Hamburger Toggle (Mobile Only, viewport < 768px) -->
+      <!-- Mobile Hamburger Toggle (Viewport < 768px) -->
       <button 
         id="mobile-nav-toggle"
         class="mobile-toggle mobile-only" 
@@ -68,8 +42,9 @@ import { SITE_TITLE } from '../consts';
         aria-controls="mobile-nav-drawer" 
       >
         <span class="hamburger-box" aria-hidden="true">
-          <span class="hamburger-line line-1"></span>
-          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </span>
       </button>
     </div>
@@ -90,7 +65,10 @@ import { SITE_TITLE } from '../consts';
       <div class="brand-logo-frame brand-logo-frame--sm">
         <img src="/images/logo.jpeg" alt="" class="brand-logo" width="34" height="34" />
       </div>
-      <span class="brand-text">{SITE_TITLE}</span>
+      <div class="brand-text-block">
+        <span class="brand-text">{SITE_TITLE}</span>
+        <span class="brand-sublabel">Steinbach, MB</span>
+      </div>
       <button id="mobile-drawer-close" class="drawer-close-btn" type="button" aria-label="Close navigation menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -100,51 +78,45 @@ import { SITE_TITLE } from '../consts';
     </div>
     
     <nav class="mobile-drawer-links" aria-label="Mobile Navigation Links">
-      <a href="/#services" class="mobile-link">Services</a>
-      <a href="/#instructors" class="mobile-link">Instructors</a>
-      <a href="/#why-us" class="mobile-link">Why Us</a>
+      <a href="/#instructors" class="mobile-link">Meet Us</a>
+      <a href="/#vehicles" class="mobile-link">Our Vehicles</a>
+      <a href="/#services" class="mobile-link">Lessons & Rates</a>
+      <a href="/#faq" class="mobile-link">FAQ</a>
       <a href="/#contact" class="mobile-link">Contact</a>
     </nav>
 
     <div class="mobile-drawer-footer">
       <a href="/#services" class="btn btn-primary btn-lg mobile-cta-full">
         <span>Book a Lesson</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-          <polyline points="12 5 19 12 12 19"></polyline>
-        </svg>
       </a>
 
-      <div class="mobile-drawer-social">
-        <a 
-          href="https://www.instagram.com/martensdrivingschool/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="mobile-instagram-link"
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-          </svg>
-          <span>Follow us on Instagram</span>
-        </a>
+      <div class="mobile-drawer-phone">
+        <span class="phone-label">Call or Text:</span>
+        <a href="tel:+12043802912" class="phone-link">Carlos: (204) 380-2912</a>
+        <a href="tel:+12043717417" class="phone-link">Noemi: (204) 371-7417</a>
       </div>
     </div>
   </aside>
 </header>
 
 <style>
-  /* Header Container & Sticky Glassmorphism */
+  /* Header Container: White Background with 4px Navy Top Border */
   .site-header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(15, 30, 54, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 4px solid var(--navy-brand);
+    border-bottom: 1px solid var(--border-warm);
+    box-shadow: 0 2px 12px rgba(29, 53, 87, 0.06);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .site-header.is-open {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
 
   .header-inner {
@@ -157,50 +129,50 @@ import { SITE_TITLE } from '../consts';
     gap: 1.5rem;
   }
 
-  /* 3-Part Layout: Left, Center, Right */
+  /* 3-Part Layout */
   .header-left {
-    flex: 1 1 0%;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
 
   .desktop-nav {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.45rem;
   }
 
   .header-right {
-    flex: 1 1 0%;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
-  /* Brand Emblem & Wordmark */
+  /* Brand Link & Wordmark */
   .brand-link {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    text-decoration: none;
-    color: var(--text-primary-dark);
+    text-decoration: none !important;
+    color: var(--navy-brand);
   }
 
   .brand-logo-frame {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    padding: 2px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(230, 57, 70, 0.5));
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: 2px solid var(--border-warm);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    background-color: #FFFFFF;
   }
 
   .brand-logo-frame--sm {
@@ -215,65 +187,55 @@ import { SITE_TITLE } from '../consts';
     object-fit: cover;
   }
 
+  .brand-text-block {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
   .brand-text {
     font-size: 1.15rem;
     font-weight: 700;
+    color: var(--navy-brand);
     letter-spacing: -0.01em;
-    color: var(--text-primary-dark);
     white-space: nowrap;
+  }
+
+  .brand-sublabel {
+    font-size: 0.775rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 
   /* Desktop Anchor Navigation Links */
   .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.925rem;
     font-weight: 700;
-    color: var(--text-secondary-dark);
-    text-decoration: none;
-    padding: 0.5rem 0.9rem;
-    border-radius: var(--radius-pill);
-    transition: all 0.2s ease;
+    color: var(--text-primary);
+    text-decoration: none !important;
+    padding: 0.4rem 0.65rem;
+    border-radius: var(--radius-sm);
+    transition: color 0.15s ease, background-color 0.15s ease;
+    white-space: nowrap;
   }
 
   .nav-link:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  .instagram-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    color: var(--text-secondary-dark);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all 0.2s ease;
-    flex-shrink: 0;
-  }
-
-  .instagram-link:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px);
+    color: var(--navy-brand);
+    background-color: var(--bg-section-alt);
   }
 
   .header-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
     white-space: nowrap;
     flex-shrink: 0;
   }
 
   /* =========================================================================
-     VIEWPORT GATING: Desktop (>= 768px) vs Mobile (< 768px)
+     VIEWPORT GATING: Desktop (>= 960px) vs Mobile (< 960px)
      ========================================================================= */
 
-  /* DEFAULT FOR VIEWPORTS >= 768px: Mobile Drawer/Backdrop strictly non-existent */
-  @media (min-width: 768px) {
+  /* DEFAULT FOR VIEWPORTS >= 960px: Mobile Drawer/Backdrop strictly non-existent */
+  @media (min-width: 960px) {
     .mobile-only {
       display: none !important;
       visibility: hidden !important;
@@ -293,8 +255,8 @@ import { SITE_TITLE } from '../consts';
     }
   }
 
-  /* MOBILE VIEWPORTS (< 768px) */
-  @media (max-width: 767.98px) {
+  /* MOBILE VIEWPORTS (< 960px) */
+  @media (max-width: 959.98px) {
     .desktop-only {
       display: none !important;
     }
@@ -304,7 +266,7 @@ import { SITE_TITLE } from '../consts';
     }
 
     .header-inner {
-      padding: 0.65rem 1rem;
+      padding: 0.75rem 1rem;
     }
 
     .brand-text {
@@ -314,9 +276,9 @@ import { SITE_TITLE } from '../consts';
     /* Hamburger Toggle Button */
     .mobile-toggle {
       display: inline-flex !important;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--text-primary-dark);
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      color: var(--navy-brand);
       width: 40px;
       height: 40px;
       border-radius: var(--radius-sm);
@@ -325,18 +287,17 @@ import { SITE_TITLE } from '../consts';
       justify-content: center;
       padding: 0;
       flex-shrink: 0;
-      transition: background-color 0.2s ease, border-color 0.2s ease;
+      transition: background-color 0.15s ease;
     }
 
     .mobile-toggle:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.2);
+      background-color: var(--bg-section-alt);
     }
 
     .hamburger-box {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
       width: 20px;
     }
 
@@ -344,9 +305,8 @@ import { SITE_TITLE } from '../consts';
       display: block;
       width: 100%;
       height: 2px;
-      background-color: var(--text-primary-dark);
+      background-color: var(--navy-brand);
       border-radius: 2px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
     /* Mobile Backdrop */
@@ -354,9 +314,9 @@ import { SITE_TITLE } from '../consts';
       display: block !important;
       position: fixed;
       inset: 0;
-      background: rgba(11, 21, 38, 0.75);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      background-color: rgba(29, 53, 87, 0.4);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
       z-index: 99;
       opacity: 0;
       visibility: hidden;
@@ -377,11 +337,14 @@ import { SITE_TITLE } from '../consts';
       top: 0;
       right: 0;
       bottom: 0;
-      width: 320px;
+      width: 300px;
       max-width: 85vw;
-      background: #0f1e36;
-      border-left: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.5);
+      height: 100vh;
+      height: 100dvh;
+      overflow-y: auto;
+      background-color: #FAF8F5;
+      border-left: 1px solid var(--border-warm);
+      box-shadow: -8px 0 24px rgba(0, 0, 0, 0.1);
       z-index: 100;
       flex-direction: column;
       padding: 1.5rem;
@@ -389,7 +352,7 @@ import { SITE_TITLE } from '../consts';
       transform: translateX(100%);
       visibility: hidden;
       pointer-events: none;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
     }
 
     .mobile-drawer.is-open {
@@ -403,13 +366,14 @@ import { SITE_TITLE } from '../consts';
       align-items: center;
       justify-content: space-between;
       padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid var(--border-warm);
+      gap: 0.75rem;
     }
 
     .drawer-close-btn {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--text-primary-dark);
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      color: var(--navy-brand);
       width: 36px;
       height: 36px;
       border-radius: 50%;
@@ -417,12 +381,12 @@ import { SITE_TITLE } from '../consts';
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background-color 0.2s ease, border-color 0.2s ease;
+      margin-left: auto;
+      transition: background-color 0.15s ease;
     }
 
     .drawer-close-btn:hover {
-      background: rgba(255, 255, 255, 0.14);
-      border-color: rgba(255, 255, 255, 0.25);
+      background-color: var(--bg-section-alt);
     }
 
     .mobile-drawer-links {
@@ -432,21 +396,19 @@ import { SITE_TITLE } from '../consts';
     }
 
     .mobile-link {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
-      color: var(--text-primary-dark);
-      text-decoration: none;
+      color: var(--navy-brand);
+      text-decoration: none !important;
       padding: 0.85rem 1rem;
       border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.2s ease;
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      transition: background-color 0.15s ease;
     }
 
     .mobile-link:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: #ffffff;
-      transform: translateX(4px);
+      background-color: var(--bg-section-alt);
     }
 
     .mobile-drawer-footer {
@@ -460,23 +422,32 @@ import { SITE_TITLE } from '../consts';
       width: 100%;
     }
 
-    .mobile-drawer-social {
+    .mobile-drawer-phone {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      gap: 0.25rem;
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-sm);
     }
 
-    .mobile-instagram-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9rem;
+    .phone-label {
+      font-size: 0.8rem;
       font-weight: 700;
-      color: var(--text-secondary-dark);
-      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--text-muted);
     }
 
-    .mobile-instagram-link:hover {
-      color: #ffffff;
+    .phone-link {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy-brand);
+      text-decoration: none !important;
+    }
+
+    .phone-link:hover {
+      color: var(--red-cta);
     }
   }
 </style>
@@ -521,7 +492,7 @@ import { SITE_TITLE } from '../consts';
     closeBtn?.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    // Close when tapping any navigation link inside drawer
+    // Close when tapping any link inside the mobile drawer
     drawer.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', closeDrawer);
     });
@@ -533,9 +504,9 @@ import { SITE_TITLE } from '../consts';
       }
     });
 
-    // Auto-close if screen is resized beyond mobile breakpoint (>= 768px)
+    // Automatically close if screen resized to desktop viewport (>= 960px)
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768 && drawer.classList.contains('is-open')) {
+      if (window.innerWidth >= 960 && drawer.classList.contains('is-open')) {
         drawer.classList.remove('is-open');
         backdrop.classList.remove('is-open');
         siteHeader?.classList.remove('is-open');
@@ -545,7 +516,6 @@ import { SITE_TITLE } from '../consts';
     });
   }
 
-  // Initialize on page load and Astro view transitions
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initNavigation);
   } else {

@@ -19,18 +19,16 @@ const NOEMI_URL = 'https://calendar.google.com/calendar/appointments/schedules/A
 const buttons = variant === 'split'
   ? [
       {
-        id: 'carlos',
-        label: 'Book with Carlos',
-        url: CARLOS_URL,
-        price: '$55/hr',
-        specialty: 'Real-World Skills'
-      },
-      {
         id: 'noemi',
         label: 'Book with Noemi',
         url: NOEMI_URL,
-        price: '$70/hr',
-        specialty: 'Anxious Learner Specialist'
+        price: '$70/hr'
+      },
+      {
+        id: 'carlos',
+        label: 'Book with Carlos',
+        url: CARLOS_URL,
+        price: '$55/hr'
       }
     ]
   : [
@@ -38,8 +36,7 @@ const buttons = variant === 'split'
         id: instructor,
         label: instructor === 'noemi' ? 'Book with Noemi' : 'Book with Carlos',
         url: instructor === 'noemi' ? NOEMI_URL : CARLOS_URL,
-        price: instructor === 'noemi' ? '$70/hr' : '$55/hr',
-        specialty: instructor === 'noemi' ? 'Anxious Learner Specialist' : 'Real-World Skills'
+        price: instructor === 'noemi' ? '$70/hr' : '$55/hr'
       }
     ];
 ---
@@ -58,8 +55,8 @@ const buttons = variant === 'split'
       aria-label={`${btn.label} (${btn.price})`}
     >
       <!-- Calendar Icon -->
-      <span class="btn-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <span class="btn-icon" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
           <line x1="16" y1="2" x2="16" y2="6"></line>
           <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -67,17 +64,15 @@ const buttons = variant === 'split'
         </svg>
       </span>
 
-      <span class="btn-text-wrap">
-        <span class="btn-label">{btn.label}</span>
-      </span>
+      <span class="btn-label">{btn.label}</span>
 
       {showPriceBadge && (
         <span class="btn-rate-badge">{btn.price}</span>
       )}
 
-      <!-- Arrow Icon -->
-      <span class="btn-arrow">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <!-- Clean Arrow -->
+      <span class="btn-arrow" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg>
@@ -104,44 +99,42 @@ const buttons = variant === 'split'
     gap: 1.25rem;
   }
 
+  /* Symmetrical, polished red pill CTAs directly on dark hero canvas */
   .schedule-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    padding: 0.95rem 1.6rem;
+    padding: 0.95rem 1.65rem;
     border-radius: var(--radius-pill);
-    background: var(--gradient-cta);
-    color: #ffffff !important;
-    text-decoration: none;
+    background: linear-gradient(135deg, #e63946 0%, #c12f3e 100%);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #FFFFFF !important;
+    text-decoration: none !important;
     font-weight: 700;
     font-size: 1.05rem;
     line-height: 1.2;
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    box-shadow: var(--shadow-cta), var(--highlight-top);
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-                box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-                background 0.25s ease;
+    box-shadow: 0 4px 18px rgba(230, 57, 70, 0.28), 0 1px 3px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     white-space: nowrap;
-    position: relative;
     cursor: pointer;
   }
 
   .schedule-btn:hover {
-    background: var(--gradient-cta-hover);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-cta-hover), var(--highlight-top);
-    color: #ffffff;
+    background: linear-gradient(135deg, #c12f3e 0%, #a72432 100%);
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.4), 0 2px 4px rgba(0, 0, 0, 0.15);
   }
 
   .schedule-btn--lg {
-    padding: 1.1rem 2rem;
-    font-size: 1.15rem;
+    padding: 1.05rem 1.85rem;
+    font-size: 1.08rem;
   }
 
   .schedule-btn--sm {
-    padding: 0.7rem 1.2rem;
+    padding: 0.65rem 1.2rem;
     font-size: 0.925rem;
+    border-radius: var(--radius-pill);
   }
 
   .btn-icon {
@@ -149,13 +142,6 @@ const buttons = variant === 'split'
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    opacity: 0.95;
-  }
-
-  .btn-text-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .btn-label {
@@ -163,13 +149,14 @@ const buttons = variant === 'split'
   }
 
   .btn-rate-badge {
-    background: rgba(0, 0, 0, 0.22);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.2rem 0.55rem;
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.18rem 0.55rem;
     border-radius: var(--radius-pill);
     font-size: 0.825rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.02em;
+    color: #FFFFFF;
     flex-shrink: 0;
   }
 
@@ -197,7 +184,7 @@ const buttons = variant === 'split'
       width: 100%;
       min-width: 0;
       justify-content: center;
-      padding: 0.85rem 1.25rem;
+      padding: 0.9rem 1.25rem;
       font-size: 1rem;
     }
   }
